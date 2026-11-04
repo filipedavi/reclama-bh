@@ -1,0 +1,1300 @@
+{
+  "titulo": "Tesauro Reclama BH",
+  "descricao": "Vocabulário controlado que liga a linguagem do cidadão aos temas, subtemas e serviços oficiais. Relações: UP (usado para: formas não preferidas), TG (termo genérico), TE (termos específicos), TR (termos relacionados), NE (nota de escopo). Os termos de tema e subtema vêm da taxonomia; os serviços oficiais e suas variantes de grafia são acrescentados automaticamente pelo indicadores.py (UP = grafias não autorizadas).",
+  "entradas": [
+    {
+      "alvo": "VIA.BUR",
+      "UP": [
+        "buraco",
+        "buracos",
+        "buraco na rua",
+        "asfalto",
+        "recapear",
+        "recapeamento",
+        "cratera",
+        "rua esburacada",
+        "pavimentacao",
+        "operacao tapa buraco"
+      ]
+    },
+    {
+      "alvo": "VIA.CAL",
+      "UP": [
+        "calcada",
+        "calcadas",
+        "passeio",
+        "passeios",
+        "calcada quebrada",
+        "rampa",
+        "meio fio",
+        "guia",
+        "acessibilidade na calcada"
+      ]
+    },
+    {
+      "alvo": "VIA.DRE",
+      "UP": [
+        "boca de lobo",
+        "bueiro",
+        "bueiros",
+        "enchente",
+        "enchentes",
+        "alagamento",
+        "alaga",
+        "inundacao",
+        "drenagem",
+        "corrego",
+        "chuva"
+      ]
+    },
+    {
+      "alvo": "VIA.ESG",
+      "UP": [
+        "esgoto",
+        "esgoto a ceu aberto",
+        "agua na rua",
+        "vazamento",
+        "cheiro de esgoto",
+        "fossa"
+      ]
+    },
+    {
+      "alvo": "VIA.DEF",
+      "UP": [
+        "defesa civil",
+        "deslizamento",
+        "barranco",
+        "risco de desabar",
+        "muro caindo",
+        "area de risco"
+      ]
+    },
+    {
+      "alvo": "VIA.OBR",
+      "UP": [
+        "obra da prefeitura",
+        "obras publicas",
+        "obra parada",
+        "vila",
+        "favela",
+        "aglomerado",
+        "habitacao",
+        "casa popular",
+        "minha casa minha vida",
+        "urbel"
+      ]
+    },
+    {
+      "alvo": "ILU.MAN",
+      "UP": [
+        "luz apagada",
+        "poste apagado",
+        "lampada queimada",
+        "luminaria",
+        "poste piscando",
+        "rua escura",
+        "iluminacao quebrada",
+        "luz da rua"
+      ]
+    },
+    {
+      "alvo": "ILU.RED",
+      "UP": [
+        "iluminacao publica",
+        "poste",
+        "postes",
+        "sem poste",
+        "falta de iluminacao",
+        "colocar poste"
+      ]
+    },
+    {
+      "alvo": "LIM.COL",
+      "UP": [
+        "coleta de lixo",
+        "lixo nao recolhido",
+        "caminhao de lixo",
+        "coleta seletiva",
+        "reciclagem",
+        "nao passou o lixo",
+        "lixo acumulado"
+      ]
+    },
+    {
+      "alvo": "LIM.VAR",
+      "UP": [
+        "varricao",
+        "varredor",
+        "gari",
+        "rua suja",
+        "lavar a rua",
+        "limpeza da rua"
+      ]
+    },
+    {
+      "alvo": "LIM.DEP",
+      "UP": [
+        "entulho",
+        "lixo na rua",
+        "descarte irregular",
+        "bota fora",
+        "cacamba",
+        "sofa na rua",
+        "movel na rua",
+        "lixo jogado",
+        "terreno com lixo"
+      ]
+    },
+    {
+      "alvo": "LIM.LIX",
+      "UP": [
+        "lixeira",
+        "lixeiras",
+        "lixeirinha",
+        "cesto de lixo",
+        "container de lixo",
+        "conteiner"
+      ]
+    },
+    {
+      "alvo": "ARV.POD",
+      "UP": [
+        "poda",
+        "podar",
+        "podar arvore",
+        "galho",
+        "galhos",
+        "arvore no fio",
+        "arvore na fiacao",
+        "arvore grande"
+      ]
+    },
+    {
+      "alvo": "ARV.COR",
+      "UP": [
+        "cortar arvore",
+        "corte de arvore",
+        "arvore caida",
+        "arvore caiu",
+        "arvore seca",
+        "arvore morta",
+        "raiz",
+        "raiz levantando calcada",
+        "toco",
+        "supressao"
+      ]
+    },
+    {
+      "alvo": "ARV.PLA",
+      "UP": [
+        "plantar arvore",
+        "plantio",
+        "muda",
+        "mudas"
+      ]
+    },
+    {
+      "alvo": "ARV.PRA",
+      "UP": [
+        "praca",
+        "pracas",
+        "parque",
+        "parques",
+        "mato alto",
+        "capina",
+        "rocada",
+        "canteiro",
+        "jardim",
+        "zoologico",
+        "zoo",
+        "quadra",
+        "campo de futebol",
+        "academia ao ar livre"
+      ]
+    },
+    {
+      "alvo": "TRA.ONI",
+      "UP": [
+        "onibus",
+        "busao",
+        "coletivo",
+        "transporte coletivo",
+        "transporte publico",
+        "linha de onibus",
+        "ponto de onibus",
+        "move",
+        "bhbus",
+        "cartao bhbus",
+        "passe",
+        "passe livre",
+        "meio passe",
+        "gratuidade",
+        "itinerario",
+        "onibus lotado",
+        "onibus atrasado",
+        "motorista de onibus"
+      ]
+    },
+    {
+      "alvo": "TRA.MUL",
+      "UP": [
+        "multa",
+        "multas",
+        "multa de transito",
+        "radar",
+        "infracao",
+        "recurso de multa",
+        "jari",
+        "notificacao",
+        "pontos na carteira",
+        "cnh",
+        "reboque",
+        "guincho",
+        "patio"
+      ]
+    },
+    {
+      "alvo": "TRA.TAX",
+      "UP": [
+        "taxi",
+        "taxista",
+        "uber",
+        "99",
+        "aplicativo",
+        "motorista de aplicativo",
+        "transporte escolar",
+        "van escolar",
+        "perua"
+      ]
+    },
+    {
+      "alvo": "TRA.EST",
+      "UP": [
+        "estacionamento",
+        "estacionar",
+        "carro estacionado",
+        "estacionado na calcada",
+        "rotativo",
+        "zona azul",
+        "vaga de idoso",
+        "vaga de deficiente",
+        "credencial"
+      ]
+    },
+    {
+      "alvo": "TRA.SIN",
+      "UP": [
+        "sinalizacao",
+        "placa de transito",
+        "semaforo",
+        "sinal",
+        "sinal quebrado",
+        "quebra mola",
+        "lombada",
+        "redutor",
+        "faixa de pedestre",
+        "transito",
+        "velocidade",
+        "ciclovia",
+        "ciclofaixa",
+        "bicicleta",
+        "mao de direcao",
+        "fiscalizacao de transito",
+        "agente de transito"
+      ]
+    },
+    {
+      "alvo": "FIS.SOM",
+      "UP": [
+        "barulho",
+        "som alto",
+        "poluicao sonora",
+        "bar barulhento",
+        "festa",
+        "musica alta",
+        "vizinho barulhento",
+        "igreja barulhenta",
+        "perturbacao do sossego"
+      ]
+    },
+    {
+      "alvo": "FIS.OBR",
+      "UP": [
+        "obra irregular",
+        "construcao irregular",
+        "obra sem alvara",
+        "vizinho construindo",
+        "puxadinho",
+        "construcao sem licenca"
+      ]
+    },
+    {
+      "alvo": "FIS.COM",
+      "UP": [
+        "bar irregular",
+        "estabelecimento irregular",
+        "comercio irregular",
+        "camelo",
+        "ambulante",
+        "mesa na calcada",
+        "cadeira na calcada",
+        "loja sem alvara",
+        "food truck"
+      ]
+    },
+    {
+      "alvo": "FIS.LOT",
+      "UP": [
+        "lote vago",
+        "terreno abandonado",
+        "terreno baldio",
+        "lote sujo",
+        "invasao",
+        "ocupacao",
+        "terreno invadido"
+      ]
+    },
+    {
+      "alvo": "FIS.PUB",
+      "UP": [
+        "placa irregular",
+        "outdoor",
+        "propaganda",
+        "cavalete",
+        "cone na rua",
+        "faixa",
+        "pichacao",
+        "publicidade"
+      ]
+    },
+    {
+      "alvo": "FIS.VEI",
+      "UP": [
+        "carro abandonado",
+        "veiculo abandonado",
+        "carcaca",
+        "sucata",
+        "carro velho na rua"
+      ]
+    },
+    {
+      "alvo": "FIS.AMB",
+      "UP": [
+        "poluicao",
+        "fumaca",
+        "queimada",
+        "meio ambiente",
+        "nascente",
+        "fabrica poluindo"
+      ]
+    },
+    {
+      "alvo": "FIS.SAN",
+      "UP": [
+        "vigilancia sanitaria",
+        "comida estragada",
+        "restaurante sujo",
+        "alimento improprio",
+        "higiene",
+        "intoxicacao"
+      ]
+    },
+    {
+      "alvo": "FIS.GER",
+      "UP": [
+        "fiscalizacao",
+        "fiscal",
+        "denuncia",
+        "irregularidade",
+        "irregular"
+      ]
+    },
+    {
+      "alvo": "URB.LIC",
+      "UP": [
+        "alvara",
+        "licenca",
+        "licenciamento",
+        "regularizar imovel",
+        "regularizacao",
+        "habite-se",
+        "aprovacao de projeto",
+        "numero da casa",
+        "numeracao",
+        "endereco oficial",
+        "banca de jornal"
+      ]
+    },
+    {
+      "alvo": "TRI.IPT",
+      "UP": [
+        "iptu",
+        "imposto da casa",
+        "isencao de iptu",
+        "guia do iptu",
+        "revisao do iptu"
+      ]
+    },
+    {
+      "alvo": "TRI.ITB",
+      "UP": [
+        "itbi",
+        "imposto de transmissao",
+        "compra de imovel"
+      ]
+    },
+    {
+      "alvo": "TRI.ISS",
+      "UP": [
+        "iss",
+        "issqn",
+        "nota fiscal",
+        "nfs-e",
+        "nota fiscal eletronica",
+        "simples nacional",
+        "autonomo"
+      ]
+    },
+    {
+      "alvo": "TRI.DIV",
+      "UP": [
+        "divida ativa",
+        "divida",
+        "parcelamento",
+        "parcelar",
+        "protesto",
+        "nome protestado",
+        "cobranca",
+        "debito"
+      ]
+    },
+    {
+      "alvo": "TRI.GER",
+      "UP": [
+        "imposto",
+        "impostos",
+        "taxa",
+        "taxas",
+        "fazenda",
+        "receita municipal",
+        "certidao",
+        "certidao negativa",
+        "cnd",
+        "restituicao",
+        "tributo"
+      ]
+    },
+    {
+      "alvo": "EDU.VAG",
+      "UP": [
+        "vaga na escola",
+        "vaga escolar",
+        "matricula",
+        "cadastro escolar",
+        "transferencia de escola",
+        "sem vaga"
+      ]
+    },
+    {
+      "alvo": "EDU.CRE",
+      "UP": [
+        "creche",
+        "creches",
+        "vaga na creche",
+        "umei",
+        "educacao infantil",
+        "bercario"
+      ]
+    },
+    {
+      "alvo": "EDU.ESC",
+      "UP": [
+        "escola",
+        "escolas",
+        "escola municipal",
+        "merenda",
+        "uniforme",
+        "professor",
+        "professora",
+        "diretora",
+        "aluno",
+        "ensino",
+        "inclusao",
+        "monitor"
+      ]
+    },
+    {
+      "alvo": "SAU.VAC",
+      "UP": [
+        "vacina",
+        "vacinas",
+        "vacinacao",
+        "campanha de vacinacao",
+        "gripe",
+        "covid",
+        "hpv"
+      ]
+    },
+    {
+      "alvo": "SAU.MED",
+      "UP": [
+        "remedio",
+        "remedios",
+        "medicamento",
+        "medicamentos",
+        "farmacia",
+        "falta de remedio",
+        "fralda",
+        "insulina",
+        "insumo"
+      ]
+    },
+    {
+      "alvo": "SAU.CIR",
+      "UP": [
+        "cirurgia",
+        "operacao",
+        "internacao",
+        "leito",
+        "fila de cirurgia"
+      ]
+    },
+    {
+      "alvo": "SAU.EXA",
+      "UP": [
+        "exame",
+        "exames",
+        "marcar exame",
+        "resultado de exame",
+        "ultrassom",
+        "tomografia",
+        "ressonancia",
+        "mamografia",
+        "laboratorio"
+      ]
+    },
+    {
+      "alvo": "SAU.URG",
+      "UP": [
+        "upa",
+        "pronto socorro",
+        "samu",
+        "ambulancia",
+        "urgencia",
+        "emergencia"
+      ]
+    },
+    {
+      "alvo": "SAU.MEN",
+      "UP": [
+        "saude mental",
+        "cersam",
+        "caps",
+        "psicologo",
+        "psiquiatra",
+        "depressao",
+        "ansiedade",
+        "drogas",
+        "alcool"
+      ]
+    },
+    {
+      "alvo": "SAU.ODO",
+      "UP": [
+        "dentista",
+        "dente",
+        "odontologia",
+        "odontologico",
+        "ceo"
+      ]
+    },
+    {
+      "alvo": "SAU.DOM",
+      "UP": [
+        "atendimento em casa",
+        "medico em casa",
+        "acamado",
+        "home care",
+        "transporte para tratamento",
+        "tfd"
+      ]
+    },
+    {
+      "alvo": "SAU.ESP",
+      "UP": [
+        "especialista",
+        "encaminhamento",
+        "consulta com especialista",
+        "ortopedista",
+        "cardiologista",
+        "oftalmologista",
+        "neurologista",
+        "fisioterapia",
+        "fila",
+        "agendamento",
+        "marcar consulta",
+        "pre natal",
+        "gestante"
+      ]
+    },
+    {
+      "alvo": "SAU.UNI",
+      "UP": [
+        "posto de saude",
+        "posto",
+        "centro de saude",
+        "unidade de saude",
+        "ubs",
+        "medico",
+        "consulta",
+        "consulta medica",
+        "medico de familia",
+        "saude da familia",
+        "psf",
+        "esf",
+        "agente de saude",
+        "recepcao do posto",
+        "senha no posto",
+        "hospital",
+        "sus",
+        "cartao sus",
+        "academia da cidade"
+      ]
+    },
+    {
+      "alvo": "ANI.AED",
+      "UP": [
+        "dengue",
+        "mosquito",
+        "mosquito da dengue",
+        "aedes",
+        "foco de dengue",
+        "agua parada",
+        "fumace",
+        "zika",
+        "chikungunya"
+      ]
+    },
+    {
+      "alvo": "ANI.PRA",
+      "UP": [
+        "rato",
+        "ratos",
+        "ratazana",
+        "escorpiao",
+        "escorpioes",
+        "barata",
+        "pulga",
+        "carrapato",
+        "pombo",
+        "pombos",
+        "caramujo",
+        "morcego",
+        "abelha",
+        "marimbondo",
+        "praga"
+      ]
+    },
+    {
+      "alvo": "ANI.ZOO",
+      "UP": [
+        "leishmaniose",
+        "calazar",
+        "raiva",
+        "zoonose",
+        "zoonoses",
+        "cachorro doente",
+        "mordida de cachorro"
+      ]
+    },
+    {
+      "alvo": "ANI.CAO",
+      "UP": [
+        "cachorro",
+        "cachorros",
+        "cao",
+        "caes",
+        "gato",
+        "gatos",
+        "castracao",
+        "castrar",
+        "maus tratos",
+        "maus-tratos",
+        "animal abandonado",
+        "cachorro abandonado",
+        "animal",
+        "animais",
+        "veterinario",
+        "cavalo",
+        "criacao de animais"
+      ]
+    },
+    {
+      "alvo": "SOC.DIR",
+      "UP": [
+        "direitos humanos",
+        "violencia",
+        "agressao",
+        "discriminacao",
+        "racismo",
+        "homofobia",
+        "idoso",
+        "idosa",
+        "crianca",
+        "adolescente",
+        "mulher",
+        "violencia contra a mulher",
+        "deficiente",
+        "pessoa com deficiencia",
+        "disque 100",
+        "trabalho infantil"
+      ]
+    },
+    {
+      "alvo": "SOC.RUA",
+      "UP": [
+        "morador de rua",
+        "moradores de rua",
+        "pessoa em situacao de rua",
+        "situacao de rua",
+        "abrigo",
+        "albergue",
+        "sem teto"
+      ]
+    },
+    {
+      "alvo": "SOC.BEN",
+      "UP": [
+        "bolsa familia",
+        "cadunico",
+        "cadastro unico",
+        "beneficio",
+        "auxilio",
+        "bpc",
+        "cesta basica",
+        "restaurante popular",
+        "fome"
+      ]
+    },
+    {
+      "alvo": "SOC.CRA",
+      "UP": [
+        "cras",
+        "creas",
+        "assistencia social",
+        "assistente social",
+        "conselho tutelar",
+        "familia",
+        "servico social"
+      ]
+    },
+    {
+      "alvo": "SER.DEN",
+      "UP": [
+        "servidor mal educado",
+        "funcionario mal educado",
+        "denuncia de servidor",
+        "guarda municipal",
+        "guarda",
+        "conduta",
+        "assedio",
+        "corrupcao",
+        "funcionario da prefeitura"
+      ]
+    },
+    {
+      "alvo": "SER.CON",
+      "UP": [
+        "concurso",
+        "concurso publico",
+        "processo seletivo",
+        "selecao",
+        "estagio",
+        "edital",
+        "convocacao"
+      ]
+    },
+    {
+      "alvo": "SER.RH",
+      "UP": [
+        "servidor",
+        "servidores",
+        "servidor publico",
+        "salario",
+        "pagamento do servidor",
+        "aposentadoria",
+        "pensao",
+        "ferias",
+        "licenca premio",
+        "pericia medica",
+        "contracheque",
+        "quinquenio"
+      ]
+    },
+    {
+      "alvo": "SER.ATE",
+      "UP": [
+        "156",
+        "telefone 156",
+        "bh resolve",
+        "bh digital",
+        "portal",
+        "site da prefeitura",
+        "aplicativo da prefeitura",
+        "atendimento",
+        "demora no atendimento",
+        "ninguem atende",
+        "sistema fora do ar",
+        "protocolo",
+        "senha",
+        "wifi",
+        "internet gratis"
+      ]
+    },
+    {
+      "alvo": "SER.LAI",
+      "UP": [
+        "lai",
+        "acesso a informacao",
+        "pedido de informacao",
+        "ouvidoria",
+        "ouvidor",
+        "transparencia",
+        "dados pessoais",
+        "lgpd"
+      ]
+    },
+    {
+      "alvo": "SER.GES",
+      "UP": [
+        "gestao",
+        "administracao",
+        "contrato",
+        "licitacao",
+        "fornecedor",
+        "indenizacao",
+        "prejuizo",
+        "ressarcimento",
+        "procuradoria",
+        "juridico"
+      ]
+    },
+    {
+      "alvo": "CUL.EVE",
+      "UP": [
+        "carnaval",
+        "bloco",
+        "bloco de rua",
+        "evento",
+        "festival",
+        "show",
+        "reveillon",
+        "virada cultural",
+        "fiq"
+      ]
+    },
+    {
+      "alvo": "CUL.CUL",
+      "UP": [
+        "cultura",
+        "biblioteca",
+        "museu",
+        "teatro",
+        "centro cultural",
+        "patrimonio",
+        "esporte",
+        "lazer",
+        "turismo",
+        "piscina",
+        "cemiterio",
+        "enterro",
+        "sepultamento"
+      ]
+    },
+    {
+      "alvo": "CON.PRO",
+      "UP": [
+        "procon",
+        "consumidor",
+        "direito do consumidor",
+        "loja",
+        "cobranca indevida",
+        "produto com defeito"
+      ]
+    },
+    {
+      "alvo": "DES.TRA",
+      "UP": [
+        "emprego",
+        "trabalho",
+        "sine",
+        "vaga de emprego",
+        "curso profissionalizante",
+        "mei",
+        "empreendedor",
+        "feira livre",
+        "mercado"
+      ]
+    },
+    {
+      "alvo": "OUT.NAO",
+      "UP": [
+        "nao e da prefeitura",
+        "cemig",
+        "copasa",
+        "correios",
+        "estado",
+        "governo do estado",
+        "governo federal",
+        "policia",
+        "inss"
+      ]
+    },
+    {
+      "alvo": "motivo:Dificuldade de Acesso",
+      "UP": [
+        "dificuldade de acesso",
+        "nao consigo",
+        "nao consegui",
+        "sem acesso",
+        "nao atende",
+        "nao atendem"
+      ]
+    },
+    {
+      "alvo": "motivo:Descumprimento de Prazo",
+      "UP": [
+        "prazo",
+        "atraso",
+        "atrasado",
+        "demora",
+        "demorando",
+        "demorou",
+        "esperando",
+        "esperando ha meses",
+        "ninguem responde"
+      ]
+    },
+    {
+      "alvo": "motivo:Má Qualidade do Atendimento",
+      "UP": [
+        "mal atendido",
+        "mal atendida",
+        "ma qualidade",
+        "atendimento ruim",
+        "grosseria",
+        "mal educado",
+        "destratado"
+      ]
+    },
+    {
+      "alvo": "motivo:Irregularidade",
+      "UP": [
+        "irregularidade",
+        "irregular",
+        "ilegal",
+        "denuncia"
+      ]
+    },
+    {
+      "alvo": "motivo:Discordância",
+      "UP": [
+        "discordo",
+        "discordancia",
+        "nao concordo",
+        "injusto",
+        "contestar",
+        "contestacao"
+      ]
+    },
+    {
+      "alvo": "motivo:Ineficiência",
+      "UP": [
+        "ineficiencia",
+        "ineficiente",
+        "nao funciona",
+        "nao resolve",
+        "nao resolveram"
+      ]
+    },
+    {
+      "alvo": "motivo:Insuficiência",
+      "UP": [
+        "insuficiente",
+        "insuficiencia",
+        "pouco",
+        "falta de",
+        "faltam"
+      ]
+    },
+    {
+      "alvo": "motivo:Inadequação",
+      "UP": [
+        "inadequado",
+        "inadequacao",
+        "inadequada"
+      ]
+    },
+    {
+      "alvo": "motivo:Descumprimento de Procedimento",
+      "UP": [
+        "procedimento",
+        "fora do procedimento",
+        "nao seguiu"
+      ]
+    },
+    {
+      "alvo": "tipologia:Reclamação",
+      "UP": [
+        "reclamacao",
+        "reclamacoes",
+        "reclamar",
+        "reclamei",
+        "reclamam"
+      ]
+    },
+    {
+      "alvo": "tipologia:Denúncia",
+      "UP": [
+        "denuncia",
+        "denuncias",
+        "denunciar",
+        "denunciei"
+      ]
+    },
+    {
+      "alvo": "tipologia:Elogio",
+      "UP": [
+        "elogio",
+        "elogios",
+        "elogiar",
+        "parabens"
+      ]
+    },
+    {
+      "alvo": "tipologia:Sugestão",
+      "UP": [
+        "sugestao",
+        "sugestoes",
+        "sugerir",
+        "ideia"
+      ]
+    },
+    {
+      "alvo": "tipologia:Orientação",
+      "UP": [
+        "orientacao",
+        "duvida",
+        "informacao",
+        "como faco"
+      ]
+    },
+    {
+      "alvo": "resultado:atendida",
+      "UP": [
+        "atendida",
+        "atendidas",
+        "resolvida",
+        "resolvidas",
+        "resolve",
+        "resolvem",
+        "resolveu",
+        "resultado",
+        "funciona",
+        "mais atendido",
+        "mais atendida",
+        "mais resolvido",
+        "mais resolve"
+      ]
+    },
+    {
+      "alvo": "resultado:arquivada",
+      "UP": [
+        "arquivada",
+        "arquivadas",
+        "arquivam",
+        "arquivou",
+        "ignorada",
+        "engavetada",
+        "sem resposta",
+        "arquivado",
+        "arquivados",
+        "arquiva",
+        "mais arquivado",
+        "mais arquivada",
+        "mais e arquivado"
+      ]
+    },
+    {
+      "alvo": "resultado:lenta",
+      "UP": [
+        "demora",
+        "demorada",
+        "demorado",
+        "lenta",
+        "lento",
+        "mais demora",
+        "atrasa",
+        "fora do prazo",
+        "leva mais tempo",
+        "mais demorado",
+        "mais demorada",
+        "demora mais",
+        "mais lento",
+        "mais lenta"
+      ]
+    },
+    {
+      "alvo": "resultado:rapida",
+      "UP": [
+        "rapido",
+        "rapida",
+        "mais rapido",
+        "no prazo",
+        "agil"
+      ]
+    },
+    {
+      "alvo": "regional:BA",
+      "UP": [
+        "barreiro",
+        "regional barreiro"
+      ]
+    },
+    {
+      "alvo": "regional:CS",
+      "UP": [
+        "centro-sul",
+        "centro sul",
+        "centro",
+        "savassi",
+        "hipercentro"
+      ]
+    },
+    {
+      "alvo": "regional:LE",
+      "UP": [
+        "leste",
+        "regional leste"
+      ]
+    },
+    {
+      "alvo": "regional:NE",
+      "UP": [
+        "nordeste",
+        "regional nordeste"
+      ]
+    },
+    {
+      "alvo": "regional:NO",
+      "UP": [
+        "noroeste",
+        "regional noroeste"
+      ]
+    },
+    {
+      "alvo": "regional:NT",
+      "UP": [
+        "norte",
+        "regional norte"
+      ]
+    },
+    {
+      "alvo": "regional:OE",
+      "UP": [
+        "oeste",
+        "regional oeste"
+      ]
+    },
+    {
+      "alvo": "regional:PA",
+      "UP": [
+        "pampulha",
+        "regional pampulha"
+      ]
+    },
+    {
+      "alvo": "regional:VN",
+      "UP": [
+        "venda nova",
+        "regional venda nova"
+      ]
+    }
+  ],
+  "palavras_vazias": [
+    "o",
+    "a",
+    "os",
+    "as",
+    "um",
+    "uma",
+    "de",
+    "da",
+    "do",
+    "das",
+    "dos",
+    "no",
+    "na",
+    "nos",
+    "nas",
+    "em",
+    "para",
+    "pra",
+    "pro",
+    "por",
+    "que",
+    "e",
+    "com",
+    "me",
+    "meu",
+    "minha",
+    "mostre",
+    "mostra",
+    "quero",
+    "ver",
+    "quais",
+    "qual",
+    "sobre",
+    "prefeitura",
+    "pbh",
+    "bh",
+    "belo",
+    "horizonte",
+    "cidade",
+    "aqui",
+    "isso",
+    "esse",
+    "essa",
+    "este",
+    "esta",
+    "tem",
+    "teve",
+    "foi",
+    "ser",
+    "sao",
+    "ha",
+    "ja",
+    "ainda",
+    "quando",
+    "como",
+    "onde",
+    "quanto",
+    "tempo",
+    "leva",
+    "demora",
+    "reclamacao",
+    "reclamacoes",
+    "reclamar",
+    "reclamam",
+    "problema",
+    "problemas",
+    "gente",
+    "pessoas",
+    "muito",
+    "muita",
+    "mais",
+    "menos",
+    "bem",
+    "mal"
+  ]
+}

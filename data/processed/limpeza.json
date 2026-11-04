@@ -1,0 +1,196 @@
+{
+  "linhas_lidas": 259033,
+  "linhas_repetidas": 120710,
+  "manifestacoes": 138323,
+  "por_ano": {
+    "2022": 36070,
+    "2023": 35455,
+    "2024": 44791,
+    "2025": 22007
+  },
+  "servicos_distintos_originais": 1744,
+  "servicos_apos_autoridade": 1670,
+  "sem_regional": 71024,
+  "sem_orgao": 48410,
+  "nao_classificados": 2136,
+  "siglas_fora_da_lista": [
+    [
+      "DITR",
+      9
+    ],
+    [
+      "SUCOR-COMAMS",
+      9
+    ],
+    [
+      "SUCOM",
+      7
+    ],
+    [
+      "SUMOBM-MOB",
+      1
+    ]
+  ],
+  "nao_classificados_exemplos": [
+    [
+      "(sem serviço informado)",
+      579
+    ],
+    [
+      "Mapeamento de Áreas de Atuação de Flanelinhas em Vias Públicas",
+      48
+    ],
+    [
+      "Disponibilização de Documentos Referentes a Notificações",
+      47
+    ],
+    [
+      "Tratamento em Reabilitação",
+      45
+    ],
+    [
+      "Informação Preliminar/Esclarecimento",
+      44
+    ],
+    [
+      "Fiação em Situação Irregular",
+      44
+    ],
+    [
+      "Consulta On-line: Sintomas Respiratórios",
+      41
+    ],
+    [
+      "Projeto de Revitalização",
+      40
+    ],
+    [
+      "Emissão de Atestados Funcionais e Declarações Diversas",
+      37
+    ],
+    [
+      "Alfabetização e letramento",
+      35
+    ],
+    [
+      "Orientação para Construção ou Reforma de Passeio",
+      35
+    ],
+    [
+      "Emissão de Documentos Digitais de Edificação",
+      32
+    ],
+    [
+      "Sarjeta - Manutenção",
+      29
+    ],
+    [
+      "Verificação de Origem de Lote",
+      29
+    ],
+    [
+      "Atualização Cadastral de Informação Urbanística",
+      28
+    ],
+    [
+      "Via Pública - Desobstrução",
+      25
+    ],
+    [
+      "Solicitação de Informe de Rendimentos  - Casos Específicos",
+      25
+    ],
+    [
+      "Credenciamento em Atividade de Comercialização de Bebidas em Veículo de Tração Humana em Manifestações Espontâneas - Caixeiro",
+      22
+    ],
+    [
+      "Unidades de Recebimento de Pequenos Volumes - URPVs - Informação",
+      22
+    ],
+    [
+      "Processos: Consultas - Imóveis e obras",
+      21
+    ],
+    [
+      "Programa Locação Social",
+      21
+    ],
+    [
+      "Validação de Atestado",
+      20
+    ],
+    [
+      "Emissão de 2ª Via da Declaração de Rendimentos",
+      20
+    ],
+    [
+      "Exoneração a Pedido",
+      19
+    ],
+    [
+      "Vistoria de Obra de Edificação",
+      18
+    ],
+    [
+      "Inscrição Municipal de Pessoa Jurídica - Acerto de Dados Cadastrais devido a problema no processamento da REDESIM",
+      18
+    ],
+    [
+      "Requisição De Notificação de Receita das Listas – A – e – C3 – (talidomida)",
+      18
+    ],
+    [
+      "Centro de Referência da População de Rua - Adulto",
+      16
+    ],
+    [
+      "Anuência do Município para Retificação ou Revisão de Área",
+      16
+    ],
+    [
+      "Redução de Jornada",
+      15
+    ],
+    [
+      "Verificação de Geometria de Lote",
+      15
+    ],
+    [
+      "Conversão da Autuação em Advertência",
+      14
+    ],
+    [
+      "Programa Maior Cuidado - Atenção Socioassistencial à pessoa idosa no domicílio",
+      14
+    ],
+    [
+      "Atendimento às pessoas com HIV/AIDS e Hepatites Virais - Informação",
+      12
+    ],
+    [
+      "Fornecimento de Óculos na Rede SUS-BH",
+      12
+    ],
+    [
+      "Desapropriação de Imóvel",
+      11
+    ],
+    [
+      "Imóveis Públicos Municipais – Identificação",
+      11
+    ],
+    [
+      "Sarjeta - Implantação",
+      11
+    ],
+    [
+      "Avaliação pedagógica",
+      11
+    ],
+    [
+      "Cômputo de Tempo de Contribuição/ Serviço Municipal",
+      11
+    ]
+  ]
+}

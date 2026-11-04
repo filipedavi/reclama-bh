@@ -1,0 +1,3626 @@
+{
+  "NI": {
+    "nome": "Não informada",
+    "n": 71024,
+    "encerradas": 62851,
+    "em_andamento": 8173,
+    "suficiente": true,
+    "pct_atendida": 31.9,
+    "pct_orientacao": 40.0,
+    "pct_arquivada": 24.3,
+    "pct_outra": 3.8,
+    "pct_no_prazo": 81.8,
+    "pct_critico": 7.3,
+    "mediana_dias": 11,
+    "p90_dias": 48,
+    "por_ano": {
+      "2022": {
+        "n": 14270,
+        "encerradas": 12808,
+        "em_andamento": 1462,
+        "suficiente": true,
+        "pct_atendida": 35.0,
+        "pct_orientacao": 36.7,
+        "pct_arquivada": 25.1,
+        "pct_outra": 3.2,
+        "pct_no_prazo": 78.3,
+        "pct_critico": 9.7,
+        "mediana_dias": 15.0,
+        "p90_dias": 59
+      },
+      "2023": {
+        "n": 35455,
+        "encerradas": 30770,
+        "em_andamento": 4685,
+        "suficiente": true,
+        "pct_atendida": 26.5,
+        "pct_orientacao": 46.7,
+        "pct_arquivada": 21.9,
+        "pct_outra": 4.9,
+        "pct_no_prazo": 79.9,
+        "pct_critico": 8.3,
+        "mediana_dias": 11.0,
+        "p90_dias": 52
+      },
+      "2024": {
+        "n": 14090,
+        "encerradas": 12965,
+        "em_andamento": 1125,
+        "suficiente": true,
+        "pct_atendida": 37.3,
+        "pct_orientacao": 31.4,
+        "pct_arquivada": 29.1,
+        "pct_outra": 2.2,
+        "pct_no_prazo": 85.9,
+        "pct_critico": 4.8,
+        "mediana_dias": 9,
+        "p90_dias": 37
+      },
+      "2025": {
+        "n": 7209,
+        "encerradas": 6308,
+        "em_andamento": 901,
+        "suficiente": true,
+        "pct_atendida": 40.8,
+        "pct_orientacao": 32.2,
+        "pct_arquivada": 24.4,
+        "pct_outra": 2.6,
+        "pct_no_prazo": 90.5,
+        "pct_critico": 2.8,
+        "mediana_dias": 8.0,
+        "p90_dias": 29
+      }
+    },
+    "temas": {
+      "SAU": {
+        "n": 17298,
+        "encerradas": 15104,
+        "em_andamento": 2194,
+        "suficiente": true,
+        "pct_atendida": 27.2,
+        "pct_orientacao": 57.7,
+        "pct_arquivada": 14.5,
+        "pct_outra": 0.7,
+        "pct_no_prazo": 83.1,
+        "pct_critico": 7.2,
+        "mediana_dias": 12.0,
+        "p90_dias": 47
+      },
+      "ARV": {
+        "n": 4273,
+        "encerradas": 2823,
+        "em_andamento": 1450,
+        "suficiente": true,
+        "pct_atendida": 44.9,
+        "pct_orientacao": 27.0,
+        "pct_arquivada": 24.4,
+        "pct_outra": 3.7,
+        "pct_no_prazo": 57.4,
+        "pct_critico": 30.5,
+        "mediana_dias": 21,
+        "p90_dias": 146
+      },
+      "LIM": {
+        "n": 1571,
+        "encerradas": 1474,
+        "em_andamento": 97,
+        "suficiente": true,
+        "pct_atendida": 29.9,
+        "pct_orientacao": 18.0,
+        "pct_arquivada": 50.3,
+        "pct_outra": 1.8,
+        "pct_no_prazo": 82.7,
+        "pct_critico": 6.7,
+        "mediana_dias": 5.0,
+        "p90_dias": 48
+      },
+      "TRA": {
+        "n": 8133,
+        "encerradas": 7669,
+        "em_andamento": 464,
+        "suficiente": true,
+        "pct_atendida": 26.5,
+        "pct_orientacao": 37.4,
+        "pct_arquivada": 34.4,
+        "pct_outra": 1.7,
+        "pct_no_prazo": 85.7,
+        "pct_critico": 5.6,
+        "mediana_dias": 7,
+        "p90_dias": 42
+      },
+      "TRI": {
+        "n": 8832,
+        "encerradas": 8237,
+        "em_andamento": 595,
+        "suficiente": true,
+        "pct_atendida": 32.3,
+        "pct_orientacao": 40.8,
+        "pct_arquivada": 25.0,
+        "pct_outra": 2.0,
+        "pct_no_prazo": 84.4,
+        "pct_critico": 4.9,
+        "mediana_dias": 11,
+        "p90_dias": 40
+      },
+      "SER": {
+        "n": 9424,
+        "encerradas": 8796,
+        "em_andamento": 628,
+        "suficiente": true,
+        "pct_atendida": 28.9,
+        "pct_orientacao": 32.3,
+        "pct_arquivada": 22.3,
+        "pct_outra": 16.6,
+        "pct_no_prazo": 88.0,
+        "pct_critico": 3.0,
+        "mediana_dias": 9.0,
+        "p90_dias": 33
+      },
+      "OUT": {
+        "n": 1694,
+        "encerradas": 1546,
+        "em_andamento": 148,
+        "suficiente": true,
+        "pct_atendida": 29.1,
+        "pct_orientacao": 35.8,
+        "pct_arquivada": 34.0,
+        "pct_outra": 1.1,
+        "pct_no_prazo": 91.8,
+        "pct_critico": 2.4,
+        "mediana_dias": 5.0,
+        "p90_dias": 28
+      },
+      "FIS": {
+        "n": 8761,
+        "encerradas": 7978,
+        "em_andamento": 783,
+        "suficiente": true,
+        "pct_atendida": 40.2,
+        "pct_orientacao": 30.4,
+        "pct_arquivada": 28.8,
+        "pct_outra": 0.6,
+        "pct_no_prazo": 76.9,
+        "pct_critico": 7.1,
+        "mediana_dias": 14.0,
+        "p90_dias": 50
+      },
+      "URB": {
+        "n": 1341,
+        "encerradas": 1280,
+        "em_andamento": 61,
+        "suficiente": true,
+        "pct_atendida": 49.5,
+        "pct_orientacao": 36.7,
+        "pct_arquivada": 12.8,
+        "pct_outra": 1.0,
+        "pct_no_prazo": 89.0,
+        "pct_critico": 2.7,
+        "mediana_dias": 12.0,
+        "p90_dias": 32
+      },
+      "ANI": {
+        "n": 2266,
+        "encerradas": 2087,
+        "em_andamento": 179,
+        "suficiente": true,
+        "pct_atendida": 29.3,
+        "pct_orientacao": 51.1,
+        "pct_arquivada": 19.3,
+        "pct_outra": 0.3,
+        "pct_no_prazo": 84.5,
+        "pct_critico": 6.0,
+        "mediana_dias": 9,
+        "p90_dias": 42
+      },
+      "VIA": {
+        "n": 3461,
+        "encerradas": 2277,
+        "em_andamento": 1184,
+        "suficiente": true,
+        "pct_atendida": 33.0,
+        "pct_orientacao": 30.7,
+        "pct_arquivada": 35.7,
+        "pct_outra": 0.7,
+        "pct_no_prazo": 67.6,
+        "pct_critico": 20.3,
+        "mediana_dias": 14,
+        "p90_dias": 124
+      },
+      "SOC": {
+        "n": 1589,
+        "encerradas": 1291,
+        "em_andamento": 298,
+        "suficiente": true,
+        "pct_atendida": 25.0,
+        "pct_orientacao": 26.8,
+        "pct_arquivada": 32.6,
+        "pct_outra": 15.6,
+        "pct_no_prazo": 71.6,
+        "pct_critico": 10.5,
+        "mediana_dias": 14,
+        "p90_dias": 63
+      },
+      "ILU": {
+        "n": 340,
+        "encerradas": 317,
+        "em_andamento": 23,
+        "suficiente": true,
+        "pct_atendida": 42.9,
+        "pct_orientacao": 24.9,
+        "pct_arquivada": 30.0,
+        "pct_outra": 2.2,
+        "pct_no_prazo": 84.5,
+        "pct_critico": 8.5,
+        "mediana_dias": 9,
+        "p90_dias": 49
+      },
+      "CUL": {
+        "n": 383,
+        "encerradas": 350,
+        "em_andamento": 33,
+        "suficiente": true,
+        "pct_atendida": 62.9,
+        "pct_orientacao": 31.7,
+        "pct_arquivada": 4.0,
+        "pct_outra": 1.4,
+        "pct_no_prazo": 90.0,
+        "pct_critico": 4.0,
+        "mediana_dias": 2.0,
+        "p90_dias": 32
+      },
+      "EDU": {
+        "n": 1439,
+        "encerradas": 1415,
+        "em_andamento": 24,
+        "suficiente": true,
+        "pct_atendida": 40.9,
+        "pct_orientacao": 35.5,
+        "pct_arquivada": 17.8,
+        "pct_outra": 5.8,
+        "pct_no_prazo": 77.6,
+        "pct_critico": 2.8,
+        "mediana_dias": 20,
+        "p90_dias": 41
+      },
+      "DES": {
+        "n": 115,
+        "encerradas": 105,
+        "em_andamento": 10,
+        "suficiente": true,
+        "pct_atendida": 41.9,
+        "pct_orientacao": 41.9,
+        "pct_arquivada": 15.2,
+        "pct_outra": 1.0,
+        "pct_no_prazo": 82.9,
+        "pct_critico": 3.8,
+        "mediana_dias": 14,
+        "p90_dias": 39
+      },
+      "CON": {
+        "n": 104,
+        "encerradas": 102,
+        "em_andamento": 2,
+        "suficiente": true,
+        "pct_atendida": 33.3,
+        "pct_orientacao": 54.9,
+        "pct_arquivada": 11.8,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 95.1,
+        "pct_critico": 1.0,
+        "mediana_dias": 6.5,
+        "p90_dias": 20
+      }
+    },
+    "servicos": [
+      {
+        "id": "consulta-medica-saude-familia-comunidade",
+        "n": 5916
+      },
+      {
+        "id": "comunicacao-irregularidade",
+        "n": 2658
+      },
+      {
+        "id": "denuncia-servidores-municipais",
+        "n": 2434
+      },
+      {
+        "id": "orientacao-processos-servicos-receita-municipal",
+        "n": 2257
+      },
+      {
+        "id": "reclamacao-onibus-transporte-coletivo",
+        "n": 1744
+      },
+      {
+        "id": "gestao-administrativa",
+        "n": 1620
+      },
+      {
+        "id": "arvore-poda-arvore-passeios-pracas-etc",
+        "n": 1528
+      },
+      {
+        "id": "equipes-complementares",
+        "n": 1504
+      },
+      {
+        "id": "servidor-publico",
+        "n": 1491
+      },
+      {
+        "id": "poluicao-sonora-fiscalizacao",
+        "n": 1216
+      },
+      {
+        "id": "vacinacao",
+        "n": 1202
+      },
+      {
+        "id": "normas-procedimentos-unidades-saude",
+        "n": 1120
+      },
+      {
+        "id": "obra-andamento-irregular-fiscalizacao",
+        "n": 1075
+      },
+      {
+        "id": "arvore-corte-ou-supressao-arvore-passeios-pracas-etc",
+        "n": 978
+      },
+      {
+        "id": "iptu-revisao",
+        "n": 898
+      }
+    ]
+  },
+  "CS": {
+    "nome": "Centro-Sul",
+    "n": 18758,
+    "encerradas": 16901,
+    "em_andamento": 1857,
+    "suficiente": true,
+    "pct_atendida": 40.1,
+    "pct_orientacao": 31.1,
+    "pct_arquivada": 25.4,
+    "pct_outra": 3.4,
+    "pct_no_prazo": 84.4,
+    "pct_critico": 6.4,
+    "mediana_dias": 9,
+    "p90_dias": 43,
+    "por_ano": {
+      "2022": {
+        "n": 8079,
+        "encerradas": 7456,
+        "em_andamento": 623,
+        "suficiente": true,
+        "pct_atendida": 35.0,
+        "pct_orientacao": 31.8,
+        "pct_arquivada": 29.8,
+        "pct_outra": 3.3,
+        "pct_no_prazo": 80.2,
+        "pct_critico": 9.5,
+        "mediana_dias": 12.0,
+        "p90_dias": 58
+      },
+      "2024": {
+        "n": 7692,
+        "encerradas": 6829,
+        "em_andamento": 863,
+        "suficiente": true,
+        "pct_atendida": 42.0,
+        "pct_orientacao": 33.0,
+        "pct_arquivada": 21.0,
+        "pct_outra": 4.0,
+        "pct_no_prazo": 85.8,
+        "pct_critico": 4.7,
+        "mediana_dias": 9,
+        "p90_dias": 37
+      },
+      "2025": {
+        "n": 2987,
+        "encerradas": 2616,
+        "em_andamento": 371,
+        "suficiente": true,
+        "pct_atendida": 49.7,
+        "pct_orientacao": 24.4,
+        "pct_arquivada": 24.0,
+        "pct_outra": 1.9,
+        "pct_no_prazo": 92.8,
+        "pct_critico": 2.3,
+        "mediana_dias": 7.0,
+        "p90_dias": 26
+      }
+    },
+    "temas": {
+      "TRI": {
+        "n": 1088,
+        "encerradas": 1000,
+        "em_andamento": 88,
+        "suficiente": true,
+        "pct_atendida": 27.1,
+        "pct_orientacao": 43.9,
+        "pct_arquivada": 28.5,
+        "pct_outra": 0.5,
+        "pct_no_prazo": 85.4,
+        "pct_critico": 5.3,
+        "mediana_dias": 9.5,
+        "p90_dias": 40
+      },
+      "SER": {
+        "n": 4611,
+        "encerradas": 4367,
+        "em_andamento": 244,
+        "suficiente": true,
+        "pct_atendida": 43.4,
+        "pct_orientacao": 29.2,
+        "pct_arquivada": 18.5,
+        "pct_outra": 8.9,
+        "pct_no_prazo": 85.4,
+        "pct_critico": 4.6,
+        "mediana_dias": 8,
+        "p90_dias": 38
+      },
+      "SAU": {
+        "n": 4452,
+        "encerradas": 4325,
+        "em_andamento": 127,
+        "suficiente": true,
+        "pct_atendida": 54.0,
+        "pct_orientacao": 28.2,
+        "pct_arquivada": 17.3,
+        "pct_outra": 0.4,
+        "pct_no_prazo": 88.3,
+        "pct_critico": 4.4,
+        "mediana_dias": 10,
+        "p90_dias": 33
+      },
+      "FIS": {
+        "n": 1980,
+        "encerradas": 1827,
+        "em_andamento": 153,
+        "suficiente": true,
+        "pct_atendida": 40.6,
+        "pct_orientacao": 25.5,
+        "pct_arquivada": 32.3,
+        "pct_outra": 1.6,
+        "pct_no_prazo": 80.5,
+        "pct_critico": 6.9,
+        "mediana_dias": 13,
+        "p90_dias": 49
+      },
+      "VIA": {
+        "n": 636,
+        "encerradas": 392,
+        "em_andamento": 244,
+        "suficiente": true,
+        "pct_atendida": 23.0,
+        "pct_orientacao": 27.3,
+        "pct_arquivada": 48.0,
+        "pct_outra": 1.8,
+        "pct_no_prazo": 78.3,
+        "pct_critico": 10.2,
+        "mediana_dias": 8.0,
+        "p90_dias": 62
+      },
+      "ANI": {
+        "n": 283,
+        "encerradas": 265,
+        "em_andamento": 18,
+        "suficiente": true,
+        "pct_atendida": 41.9,
+        "pct_orientacao": 32.1,
+        "pct_arquivada": 26.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 80.8,
+        "pct_critico": 3.8,
+        "mediana_dias": 11,
+        "p90_dias": 43
+      },
+      "SOC": {
+        "n": 2115,
+        "encerradas": 1606,
+        "em_andamento": 509,
+        "suficiente": true,
+        "pct_atendida": 15.0,
+        "pct_orientacao": 27.6,
+        "pct_arquivada": 52.6,
+        "pct_outra": 4.9,
+        "pct_no_prazo": 73.6,
+        "pct_critico": 16.2,
+        "mediana_dias": 10.0,
+        "p90_dias": 101
+      },
+      "LIM": {
+        "n": 339,
+        "encerradas": 317,
+        "em_andamento": 22,
+        "suficiente": true,
+        "pct_atendida": 29.3,
+        "pct_orientacao": 24.6,
+        "pct_arquivada": 45.1,
+        "pct_outra": 0.9,
+        "pct_no_prazo": 79.5,
+        "pct_critico": 11.4,
+        "mediana_dias": 6,
+        "p90_dias": 71
+      },
+      "ARV": {
+        "n": 790,
+        "encerradas": 466,
+        "em_andamento": 324,
+        "suficiente": true,
+        "pct_atendida": 45.5,
+        "pct_orientacao": 27.5,
+        "pct_arquivada": 24.5,
+        "pct_outra": 2.6,
+        "pct_no_prazo": 67.6,
+        "pct_critico": 21.7,
+        "mediana_dias": 13.0,
+        "p90_dias": 130
+      },
+      "TRA": {
+        "n": 918,
+        "encerradas": 865,
+        "em_andamento": 53,
+        "suficiente": true,
+        "pct_atendida": 25.4,
+        "pct_orientacao": 40.3,
+        "pct_arquivada": 32.8,
+        "pct_outra": 1.4,
+        "pct_no_prazo": 88.8,
+        "pct_critico": 3.9,
+        "mediana_dias": 7,
+        "p90_dias": 33
+      },
+      "OUT": {
+        "n": 619,
+        "encerradas": 592,
+        "em_andamento": 27,
+        "suficiente": true,
+        "pct_atendida": 29.7,
+        "pct_orientacao": 56.6,
+        "pct_arquivada": 13.3,
+        "pct_outra": 0.3,
+        "pct_no_prazo": 94.9,
+        "pct_critico": 1.9,
+        "mediana_dias": 3.0,
+        "p90_dias": 21
+      },
+      "EDU": {
+        "n": 331,
+        "encerradas": 322,
+        "em_andamento": 9,
+        "suficiente": true,
+        "pct_atendida": 38.5,
+        "pct_orientacao": 35.7,
+        "pct_arquivada": 22.4,
+        "pct_outra": 3.4,
+        "pct_no_prazo": 85.7,
+        "pct_critico": 3.7,
+        "mediana_dias": 15.0,
+        "p90_dias": 34
+      },
+      "URB": {
+        "n": 197,
+        "encerradas": 190,
+        "em_andamento": 7,
+        "suficiente": true,
+        "pct_atendida": 47.4,
+        "pct_orientacao": 35.3,
+        "pct_arquivada": 16.8,
+        "pct_outra": 0.5,
+        "pct_no_prazo": 89.5,
+        "pct_critico": 0.5,
+        "mediana_dias": 11.5,
+        "p90_dias": 32
+      },
+      "CON": {
+        "n": 72,
+        "encerradas": 70,
+        "em_andamento": 2,
+        "suficiente": true,
+        "pct_atendida": 24.3,
+        "pct_orientacao": 64.3,
+        "pct_arquivada": 10.0,
+        "pct_outra": 1.4,
+        "pct_no_prazo": 100.0,
+        "pct_critico": 0.0,
+        "mediana_dias": 4.0,
+        "p90_dias": 14
+      },
+      "DES": {
+        "n": 21,
+        "encerradas": 18,
+        "em_andamento": 3,
+        "suficiente": false,
+        "pct_atendida": 44.4,
+        "pct_orientacao": 44.4,
+        "pct_arquivada": 11.1,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 94.4,
+        "pct_critico": 0.0,
+        "mediana_dias": 13.0,
+        "p90_dias": 23
+      },
+      "ILU": {
+        "n": 38,
+        "encerradas": 35,
+        "em_andamento": 3,
+        "suficiente": true,
+        "pct_atendida": 37.1,
+        "pct_orientacao": 25.7,
+        "pct_arquivada": 34.3,
+        "pct_outra": 2.9,
+        "pct_no_prazo": 85.7,
+        "pct_critico": 14.3,
+        "mediana_dias": 12,
+        "p90_dias": 91
+      },
+      "CUL": {
+        "n": 268,
+        "encerradas": 244,
+        "em_andamento": 24,
+        "suficiente": true,
+        "pct_atendida": 56.1,
+        "pct_orientacao": 38.9,
+        "pct_arquivada": 3.3,
+        "pct_outra": 1.6,
+        "pct_no_prazo": 95.9,
+        "pct_critico": 1.2,
+        "mediana_dias": 15.0,
+        "p90_dias": 23
+      }
+    },
+    "servicos": [
+      {
+        "id": "gestao-administrativa",
+        "n": 1523
+      },
+      {
+        "id": "programa-assistencia-social",
+        "n": 1214
+      },
+      {
+        "id": "processo-seletivo-concurso",
+        "n": 911
+      },
+      {
+        "id": "comunicacao-irregularidade",
+        "n": 876
+      },
+      {
+        "id": "consulta-medica-saude-familia-comunidade",
+        "n": 684
+      },
+      {
+        "id": "denuncias-violacao-direitos-humanos",
+        "n": 612
+      },
+      {
+        "id": "cirurgia",
+        "n": 552
+      },
+      {
+        "id": "vacinacao",
+        "n": 468
+      },
+      {
+        "id": "normas-procedimentos-unidades-saude",
+        "n": 391
+      },
+      {
+        "id": "nao-competencia-pbh",
+        "n": 383
+      },
+      {
+        "id": "atendimento-servidor",
+        "n": 336
+      },
+      {
+        "id": "orientacao-processos-servicos-receita-municipal",
+        "n": 292
+      },
+      {
+        "id": "arvore-poda-arvore-passeios-pracas-etc",
+        "n": 292
+      },
+      {
+        "id": "denuncia-servidores-municipais",
+        "n": 283
+      },
+      {
+        "id": "gestao-sistemas-ti",
+        "n": 276
+      }
+    ]
+  },
+  "NO": {
+    "nome": "Noroeste",
+    "n": 6884,
+    "encerradas": 5676,
+    "em_andamento": 1208,
+    "suficiente": true,
+    "pct_atendida": 45.1,
+    "pct_orientacao": 29.5,
+    "pct_arquivada": 20.9,
+    "pct_outra": 4.5,
+    "pct_no_prazo": 82.8,
+    "pct_critico": 7.8,
+    "mediana_dias": 10.0,
+    "p90_dias": 48,
+    "por_ano": {
+      "2022": {
+        "n": 1957,
+        "encerradas": 1787,
+        "em_andamento": 170,
+        "suficiente": true,
+        "pct_atendida": 39.8,
+        "pct_orientacao": 34.4,
+        "pct_arquivada": 21.4,
+        "pct_outra": 4.5,
+        "pct_no_prazo": 78.7,
+        "pct_critico": 8.2,
+        "mediana_dias": 15,
+        "p90_dias": 54
+      },
+      "2024": {
+        "n": 3283,
+        "encerradas": 2666,
+        "em_andamento": 617,
+        "suficiente": true,
+        "pct_atendida": 45.6,
+        "pct_orientacao": 29.4,
+        "pct_arquivada": 19.2,
+        "pct_outra": 5.7,
+        "pct_no_prazo": 82.1,
+        "pct_critico": 8.6,
+        "mediana_dias": 9.0,
+        "p90_dias": 53
+      },
+      "2025": {
+        "n": 1644,
+        "encerradas": 1223,
+        "em_andamento": 421,
+        "suficiente": true,
+        "pct_atendida": 51.6,
+        "pct_orientacao": 22.4,
+        "pct_arquivada": 24.0,
+        "pct_outra": 2.0,
+        "pct_no_prazo": 90.5,
+        "pct_critico": 5.2,
+        "mediana_dias": 7,
+        "p90_dias": 30
+      }
+    },
+    "temas": {
+      "FIS": {
+        "n": 810,
+        "encerradas": 754,
+        "em_andamento": 56,
+        "suficiente": true,
+        "pct_atendida": 43.1,
+        "pct_orientacao": 22.5,
+        "pct_arquivada": 34.0,
+        "pct_outra": 0.4,
+        "pct_no_prazo": 82.9,
+        "pct_critico": 4.9,
+        "mediana_dias": 11.0,
+        "p90_dias": 41
+      },
+      "SAU": {
+        "n": 2353,
+        "encerradas": 2288,
+        "em_andamento": 65,
+        "suficiente": true,
+        "pct_atendida": 58.1,
+        "pct_orientacao": 29.6,
+        "pct_arquivada": 11.6,
+        "pct_outra": 0.7,
+        "pct_no_prazo": 91.3,
+        "pct_critico": 2.6,
+        "mediana_dias": 9.0,
+        "p90_dias": 28
+      },
+      "ARV": {
+        "n": 423,
+        "encerradas": 280,
+        "em_andamento": 143,
+        "suficiente": true,
+        "pct_atendida": 31.4,
+        "pct_orientacao": 39.3,
+        "pct_arquivada": 24.6,
+        "pct_outra": 4.6,
+        "pct_no_prazo": 56.8,
+        "pct_critico": 27.5,
+        "mediana_dias": 23.0,
+        "p90_dias": 111
+      },
+      "SER": {
+        "n": 741,
+        "encerradas": 678,
+        "em_andamento": 63,
+        "suficiente": true,
+        "pct_atendida": 44.5,
+        "pct_orientacao": 25.2,
+        "pct_arquivada": 16.4,
+        "pct_outra": 13.9,
+        "pct_no_prazo": 88.3,
+        "pct_critico": 3.4,
+        "mediana_dias": 10.0,
+        "p90_dias": 33
+      },
+      "TRA": {
+        "n": 311,
+        "encerradas": 288,
+        "em_andamento": 23,
+        "suficiente": true,
+        "pct_atendida": 25.0,
+        "pct_orientacao": 37.8,
+        "pct_arquivada": 35.4,
+        "pct_outra": 1.7,
+        "pct_no_prazo": 79.5,
+        "pct_critico": 8.0,
+        "mediana_dias": 8.0,
+        "p90_dias": 51
+      },
+      "VIA": {
+        "n": 299,
+        "encerradas": 182,
+        "em_andamento": 117,
+        "suficiente": true,
+        "pct_atendida": 18.7,
+        "pct_orientacao": 19.8,
+        "pct_arquivada": 61.0,
+        "pct_outra": 0.5,
+        "pct_no_prazo": 80.2,
+        "pct_critico": 13.2,
+        "mediana_dias": 4.0,
+        "p90_dias": 82
+      },
+      "URB": {
+        "n": 72,
+        "encerradas": 69,
+        "em_andamento": 3,
+        "suficiente": true,
+        "pct_atendida": 53.6,
+        "pct_orientacao": 34.8,
+        "pct_arquivada": 11.6,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 95.7,
+        "pct_critico": 1.4,
+        "mediana_dias": 10,
+        "p90_dias": 25
+      },
+      "OUT": {
+        "n": 85,
+        "encerradas": 76,
+        "em_andamento": 9,
+        "suficiente": true,
+        "pct_atendida": 26.3,
+        "pct_orientacao": 36.8,
+        "pct_arquivada": 32.9,
+        "pct_outra": 3.9,
+        "pct_no_prazo": 98.7,
+        "pct_critico": 0.0,
+        "mediana_dias": 5.0,
+        "p90_dias": 20
+      },
+      "SOC": {
+        "n": 997,
+        "encerradas": 325,
+        "em_andamento": 672,
+        "suficiente": true,
+        "pct_atendida": 29.5,
+        "pct_orientacao": 30.2,
+        "pct_arquivada": 6.8,
+        "pct_outra": 33.5,
+        "pct_no_prazo": 27.4,
+        "pct_critico": 51.1,
+        "mediana_dias": 63,
+        "p90_dias": 157
+      },
+      "TRI": {
+        "n": 247,
+        "encerradas": 225,
+        "em_andamento": 22,
+        "suficiente": true,
+        "pct_atendida": 30.2,
+        "pct_orientacao": 44.9,
+        "pct_arquivada": 24.4,
+        "pct_outra": 0.4,
+        "pct_no_prazo": 88.0,
+        "pct_critico": 1.3,
+        "mediana_dias": 8,
+        "p90_dias": 33
+      },
+      "LIM": {
+        "n": 188,
+        "encerradas": 171,
+        "em_andamento": 17,
+        "suficiente": true,
+        "pct_atendida": 22.8,
+        "pct_orientacao": 19.9,
+        "pct_arquivada": 55.6,
+        "pct_outra": 1.8,
+        "pct_no_prazo": 81.3,
+        "pct_critico": 9.9,
+        "mediana_dias": 5,
+        "p90_dias": 59
+      },
+      "EDU": {
+        "n": 129,
+        "encerradas": 126,
+        "em_andamento": 3,
+        "suficiente": true,
+        "pct_atendida": 45.2,
+        "pct_orientacao": 38.1,
+        "pct_arquivada": 11.9,
+        "pct_outra": 4.8,
+        "pct_no_prazo": 84.1,
+        "pct_critico": 0.0,
+        "mediana_dias": 17.0,
+        "p90_dias": 35
+      },
+      "ANI": {
+        "n": 159,
+        "encerradas": 155,
+        "em_andamento": 4,
+        "suficiente": true,
+        "pct_atendida": 43.2,
+        "pct_orientacao": 28.4,
+        "pct_arquivada": 27.7,
+        "pct_outra": 0.6,
+        "pct_no_prazo": 86.5,
+        "pct_critico": 3.2,
+        "mediana_dias": 10,
+        "p90_dias": 36
+      },
+      "ILU": {
+        "n": 38,
+        "encerradas": 36,
+        "em_andamento": 2,
+        "suficiente": true,
+        "pct_atendida": 44.4,
+        "pct_orientacao": 27.8,
+        "pct_arquivada": 25.0,
+        "pct_outra": 2.8,
+        "pct_no_prazo": 86.1,
+        "pct_critico": 5.6,
+        "mediana_dias": 7.0,
+        "p90_dias": 35
+      },
+      "CUL": {
+        "n": 26,
+        "encerradas": 18,
+        "em_andamento": 8,
+        "suficiente": false,
+        "pct_atendida": 33.3,
+        "pct_orientacao": 55.6,
+        "pct_arquivada": 5.6,
+        "pct_outra": 5.6,
+        "pct_no_prazo": 66.7,
+        "pct_critico": 16.7,
+        "mediana_dias": 10.5,
+        "p90_dias": 114
+      },
+      "CON": {
+        "n": 2,
+        "encerradas": 2,
+        "em_andamento": 0,
+        "suficiente": false,
+        "pct_atendida": 0.0,
+        "pct_orientacao": 100.0,
+        "pct_arquivada": 0.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 100.0,
+        "pct_critico": 0.0,
+        "mediana_dias": 3.5,
+        "p90_dias": 6
+      },
+      "DES": {
+        "n": 4,
+        "encerradas": 3,
+        "em_andamento": 1,
+        "suficiente": false,
+        "pct_atendida": 66.7,
+        "pct_orientacao": 0.0,
+        "pct_arquivada": 33.3,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 100.0,
+        "pct_critico": 0.0,
+        "mediana_dias": 11,
+        "p90_dias": 22
+      }
+    },
+    "servicos": [
+      {
+        "id": "denuncias-violacao-direitos-humanos",
+        "n": 922
+      },
+      {
+        "id": "consulta-medica-saude-familia-comunidade",
+        "n": 502
+      },
+      {
+        "id": "normas-procedimentos-unidades-saude",
+        "n": 295
+      },
+      {
+        "id": "comunicacao-irregularidade",
+        "n": 291
+      },
+      {
+        "id": "cirurgia",
+        "n": 202
+      },
+      {
+        "id": "gestao-administrativa",
+        "n": 193
+      },
+      {
+        "id": "denuncia-servidores-municipais",
+        "n": 162
+      },
+      {
+        "id": "marcacao-exame",
+        "n": 143
+      },
+      {
+        "id": "arvore-poda-arvore-passeios-pracas-etc",
+        "n": 133
+      },
+      {
+        "id": "servidor-publico",
+        "n": 122
+      },
+      {
+        "id": "atendimento-recepcao-unidades-saude",
+        "n": 118
+      },
+      {
+        "id": "atendimento-hospitalar",
+        "n": 112
+      },
+      {
+        "id": "disponibilidade-profissionais-unidades-saude",
+        "n": 103
+      },
+      {
+        "id": "arvore-corte-ou-supressao-arvore-passeios-pracas-etc",
+        "n": 98
+      },
+      {
+        "id": "estabelecimento-sem-licenca-ou-irregular-comercio-servico-industria-fiscalizacao",
+        "n": 96
+      }
+    ]
+  },
+  "NE": {
+    "nome": "Nordeste",
+    "n": 6183,
+    "encerradas": 5093,
+    "em_andamento": 1090,
+    "suficiente": true,
+    "pct_atendida": 45.5,
+    "pct_orientacao": 28.8,
+    "pct_arquivada": 20.4,
+    "pct_outra": 5.2,
+    "pct_no_prazo": 82.4,
+    "pct_critico": 8.3,
+    "mediana_dias": 11,
+    "p90_dias": 50,
+    "por_ano": {
+      "2022": {
+        "n": 1699,
+        "encerradas": 1561,
+        "em_andamento": 138,
+        "suficiente": true,
+        "pct_atendida": 40.5,
+        "pct_orientacao": 35.6,
+        "pct_arquivada": 20.4,
+        "pct_outra": 3.5,
+        "pct_no_prazo": 77.1,
+        "pct_critico": 9.7,
+        "mediana_dias": 17,
+        "p90_dias": 57
+      },
+      "2024": {
+        "n": 2942,
+        "encerradas": 2395,
+        "em_andamento": 547,
+        "suficiente": true,
+        "pct_atendida": 44.3,
+        "pct_orientacao": 28.6,
+        "pct_arquivada": 20.3,
+        "pct_outra": 6.7,
+        "pct_no_prazo": 81.7,
+        "pct_critico": 9.5,
+        "mediana_dias": 10,
+        "p90_dias": 57
+      },
+      "2025": {
+        "n": 1542,
+        "encerradas": 1137,
+        "em_andamento": 405,
+        "suficiente": true,
+        "pct_atendida": 55.1,
+        "pct_orientacao": 19.9,
+        "pct_arquivada": 20.7,
+        "pct_outra": 4.4,
+        "pct_no_prazo": 91.4,
+        "pct_critico": 3.8,
+        "mediana_dias": 8,
+        "p90_dias": 27
+      }
+    },
+    "temas": {
+      "VIA": {
+        "n": 258,
+        "encerradas": 158,
+        "em_andamento": 100,
+        "suficiente": true,
+        "pct_atendida": 38.0,
+        "pct_orientacao": 22.8,
+        "pct_arquivada": 38.6,
+        "pct_outra": 0.6,
+        "pct_no_prazo": 72.2,
+        "pct_critico": 15.8,
+        "mediana_dias": 15.0,
+        "p90_dias": 102
+      },
+      "SER": {
+        "n": 659,
+        "encerradas": 618,
+        "em_andamento": 41,
+        "suficiente": true,
+        "pct_atendida": 45.6,
+        "pct_orientacao": 24.9,
+        "pct_arquivada": 16.5,
+        "pct_outra": 12.9,
+        "pct_no_prazo": 87.5,
+        "pct_critico": 2.8,
+        "mediana_dias": 10.0,
+        "p90_dias": 34
+      },
+      "ANI": {
+        "n": 134,
+        "encerradas": 131,
+        "em_andamento": 3,
+        "suficiente": true,
+        "pct_atendida": 47.3,
+        "pct_orientacao": 19.1,
+        "pct_arquivada": 32.8,
+        "pct_outra": 0.8,
+        "pct_no_prazo": 78.6,
+        "pct_critico": 6.9,
+        "mediana_dias": 12,
+        "p90_dias": 47
+      },
+      "SAU": {
+        "n": 2009,
+        "encerradas": 1962,
+        "em_andamento": 47,
+        "suficiente": true,
+        "pct_atendida": 57.7,
+        "pct_orientacao": 30.8,
+        "pct_arquivada": 10.8,
+        "pct_outra": 0.7,
+        "pct_no_prazo": 90.3,
+        "pct_critico": 2.8,
+        "mediana_dias": 9.0,
+        "p90_dias": 30
+      },
+      "SOC": {
+        "n": 1075,
+        "encerradas": 345,
+        "em_andamento": 730,
+        "suficiente": true,
+        "pct_atendida": 28.4,
+        "pct_orientacao": 28.4,
+        "pct_arquivada": 6.4,
+        "pct_outra": 36.8,
+        "pct_no_prazo": 25.5,
+        "pct_critico": 59.4,
+        "mediana_dias": 80,
+        "p90_dias": 207
+      },
+      "ARV": {
+        "n": 183,
+        "encerradas": 169,
+        "em_andamento": 14,
+        "suficiente": true,
+        "pct_atendida": 43.2,
+        "pct_orientacao": 23.7,
+        "pct_arquivada": 29.0,
+        "pct_outra": 4.1,
+        "pct_no_prazo": 85.2,
+        "pct_critico": 5.9,
+        "mediana_dias": 10,
+        "p90_dias": 43
+      },
+      "FIS": {
+        "n": 823,
+        "encerradas": 745,
+        "em_andamento": 78,
+        "suficiente": true,
+        "pct_atendida": 41.7,
+        "pct_orientacao": 24.8,
+        "pct_arquivada": 32.5,
+        "pct_outra": 0.9,
+        "pct_no_prazo": 82.0,
+        "pct_critico": 6.6,
+        "mediana_dias": 13,
+        "p90_dias": 47
+      },
+      "TRI": {
+        "n": 254,
+        "encerradas": 223,
+        "em_andamento": 31,
+        "suficiente": true,
+        "pct_atendida": 33.6,
+        "pct_orientacao": 42.2,
+        "pct_arquivada": 23.3,
+        "pct_outra": 0.9,
+        "pct_no_prazo": 83.4,
+        "pct_critico": 11.2,
+        "mediana_dias": 11,
+        "p90_dias": 65
+      },
+      "LIM": {
+        "n": 175,
+        "encerradas": 165,
+        "em_andamento": 10,
+        "suficiente": true,
+        "pct_atendida": 18.8,
+        "pct_orientacao": 14.5,
+        "pct_arquivada": 66.1,
+        "pct_outra": 0.6,
+        "pct_no_prazo": 89.1,
+        "pct_critico": 5.5,
+        "mediana_dias": 3,
+        "p90_dias": 32
+      },
+      "TRA": {
+        "n": 226,
+        "encerradas": 210,
+        "em_andamento": 16,
+        "suficiente": true,
+        "pct_atendida": 21.9,
+        "pct_orientacao": 33.3,
+        "pct_arquivada": 43.8,
+        "pct_outra": 1.0,
+        "pct_no_prazo": 85.7,
+        "pct_critico": 6.2,
+        "mediana_dias": 7.0,
+        "p90_dias": 45
+      },
+      "URB": {
+        "n": 40,
+        "encerradas": 38,
+        "em_andamento": 2,
+        "suficiente": true,
+        "pct_atendida": 42.1,
+        "pct_orientacao": 42.1,
+        "pct_arquivada": 13.2,
+        "pct_outra": 2.6,
+        "pct_no_prazo": 97.4,
+        "pct_critico": 0.0,
+        "mediana_dias": 11.0,
+        "p90_dias": 27
+      },
+      "OUT": {
+        "n": 75,
+        "encerradas": 71,
+        "em_andamento": 4,
+        "suficiente": true,
+        "pct_atendida": 28.2,
+        "pct_orientacao": 42.3,
+        "pct_arquivada": 26.8,
+        "pct_outra": 2.8,
+        "pct_no_prazo": 93.0,
+        "pct_critico": 1.4,
+        "mediana_dias": 4,
+        "p90_dias": 28
+      },
+      "EDU": {
+        "n": 211,
+        "encerradas": 203,
+        "em_andamento": 8,
+        "suficiente": true,
+        "pct_atendida": 44.3,
+        "pct_orientacao": 36.0,
+        "pct_arquivada": 9.4,
+        "pct_outra": 10.3,
+        "pct_no_prazo": 80.8,
+        "pct_critico": 2.0,
+        "mediana_dias": 20,
+        "p90_dias": 38
+      },
+      "ILU": {
+        "n": 48,
+        "encerradas": 44,
+        "em_andamento": 4,
+        "suficiente": true,
+        "pct_atendida": 38.6,
+        "pct_orientacao": 31.8,
+        "pct_arquivada": 29.5,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 90.9,
+        "pct_critico": 2.3,
+        "mediana_dias": 6.0,
+        "p90_dias": 30
+      },
+      "CUL": {
+        "n": 8,
+        "encerradas": 6,
+        "em_andamento": 2,
+        "suficiente": false,
+        "pct_atendida": 50.0,
+        "pct_orientacao": 50.0,
+        "pct_arquivada": 0.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 16.7,
+        "pct_critico": 0.0,
+        "mediana_dias": 35.5,
+        "p90_dias": 53
+      },
+      "DES": {
+        "n": 4,
+        "encerradas": 4,
+        "em_andamento": 0,
+        "suficiente": false,
+        "pct_atendida": 50.0,
+        "pct_orientacao": 0.0,
+        "pct_arquivada": 50.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 100.0,
+        "pct_critico": 0.0,
+        "mediana_dias": 5.0,
+        "p90_dias": 21
+      },
+      "CON": {
+        "n": 1,
+        "encerradas": 1,
+        "em_andamento": 0,
+        "suficiente": false,
+        "pct_atendida": 100.0,
+        "pct_orientacao": 0.0,
+        "pct_arquivada": 0.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 100.0,
+        "pct_critico": 0.0,
+        "mediana_dias": 8,
+        "p90_dias": 8
+      }
+    },
+    "servicos": [
+      {
+        "id": "denuncias-violacao-direitos-humanos",
+        "n": 993
+      },
+      {
+        "id": "consulta-medica-saude-familia-comunidade",
+        "n": 481
+      },
+      {
+        "id": "comunicacao-irregularidade",
+        "n": 335
+      },
+      {
+        "id": "normas-procedimentos-unidades-saude",
+        "n": 271
+      },
+      {
+        "id": "denuncia-servidores-municipais",
+        "n": 189
+      },
+      {
+        "id": "gestao-administrativa",
+        "n": 172
+      },
+      {
+        "id": "marcacao-exame",
+        "n": 132
+      },
+      {
+        "id": "disponibilidade-profissionais-unidades-saude",
+        "n": 127
+      },
+      {
+        "id": "atendimento-recepcao-unidades-saude",
+        "n": 109
+      },
+      {
+        "id": "servidor-publico",
+        "n": 107
+      },
+      {
+        "id": "equipes-complementares",
+        "n": 92
+      },
+      {
+        "id": "estabelecimento-sem-licenca-ou-irregular-comercio-servico-industria-fiscalizacao",
+        "n": 88
+      },
+      {
+        "id": "poluicao-sonora-fiscalizacao",
+        "n": 88
+      },
+      {
+        "id": "cirurgia",
+        "n": 85
+      },
+      {
+        "id": "acesso-medicamentos-farmacias-rede-municipal-saude",
+        "n": 82
+      }
+    ]
+  },
+  "LE": {
+    "nome": "Leste",
+    "n": 6326,
+    "encerradas": 5215,
+    "em_andamento": 1111,
+    "suficiente": true,
+    "pct_atendida": 45.8,
+    "pct_orientacao": 30.2,
+    "pct_arquivada": 19.7,
+    "pct_outra": 4.4,
+    "pct_no_prazo": 83.8,
+    "pct_critico": 7.2,
+    "mediana_dias": 11,
+    "p90_dias": 44,
+    "por_ano": {
+      "2022": {
+        "n": 1858,
+        "encerradas": 1602,
+        "em_andamento": 256,
+        "suficiente": true,
+        "pct_atendida": 36.5,
+        "pct_orientacao": 37.5,
+        "pct_arquivada": 22.0,
+        "pct_outra": 4.0,
+        "pct_no_prazo": 77.1,
+        "pct_critico": 9.7,
+        "mediana_dias": 16.0,
+        "p90_dias": 60
+      },
+      "2024": {
+        "n": 2936,
+        "encerradas": 2422,
+        "em_andamento": 514,
+        "suficiente": true,
+        "pct_atendida": 47.6,
+        "pct_orientacao": 30.2,
+        "pct_arquivada": 16.4,
+        "pct_outra": 5.7,
+        "pct_no_prazo": 83.6,
+        "pct_critico": 7.8,
+        "mediana_dias": 10.0,
+        "p90_dias": 46
+      },
+      "2025": {
+        "n": 1532,
+        "encerradas": 1191,
+        "em_andamento": 341,
+        "suficiente": true,
+        "pct_atendida": 54.7,
+        "pct_orientacao": 20.2,
+        "pct_arquivada": 23.1,
+        "pct_outra": 2.0,
+        "pct_no_prazo": 93.0,
+        "pct_critico": 2.4,
+        "mediana_dias": 7,
+        "p90_dias": 25
+      }
+    },
+    "temas": {
+      "FIS": {
+        "n": 853,
+        "encerradas": 791,
+        "em_andamento": 62,
+        "suficiente": true,
+        "pct_atendida": 38.4,
+        "pct_orientacao": 25.2,
+        "pct_arquivada": 35.4,
+        "pct_outra": 1.0,
+        "pct_no_prazo": 84.2,
+        "pct_critico": 5.3,
+        "mediana_dias": 11,
+        "p90_dias": 38
+      },
+      "SER": {
+        "n": 601,
+        "encerradas": 563,
+        "em_andamento": 38,
+        "suficiente": true,
+        "pct_atendida": 47.2,
+        "pct_orientacao": 28.1,
+        "pct_arquivada": 14.2,
+        "pct_outra": 10.5,
+        "pct_no_prazo": 90.9,
+        "pct_critico": 2.3,
+        "mediana_dias": 9,
+        "p90_dias": 29
+      },
+      "VIA": {
+        "n": 258,
+        "encerradas": 160,
+        "em_andamento": 98,
+        "suficiente": true,
+        "pct_atendida": 34.4,
+        "pct_orientacao": 18.8,
+        "pct_arquivada": 46.9,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 80.0,
+        "pct_critico": 11.2,
+        "mediana_dias": 9.0,
+        "p90_dias": 85
+      },
+      "SAU": {
+        "n": 2267,
+        "encerradas": 2216,
+        "em_andamento": 51,
+        "suficiente": true,
+        "pct_atendida": 58.1,
+        "pct_orientacao": 31.3,
+        "pct_arquivada": 10.1,
+        "pct_outra": 0.5,
+        "pct_no_prazo": 90.3,
+        "pct_critico": 2.5,
+        "mediana_dias": 10.0,
+        "p90_dias": 30
+      },
+      "SOC": {
+        "n": 940,
+        "encerradas": 317,
+        "em_andamento": 623,
+        "suficiente": true,
+        "pct_atendida": 28.1,
+        "pct_orientacao": 26.2,
+        "pct_arquivada": 10.1,
+        "pct_outra": 35.6,
+        "pct_no_prazo": 28.1,
+        "pct_critico": 51.7,
+        "mediana_dias": 63,
+        "p90_dias": 175
+      },
+      "TRI": {
+        "n": 207,
+        "encerradas": 194,
+        "em_andamento": 13,
+        "suficiente": true,
+        "pct_atendida": 30.4,
+        "pct_orientacao": 41.2,
+        "pct_arquivada": 25.8,
+        "pct_outra": 2.6,
+        "pct_no_prazo": 87.1,
+        "pct_critico": 6.7,
+        "mediana_dias": 9.0,
+        "p90_dias": 36
+      },
+      "OUT": {
+        "n": 99,
+        "encerradas": 88,
+        "em_andamento": 11,
+        "suficiente": true,
+        "pct_atendida": 23.9,
+        "pct_orientacao": 55.7,
+        "pct_arquivada": 20.5,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 92.0,
+        "pct_critico": 1.1,
+        "mediana_dias": 4.0,
+        "p90_dias": 29
+      },
+      "LIM": {
+        "n": 179,
+        "encerradas": 159,
+        "em_andamento": 20,
+        "suficiente": true,
+        "pct_atendida": 26.4,
+        "pct_orientacao": 23.3,
+        "pct_arquivada": 50.3,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 84.3,
+        "pct_critico": 7.5,
+        "mediana_dias": 6,
+        "p90_dias": 52
+      },
+      "TRA": {
+        "n": 215,
+        "encerradas": 205,
+        "em_andamento": 10,
+        "suficiente": true,
+        "pct_atendida": 21.0,
+        "pct_orientacao": 42.4,
+        "pct_arquivada": 35.1,
+        "pct_outra": 1.5,
+        "pct_no_prazo": 83.9,
+        "pct_critico": 9.3,
+        "mediana_dias": 6,
+        "p90_dias": 53
+      },
+      "URB": {
+        "n": 50,
+        "encerradas": 46,
+        "em_andamento": 4,
+        "suficiente": true,
+        "pct_atendida": 50.0,
+        "pct_orientacao": 34.8,
+        "pct_arquivada": 15.2,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 82.6,
+        "pct_critico": 2.2,
+        "mediana_dias": 13.0,
+        "p90_dias": 37
+      },
+      "ARV": {
+        "n": 229,
+        "encerradas": 153,
+        "em_andamento": 76,
+        "suficiente": true,
+        "pct_atendida": 43.1,
+        "pct_orientacao": 22.2,
+        "pct_arquivada": 34.6,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 66.0,
+        "pct_critico": 18.3,
+        "mediana_dias": 14,
+        "p90_dias": 90
+      },
+      "EDU": {
+        "n": 140,
+        "encerradas": 132,
+        "em_andamento": 8,
+        "suficiente": true,
+        "pct_atendida": 40.2,
+        "pct_orientacao": 40.9,
+        "pct_arquivada": 10.6,
+        "pct_outra": 8.3,
+        "pct_no_prazo": 87.9,
+        "pct_critico": 0.0,
+        "mediana_dias": 17.5,
+        "p90_dias": 34
+      },
+      "ANI": {
+        "n": 138,
+        "encerradas": 128,
+        "em_andamento": 10,
+        "suficiente": true,
+        "pct_atendida": 45.3,
+        "pct_orientacao": 31.2,
+        "pct_arquivada": 23.4,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 79.7,
+        "pct_critico": 3.9,
+        "mediana_dias": 12.0,
+        "p90_dias": 48
+      },
+      "CUL": {
+        "n": 120,
+        "encerradas": 34,
+        "em_andamento": 86,
+        "suficiente": true,
+        "pct_atendida": 26.5,
+        "pct_orientacao": 14.7,
+        "pct_arquivada": 5.9,
+        "pct_outra": 52.9,
+        "pct_no_prazo": 97.1,
+        "pct_critico": 0.0,
+        "mediana_dias": 2.0,
+        "p90_dias": 20
+      },
+      "ILU": {
+        "n": 25,
+        "encerradas": 24,
+        "em_andamento": 1,
+        "suficiente": true,
+        "pct_atendida": 50.0,
+        "pct_orientacao": 16.7,
+        "pct_arquivada": 33.3,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 95.8,
+        "pct_critico": 4.2,
+        "mediana_dias": 6.5,
+        "p90_dias": 17
+      },
+      "DES": {
+        "n": 4,
+        "encerradas": 4,
+        "em_andamento": 0,
+        "suficiente": false,
+        "pct_atendida": 25.0,
+        "pct_orientacao": 75.0,
+        "pct_arquivada": 0.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 50.0,
+        "pct_critico": 25.0,
+        "mediana_dias": 22.5,
+        "p90_dias": 100
+      },
+      "CON": {
+        "n": 1,
+        "encerradas": 1,
+        "em_andamento": 0,
+        "suficiente": false,
+        "pct_atendida": 0.0,
+        "pct_orientacao": 100.0,
+        "pct_arquivada": 0.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 100.0,
+        "pct_critico": 0.0,
+        "mediana_dias": 0,
+        "p90_dias": 0
+      }
+    },
+    "servicos": [
+      {
+        "id": "denuncias-violacao-direitos-humanos",
+        "n": 851
+      },
+      {
+        "id": "consulta-medica-saude-familia-comunidade",
+        "n": 556
+      },
+      {
+        "id": "comunicacao-irregularidade",
+        "n": 271
+      },
+      {
+        "id": "normas-procedimentos-unidades-saude",
+        "n": 225
+      },
+      {
+        "id": "marcacao-exame",
+        "n": 214
+      },
+      {
+        "id": "cirurgia",
+        "n": 181
+      },
+      {
+        "id": "gestao-administrativa",
+        "n": 163
+      },
+      {
+        "id": "servidor-publico",
+        "n": 145
+      },
+      {
+        "id": "poluicao-sonora-fiscalizacao",
+        "n": 136
+      },
+      {
+        "id": "atendimento-recepcao-unidades-saude",
+        "n": 118
+      },
+      {
+        "id": "disponibilidade-profissionais-unidades-saude",
+        "n": 107
+      },
+      {
+        "id": "denuncia-servidores-municipais",
+        "n": 104
+      },
+      {
+        "id": "movimento-belo-horizonte-mais-feliz",
+        "n": 102
+      },
+      {
+        "id": "estabelecimento-sem-licenca-ou-irregular-comercio-servico-industria-fiscalizacao",
+        "n": 91
+      },
+      {
+        "id": "vacinacao",
+        "n": 90
+      }
+    ]
+  },
+  "OE": {
+    "nome": "Oeste",
+    "n": 6574,
+    "encerradas": 5473,
+    "em_andamento": 1101,
+    "suficiente": true,
+    "pct_atendida": 42.5,
+    "pct_orientacao": 30.3,
+    "pct_arquivada": 23.5,
+    "pct_outra": 3.7,
+    "pct_no_prazo": 84.6,
+    "pct_critico": 6.2,
+    "mediana_dias": 10,
+    "p90_dias": 42,
+    "por_ano": {
+      "2022": {
+        "n": 1949,
+        "encerradas": 1733,
+        "em_andamento": 216,
+        "suficiente": true,
+        "pct_atendida": 36.6,
+        "pct_orientacao": 34.7,
+        "pct_arquivada": 25.2,
+        "pct_outra": 3.5,
+        "pct_no_prazo": 81.1,
+        "pct_critico": 6.9,
+        "mediana_dias": 15,
+        "p90_dias": 49
+      },
+      "2024": {
+        "n": 3130,
+        "encerradas": 2613,
+        "em_andamento": 517,
+        "suficiente": true,
+        "pct_atendida": 43.4,
+        "pct_orientacao": 29.7,
+        "pct_arquivada": 22.5,
+        "pct_outra": 4.4,
+        "pct_no_prazo": 84.1,
+        "pct_critico": 7.2,
+        "mediana_dias": 8,
+        "p90_dias": 43
+      },
+      "2025": {
+        "n": 1495,
+        "encerradas": 1127,
+        "em_andamento": 368,
+        "suficiente": true,
+        "pct_atendida": 49.2,
+        "pct_orientacao": 25.2,
+        "pct_arquivada": 23.0,
+        "pct_outra": 2.7,
+        "pct_no_prazo": 91.3,
+        "pct_critico": 3.0,
+        "mediana_dias": 8,
+        "p90_dias": 28
+      }
+    },
+    "temas": {
+      "VIA": {
+        "n": 341,
+        "encerradas": 191,
+        "em_andamento": 150,
+        "suficiente": true,
+        "pct_atendida": 26.2,
+        "pct_orientacao": 24.1,
+        "pct_arquivada": 48.2,
+        "pct_outra": 1.6,
+        "pct_no_prazo": 83.2,
+        "pct_critico": 8.4,
+        "mediana_dias": 6,
+        "p90_dias": 48
+      },
+      "TRI": {
+        "n": 382,
+        "encerradas": 356,
+        "em_andamento": 26,
+        "suficiente": true,
+        "pct_atendida": 29.5,
+        "pct_orientacao": 42.4,
+        "pct_arquivada": 27.2,
+        "pct_outra": 0.8,
+        "pct_no_prazo": 89.3,
+        "pct_critico": 3.1,
+        "mediana_dias": 9.0,
+        "p90_dias": 33
+      },
+      "ARV": {
+        "n": 365,
+        "encerradas": 231,
+        "em_andamento": 134,
+        "suficiente": true,
+        "pct_atendida": 38.5,
+        "pct_orientacao": 30.3,
+        "pct_arquivada": 27.3,
+        "pct_outra": 3.9,
+        "pct_no_prazo": 82.7,
+        "pct_critico": 8.2,
+        "mediana_dias": 9,
+        "p90_dias": 53
+      },
+      "SAU": {
+        "n": 1750,
+        "encerradas": 1715,
+        "em_andamento": 35,
+        "suficiente": true,
+        "pct_atendida": 60.8,
+        "pct_orientacao": 28.8,
+        "pct_arquivada": 10.1,
+        "pct_outra": 0.3,
+        "pct_no_prazo": 91.3,
+        "pct_critico": 2.2,
+        "mediana_dias": 9,
+        "p90_dias": 28
+      },
+      "FIS": {
+        "n": 832,
+        "encerradas": 789,
+        "em_andamento": 43,
+        "suficiente": true,
+        "pct_atendida": 34.6,
+        "pct_orientacao": 23.3,
+        "pct_arquivada": 41.6,
+        "pct_outra": 0.5,
+        "pct_no_prazo": 84.9,
+        "pct_critico": 4.7,
+        "mediana_dias": 11,
+        "p90_dias": 39
+      },
+      "TRA": {
+        "n": 758,
+        "encerradas": 721,
+        "em_andamento": 37,
+        "suficiente": true,
+        "pct_atendida": 28.2,
+        "pct_orientacao": 35.1,
+        "pct_arquivada": 35.6,
+        "pct_outra": 1.1,
+        "pct_no_prazo": 85.2,
+        "pct_critico": 5.8,
+        "mediana_dias": 8,
+        "p90_dias": 45
+      },
+      "LIM": {
+        "n": 155,
+        "encerradas": 141,
+        "em_andamento": 14,
+        "suficiente": true,
+        "pct_atendida": 28.4,
+        "pct_orientacao": 20.6,
+        "pct_arquivada": 50.4,
+        "pct_outra": 0.7,
+        "pct_no_prazo": 85.1,
+        "pct_critico": 2.8,
+        "mediana_dias": 4,
+        "p90_dias": 41
+      },
+      "SER": {
+        "n": 599,
+        "encerradas": 576,
+        "em_andamento": 23,
+        "suficiente": true,
+        "pct_atendida": 42.4,
+        "pct_orientacao": 31.4,
+        "pct_arquivada": 13.9,
+        "pct_outra": 12.3,
+        "pct_no_prazo": 86.8,
+        "pct_critico": 4.0,
+        "mediana_dias": 12.5,
+        "p90_dias": 35
+      },
+      "URB": {
+        "n": 79,
+        "encerradas": 76,
+        "em_andamento": 3,
+        "suficiente": true,
+        "pct_atendida": 59.2,
+        "pct_orientacao": 31.6,
+        "pct_arquivada": 7.9,
+        "pct_outra": 1.3,
+        "pct_no_prazo": 92.1,
+        "pct_critico": 1.3,
+        "mediana_dias": 12.5,
+        "p90_dias": 29
+      },
+      "OUT": {
+        "n": 96,
+        "encerradas": 88,
+        "em_andamento": 8,
+        "suficiente": true,
+        "pct_atendida": 29.5,
+        "pct_orientacao": 42.0,
+        "pct_arquivada": 25.0,
+        "pct_outra": 3.4,
+        "pct_no_prazo": 93.2,
+        "pct_critico": 1.1,
+        "mediana_dias": 5.5,
+        "p90_dias": 29
+      },
+      "SOC": {
+        "n": 886,
+        "encerradas": 274,
+        "em_andamento": 612,
+        "suficiente": true,
+        "pct_atendida": 25.5,
+        "pct_orientacao": 32.5,
+        "pct_arquivada": 10.6,
+        "pct_outra": 31.4,
+        "pct_no_prazo": 29.6,
+        "pct_critico": 52.2,
+        "mediana_dias": 64.0,
+        "p90_dias": 170
+      },
+      "ANI": {
+        "n": 157,
+        "encerradas": 152,
+        "em_andamento": 5,
+        "suficiente": true,
+        "pct_atendida": 43.4,
+        "pct_orientacao": 23.0,
+        "pct_arquivada": 32.9,
+        "pct_outra": 0.7,
+        "pct_no_prazo": 82.9,
+        "pct_critico": 3.9,
+        "mediana_dias": 10.0,
+        "p90_dias": 41
+      },
+      "EDU": {
+        "n": 127,
+        "encerradas": 124,
+        "em_andamento": 3,
+        "suficiente": true,
+        "pct_atendida": 44.4,
+        "pct_orientacao": 42.7,
+        "pct_arquivada": 5.6,
+        "pct_outra": 7.3,
+        "pct_no_prazo": 79.8,
+        "pct_critico": 0.0,
+        "mediana_dias": 19.0,
+        "p90_dias": 35
+      },
+      "DES": {
+        "n": 2,
+        "encerradas": 2,
+        "em_andamento": 0,
+        "suficiente": false,
+        "pct_atendida": 100.0,
+        "pct_orientacao": 0.0,
+        "pct_arquivada": 0.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 100.0,
+        "pct_critico": 0.0,
+        "mediana_dias": 18.5,
+        "p90_dias": 21
+      },
+      "CUL": {
+        "n": 8,
+        "encerradas": 7,
+        "em_andamento": 1,
+        "suficiente": false,
+        "pct_atendida": 14.3,
+        "pct_orientacao": 85.7,
+        "pct_arquivada": 0.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 85.7,
+        "pct_critico": 0.0,
+        "mediana_dias": 19,
+        "p90_dias": 36
+      },
+      "ILU": {
+        "n": 34,
+        "encerradas": 27,
+        "em_andamento": 7,
+        "suficiente": true,
+        "pct_atendida": 44.4,
+        "pct_orientacao": 25.9,
+        "pct_arquivada": 29.6,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 92.6,
+        "pct_critico": 0.0,
+        "mediana_dias": 5,
+        "p90_dias": 21
+      },
+      "CON": {
+        "n": 3,
+        "encerradas": 3,
+        "em_andamento": 0,
+        "suficiente": false,
+        "pct_atendida": 33.3,
+        "pct_orientacao": 33.3,
+        "pct_arquivada": 33.3,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 100.0,
+        "pct_critico": 0.0,
+        "mediana_dias": 2,
+        "p90_dias": 7
+      }
+    },
+    "servicos": [
+      {
+        "id": "denuncias-violacao-direitos-humanos",
+        "n": 814
+      },
+      {
+        "id": "consulta-medica-saude-familia-comunidade",
+        "n": 406
+      },
+      {
+        "id": "comunicacao-irregularidade",
+        "n": 286
+      },
+      {
+        "id": "gestao-administrativa",
+        "n": 209
+      },
+      {
+        "id": "normas-procedimentos-unidades-saude",
+        "n": 193
+      },
+      {
+        "id": "poluicao-sonora-fiscalizacao",
+        "n": 142
+      },
+      {
+        "id": "cirurgia",
+        "n": 134
+      },
+      {
+        "id": "marcacao-exame",
+        "n": 116
+      },
+      {
+        "id": "via-publica-recapeamento",
+        "n": 108
+      },
+      {
+        "id": "orientacao-processos-servicos-receita-municipal",
+        "n": 107
+      },
+      {
+        "id": "arvore-corte-ou-supressao-arvore-passeios-pracas-etc",
+        "n": 106
+      },
+      {
+        "id": "disponibilidade-profissionais-unidades-saude",
+        "n": 101
+      },
+      {
+        "id": "vacinacao",
+        "n": 100
+      },
+      {
+        "id": "denuncia-servidores-municipais",
+        "n": 100
+      },
+      {
+        "id": "arvore-poda-arvore-passeios-pracas-etc",
+        "n": 98
+      }
+    ]
+  },
+  "PA": {
+    "nome": "Pampulha",
+    "n": 6010,
+    "encerradas": 4973,
+    "em_andamento": 1037,
+    "suficiente": true,
+    "pct_atendida": 43.1,
+    "pct_orientacao": 31.7,
+    "pct_arquivada": 20.7,
+    "pct_outra": 4.6,
+    "pct_no_prazo": 80.6,
+    "pct_critico": 9.3,
+    "mediana_dias": 12,
+    "p90_dias": 56,
+    "por_ano": {
+      "2022": {
+        "n": 1745,
+        "encerradas": 1573,
+        "em_andamento": 172,
+        "suficiente": true,
+        "pct_atendida": 40.2,
+        "pct_orientacao": 36.8,
+        "pct_arquivada": 18.8,
+        "pct_outra": 4.2,
+        "pct_no_prazo": 76.5,
+        "pct_critico": 9.6,
+        "mediana_dias": 19,
+        "p90_dias": 58
+      },
+      "2024": {
+        "n": 2799,
+        "encerradas": 2305,
+        "em_andamento": 494,
+        "suficiente": true,
+        "pct_atendida": 43.2,
+        "pct_orientacao": 30.2,
+        "pct_arquivada": 20.3,
+        "pct_outra": 6.3,
+        "pct_no_prazo": 78.8,
+        "pct_critico": 11.4,
+        "mediana_dias": 11,
+        "p90_dias": 70
+      },
+      "2025": {
+        "n": 1466,
+        "encerradas": 1095,
+        "em_andamento": 371,
+        "suficiente": true,
+        "pct_atendida": 46.8,
+        "pct_orientacao": 27.5,
+        "pct_arquivada": 24.1,
+        "pct_outra": 1.6,
+        "pct_no_prazo": 90.0,
+        "pct_critico": 4.4,
+        "mediana_dias": 7,
+        "p90_dias": 30
+      }
+    },
+    "temas": {
+      "VIA": {
+        "n": 354,
+        "encerradas": 206,
+        "em_andamento": 148,
+        "suficiente": true,
+        "pct_atendida": 26.2,
+        "pct_orientacao": 27.2,
+        "pct_arquivada": 45.6,
+        "pct_outra": 1.0,
+        "pct_no_prazo": 81.1,
+        "pct_critico": 10.7,
+        "mediana_dias": 8.0,
+        "p90_dias": 70
+      },
+      "SAU": {
+        "n": 1344,
+        "encerradas": 1321,
+        "em_andamento": 23,
+        "suficiente": true,
+        "pct_atendida": 58.3,
+        "pct_orientacao": 30.7,
+        "pct_arquivada": 10.8,
+        "pct_outra": 0.2,
+        "pct_no_prazo": 89.8,
+        "pct_critico": 4.2,
+        "mediana_dias": 9,
+        "p90_dias": 31
+      },
+      "TRI": {
+        "n": 299,
+        "encerradas": 284,
+        "em_andamento": 15,
+        "suficiente": true,
+        "pct_atendida": 33.5,
+        "pct_orientacao": 35.2,
+        "pct_arquivada": 30.3,
+        "pct_outra": 1.1,
+        "pct_no_prazo": 83.5,
+        "pct_critico": 5.3,
+        "mediana_dias": 10.0,
+        "p90_dias": 43
+      },
+      "TRA": {
+        "n": 348,
+        "encerradas": 338,
+        "em_andamento": 10,
+        "suficiente": true,
+        "pct_atendida": 24.3,
+        "pct_orientacao": 37.6,
+        "pct_arquivada": 34.6,
+        "pct_outra": 3.6,
+        "pct_no_prazo": 83.7,
+        "pct_critico": 6.8,
+        "mediana_dias": 7.0,
+        "p90_dias": 49
+      },
+      "FIS": {
+        "n": 896,
+        "encerradas": 836,
+        "em_andamento": 60,
+        "suficiente": true,
+        "pct_atendida": 38.6,
+        "pct_orientacao": 28.7,
+        "pct_arquivada": 32.2,
+        "pct_outra": 0.5,
+        "pct_no_prazo": 76.2,
+        "pct_critico": 6.6,
+        "mediana_dias": 16.0,
+        "p90_dias": 47
+      },
+      "LIM": {
+        "n": 169,
+        "encerradas": 158,
+        "em_andamento": 11,
+        "suficiente": true,
+        "pct_atendida": 17.1,
+        "pct_orientacao": 27.2,
+        "pct_arquivada": 55.1,
+        "pct_outra": 0.6,
+        "pct_no_prazo": 84.8,
+        "pct_critico": 7.6,
+        "mediana_dias": 3.0,
+        "p90_dias": 56
+      },
+      "SER": {
+        "n": 544,
+        "encerradas": 512,
+        "em_andamento": 32,
+        "suficiente": true,
+        "pct_atendida": 42.6,
+        "pct_orientacao": 25.6,
+        "pct_arquivada": 12.5,
+        "pct_outra": 19.3,
+        "pct_no_prazo": 86.9,
+        "pct_critico": 3.9,
+        "mediana_dias": 11.0,
+        "p90_dias": 33
+      },
+      "ARV": {
+        "n": 634,
+        "encerradas": 508,
+        "em_andamento": 126,
+        "suficiente": true,
+        "pct_atendida": 45.3,
+        "pct_orientacao": 38.0,
+        "pct_arquivada": 14.4,
+        "pct_outra": 2.4,
+        "pct_no_prazo": 77.6,
+        "pct_critico": 13.4,
+        "mediana_dias": 21.0,
+        "p90_dias": 90
+      },
+      "OUT": {
+        "n": 91,
+        "encerradas": 83,
+        "em_andamento": 8,
+        "suficiente": true,
+        "pct_atendida": 34.9,
+        "pct_orientacao": 44.6,
+        "pct_arquivada": 19.3,
+        "pct_outra": 1.2,
+        "pct_no_prazo": 90.4,
+        "pct_critico": 2.4,
+        "mediana_dias": 5,
+        "p90_dias": 26
+      },
+      "ANI": {
+        "n": 127,
+        "encerradas": 121,
+        "em_andamento": 6,
+        "suficiente": true,
+        "pct_atendida": 52.9,
+        "pct_orientacao": 25.6,
+        "pct_arquivada": 20.7,
+        "pct_outra": 0.8,
+        "pct_no_prazo": 80.2,
+        "pct_critico": 6.6,
+        "mediana_dias": 12,
+        "p90_dias": 50
+      },
+      "EDU": {
+        "n": 213,
+        "encerradas": 211,
+        "em_andamento": 2,
+        "suficiente": true,
+        "pct_atendida": 49.3,
+        "pct_orientacao": 39.3,
+        "pct_arquivada": 9.0,
+        "pct_outra": 2.4,
+        "pct_no_prazo": 87.7,
+        "pct_critico": 1.4,
+        "mediana_dias": 20,
+        "p90_dias": 32
+      },
+      "URB": {
+        "n": 79,
+        "encerradas": 78,
+        "em_andamento": 1,
+        "suficiente": true,
+        "pct_atendida": 62.8,
+        "pct_orientacao": 29.5,
+        "pct_arquivada": 7.7,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 89.7,
+        "pct_critico": 1.3,
+        "mediana_dias": 12.0,
+        "p90_dias": 32
+      },
+      "SOC": {
+        "n": 868,
+        "encerradas": 279,
+        "em_andamento": 589,
+        "suficiente": true,
+        "pct_atendida": 27.6,
+        "pct_orientacao": 34.4,
+        "pct_arquivada": 6.8,
+        "pct_outra": 31.2,
+        "pct_no_prazo": 22.2,
+        "pct_critico": 62.7,
+        "mediana_dias": 80,
+        "p90_dias": 177
+      },
+      "ILU": {
+        "n": 24,
+        "encerradas": 24,
+        "em_andamento": 0,
+        "suficiente": true,
+        "pct_atendida": 41.7,
+        "pct_orientacao": 20.8,
+        "pct_arquivada": 37.5,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 91.7,
+        "pct_critico": 4.2,
+        "mediana_dias": 6.0,
+        "p90_dias": 29
+      },
+      "CUL": {
+        "n": 15,
+        "encerradas": 9,
+        "em_andamento": 6,
+        "suficiente": false,
+        "pct_atendida": 66.7,
+        "pct_orientacao": 33.3,
+        "pct_arquivada": 0.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 77.8,
+        "pct_critico": 0.0,
+        "mediana_dias": 19,
+        "p90_dias": 35
+      },
+      "DES": {
+        "n": 2,
+        "encerradas": 2,
+        "em_andamento": 0,
+        "suficiente": false,
+        "pct_atendida": 50.0,
+        "pct_orientacao": 50.0,
+        "pct_arquivada": 0.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 100.0,
+        "pct_critico": 0.0,
+        "mediana_dias": 20.5,
+        "p90_dias": 21
+      },
+      "CON": {
+        "n": 3,
+        "encerradas": 3,
+        "em_andamento": 0,
+        "suficiente": false,
+        "pct_atendida": 66.7,
+        "pct_orientacao": 33.3,
+        "pct_arquivada": 0.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 100.0,
+        "pct_critico": 0.0,
+        "mediana_dias": 23,
+        "p90_dias": 28
+      }
+    },
+    "servicos": [
+      {
+        "id": "denuncias-violacao-direitos-humanos",
+        "n": 820
+      },
+      {
+        "id": "comunicacao-irregularidade",
+        "n": 302
+      },
+      {
+        "id": "consulta-medica-saude-familia-comunidade",
+        "n": 289
+      },
+      {
+        "id": "normas-procedimentos-unidades-saude",
+        "n": 187
+      },
+      {
+        "id": "poluicao-sonora-fiscalizacao",
+        "n": 185
+      },
+      {
+        "id": "arvore-poda-arvore-passeios-pracas-etc",
+        "n": 177
+      },
+      {
+        "id": "gestao-administrativa",
+        "n": 147
+      },
+      {
+        "id": "denuncia-servidores-municipais",
+        "n": 138
+      },
+      {
+        "id": "jardim-zoologico-jardim-botanico-visita-livre",
+        "n": 133
+      },
+      {
+        "id": "arvore-corte-ou-supressao-arvore-passeios-pracas-etc",
+        "n": 96
+      },
+      {
+        "id": "atendimento-recepcao-unidades-saude",
+        "n": 90
+      },
+      {
+        "id": "marcacao-exame",
+        "n": 90
+      },
+      {
+        "id": "via-publica-recapeamento",
+        "n": 87
+      },
+      {
+        "id": "administracao-escolar",
+        "n": 87
+      },
+      {
+        "id": "estabelecimento-sem-licenca-ou-irregular-comercio-servico-industria-fiscalizacao",
+        "n": 82
+      }
+    ]
+  },
+  "NT": {
+    "nome": "Norte",
+    "n": 5015,
+    "encerradas": 4068,
+    "em_andamento": 947,
+    "suficiente": true,
+    "pct_atendida": 47.7,
+    "pct_orientacao": 29.7,
+    "pct_arquivada": 17.2,
+    "pct_outra": 5.5,
+    "pct_no_prazo": 82.1,
+    "pct_critico": 6.7,
+    "mediana_dias": 12.0,
+    "p90_dias": 44,
+    "por_ano": {
+      "2022": {
+        "n": 1378,
+        "encerradas": 1233,
+        "em_andamento": 145,
+        "suficiente": true,
+        "pct_atendida": 40.5,
+        "pct_orientacao": 37.9,
+        "pct_arquivada": 17.2,
+        "pct_outra": 4.5,
+        "pct_no_prazo": 77.3,
+        "pct_critico": 8.1,
+        "mediana_dias": 18,
+        "p90_dias": 52
+      },
+      "2024": {
+        "n": 2435,
+        "encerradas": 1946,
+        "em_andamento": 489,
+        "suficiente": true,
+        "pct_atendida": 47.5,
+        "pct_orientacao": 29.4,
+        "pct_arquivada": 16.1,
+        "pct_outra": 6.9,
+        "pct_no_prazo": 80.8,
+        "pct_critico": 7.8,
+        "mediana_dias": 11.0,
+        "p90_dias": 48
+      },
+      "2025": {
+        "n": 1202,
+        "encerradas": 889,
+        "em_andamento": 313,
+        "suficiente": true,
+        "pct_atendida": 58.0,
+        "pct_orientacao": 18.9,
+        "pct_arquivada": 19.3,
+        "pct_outra": 3.7,
+        "pct_no_prazo": 91.8,
+        "pct_critico": 2.1,
+        "mediana_dias": 9,
+        "p90_dias": 26
+      }
+    },
+    "temas": {
+      "SAU": {
+        "n": 1887,
+        "encerradas": 1806,
+        "em_andamento": 81,
+        "suficiente": true,
+        "pct_atendida": 58.6,
+        "pct_orientacao": 30.6,
+        "pct_arquivada": 10.1,
+        "pct_outra": 0.8,
+        "pct_no_prazo": 88.0,
+        "pct_critico": 3.7,
+        "mediana_dias": 11.0,
+        "p90_dias": 33
+      },
+      "ANI": {
+        "n": 92,
+        "encerradas": 90,
+        "em_andamento": 2,
+        "suficiente": true,
+        "pct_atendida": 50.0,
+        "pct_orientacao": 30.0,
+        "pct_arquivada": 18.9,
+        "pct_outra": 1.1,
+        "pct_no_prazo": 82.2,
+        "pct_critico": 3.3,
+        "mediana_dias": 14.0,
+        "p90_dias": 44
+      },
+      "URB": {
+        "n": 29,
+        "encerradas": 26,
+        "em_andamento": 3,
+        "suficiente": true,
+        "pct_atendida": 61.5,
+        "pct_orientacao": 30.8,
+        "pct_arquivada": 3.8,
+        "pct_outra": 3.8,
+        "pct_no_prazo": 84.6,
+        "pct_critico": 7.7,
+        "mediana_dias": 12.5,
+        "p90_dias": 38
+      },
+      "EDU": {
+        "n": 173,
+        "encerradas": 164,
+        "em_andamento": 9,
+        "suficiente": true,
+        "pct_atendida": 54.9,
+        "pct_orientacao": 31.1,
+        "pct_arquivada": 6.7,
+        "pct_outra": 7.3,
+        "pct_no_prazo": 80.5,
+        "pct_critico": 0.6,
+        "mediana_dias": 20.5,
+        "p90_dias": 36
+      },
+      "TRI": {
+        "n": 138,
+        "encerradas": 127,
+        "em_andamento": 11,
+        "suficiente": true,
+        "pct_atendida": 26.8,
+        "pct_orientacao": 44.1,
+        "pct_arquivada": 25.2,
+        "pct_outra": 3.9,
+        "pct_no_prazo": 83.5,
+        "pct_critico": 8.7,
+        "mediana_dias": 11,
+        "p90_dias": 36
+      },
+      "SER": {
+        "n": 588,
+        "encerradas": 552,
+        "em_andamento": 36,
+        "suficiente": true,
+        "pct_atendida": 44.0,
+        "pct_orientacao": 26.3,
+        "pct_arquivada": 13.9,
+        "pct_outra": 15.8,
+        "pct_no_prazo": 88.6,
+        "pct_critico": 1.4,
+        "mediana_dias": 11.0,
+        "p90_dias": 32
+      },
+      "VIA": {
+        "n": 167,
+        "encerradas": 100,
+        "em_andamento": 67,
+        "suficiente": true,
+        "pct_atendida": 34.0,
+        "pct_orientacao": 21.0,
+        "pct_arquivada": 45.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 76.0,
+        "pct_critico": 13.0,
+        "mediana_dias": 7.0,
+        "p90_dias": 70
+      },
+      "ARV": {
+        "n": 160,
+        "encerradas": 137,
+        "em_andamento": 23,
+        "suficiente": true,
+        "pct_atendida": 40.9,
+        "pct_orientacao": 20.4,
+        "pct_arquivada": 29.2,
+        "pct_outra": 9.5,
+        "pct_no_prazo": 79.6,
+        "pct_critico": 8.0,
+        "mediana_dias": 10,
+        "p90_dias": 55
+      },
+      "SOC": {
+        "n": 900,
+        "encerradas": 245,
+        "em_andamento": 655,
+        "suficiente": true,
+        "pct_atendida": 28.2,
+        "pct_orientacao": 30.2,
+        "pct_arquivada": 7.3,
+        "pct_outra": 34.3,
+        "pct_no_prazo": 26.9,
+        "pct_critico": 51.8,
+        "mediana_dias": 64,
+        "p90_dias": 165
+      },
+      "ILU": {
+        "n": 32,
+        "encerradas": 29,
+        "em_andamento": 3,
+        "suficiente": true,
+        "pct_atendida": 27.6,
+        "pct_orientacao": 34.5,
+        "pct_arquivada": 37.9,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 93.1,
+        "pct_critico": 0.0,
+        "mediana_dias": 6,
+        "p90_dias": 28
+      },
+      "FIS": {
+        "n": 506,
+        "encerradas": 461,
+        "em_andamento": 45,
+        "suficiente": true,
+        "pct_atendida": 46.9,
+        "pct_orientacao": 26.5,
+        "pct_arquivada": 26.5,
+        "pct_outra": 0.2,
+        "pct_no_prazo": 77.9,
+        "pct_critico": 3.3,
+        "mediana_dias": 16,
+        "p90_dias": 42
+      },
+      "TRA": {
+        "n": 160,
+        "encerradas": 156,
+        "em_andamento": 4,
+        "suficiente": true,
+        "pct_atendida": 21.8,
+        "pct_orientacao": 34.6,
+        "pct_arquivada": 41.0,
+        "pct_outra": 2.6,
+        "pct_no_prazo": 85.9,
+        "pct_critico": 5.1,
+        "mediana_dias": 7.5,
+        "p90_dias": 37
+      },
+      "LIM": {
+        "n": 104,
+        "encerradas": 101,
+        "em_andamento": 3,
+        "suficiente": true,
+        "pct_atendida": 20.8,
+        "pct_orientacao": 15.8,
+        "pct_arquivada": 63.4,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 90.1,
+        "pct_critico": 5.0,
+        "mediana_dias": 2,
+        "p90_dias": 27
+      },
+      "OUT": {
+        "n": 68,
+        "encerradas": 64,
+        "em_andamento": 4,
+        "suficiente": true,
+        "pct_atendida": 15.6,
+        "pct_orientacao": 62.5,
+        "pct_arquivada": 20.3,
+        "pct_outra": 1.6,
+        "pct_no_prazo": 87.5,
+        "pct_critico": 1.6,
+        "mediana_dias": 5.0,
+        "p90_dias": 34
+      },
+      "CUL": {
+        "n": 9,
+        "encerradas": 8,
+        "em_andamento": 1,
+        "suficiente": false,
+        "pct_atendida": 62.5,
+        "pct_orientacao": 37.5,
+        "pct_arquivada": 0.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 100.0,
+        "pct_critico": 0.0,
+        "mediana_dias": 17.0,
+        "p90_dias": 30
+      },
+      "DES": {
+        "n": 1,
+        "encerradas": 1,
+        "em_andamento": 0,
+        "suficiente": false,
+        "pct_atendida": 0.0,
+        "pct_orientacao": 0.0,
+        "pct_arquivada": 100.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 100.0,
+        "pct_critico": 0.0,
+        "mediana_dias": 0,
+        "p90_dias": 0
+      },
+      "CON": {
+        "n": 1,
+        "encerradas": 1,
+        "em_andamento": 0,
+        "suficiente": false,
+        "pct_atendida": 100.0,
+        "pct_orientacao": 0.0,
+        "pct_arquivada": 0.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 100.0,
+        "pct_critico": 0.0,
+        "mediana_dias": 4,
+        "p90_dias": 4
+      }
+    },
+    "servicos": [
+      {
+        "id": "denuncias-violacao-direitos-humanos",
+        "n": 838
+      },
+      {
+        "id": "consulta-medica-saude-familia-comunidade",
+        "n": 442
+      },
+      {
+        "id": "comunicacao-irregularidade",
+        "n": 292
+      },
+      {
+        "id": "normas-procedimentos-unidades-saude",
+        "n": 285
+      },
+      {
+        "id": "denuncia-servidores-municipais",
+        "n": 176
+      },
+      {
+        "id": "gestao-administrativa",
+        "n": 163
+      },
+      {
+        "id": "disponibilidade-profissionais-unidades-saude",
+        "n": 149
+      },
+      {
+        "id": "servidor-publico",
+        "n": 116
+      },
+      {
+        "id": "atendimento-recepcao-unidades-saude",
+        "n": 102
+      },
+      {
+        "id": "cadastro-usuarios-saude",
+        "n": 94
+      },
+      {
+        "id": "marcacao-exame",
+        "n": 94
+      },
+      {
+        "id": "equipes-complementares",
+        "n": 79
+      },
+      {
+        "id": "cirurgia",
+        "n": 63
+      },
+      {
+        "id": "administracao-escolar",
+        "n": 57
+      },
+      {
+        "id": "vacinacao",
+        "n": 52
+      }
+    ]
+  },
+  "BA": {
+    "nome": "Barreiro",
+    "n": 5263,
+    "encerradas": 4251,
+    "em_andamento": 1012,
+    "suficiente": true,
+    "pct_atendida": 45.2,
+    "pct_orientacao": 30.3,
+    "pct_arquivada": 19.9,
+    "pct_outra": 4.6,
+    "pct_no_prazo": 80.5,
+    "pct_critico": 7.3,
+    "mediana_dias": 13,
+    "p90_dias": 49,
+    "por_ano": {
+      "2022": {
+        "n": 1480,
+        "encerradas": 1334,
+        "em_andamento": 146,
+        "suficiente": true,
+        "pct_atendida": 37.1,
+        "pct_orientacao": 37.0,
+        "pct_arquivada": 21.9,
+        "pct_outra": 4.0,
+        "pct_no_prazo": 72.6,
+        "pct_critico": 11.9,
+        "mediana_dias": 18.0,
+        "p90_dias": 71
+      },
+      "2024": {
+        "n": 2480,
+        "encerradas": 1945,
+        "em_andamento": 535,
+        "suficiente": true,
+        "pct_atendida": 46.7,
+        "pct_orientacao": 30.0,
+        "pct_arquivada": 17.6,
+        "pct_outra": 5.7,
+        "pct_no_prazo": 80.9,
+        "pct_critico": 7.0,
+        "mediana_dias": 12,
+        "p90_dias": 50
+      },
+      "2025": {
+        "n": 1303,
+        "encerradas": 972,
+        "em_andamento": 331,
+        "suficiente": true,
+        "pct_atendida": 53.5,
+        "pct_orientacao": 21.7,
+        "pct_arquivada": 21.8,
+        "pct_outra": 3.0,
+        "pct_no_prazo": 90.4,
+        "pct_critico": 1.5,
+        "mediana_dias": 9.0,
+        "p90_dias": 29
+      }
+    },
+    "temas": {
+      "SAU": {
+        "n": 1977,
+        "encerradas": 1894,
+        "em_andamento": 83,
+        "suficiente": true,
+        "pct_atendida": 55.8,
+        "pct_orientacao": 32.8,
+        "pct_arquivada": 11.1,
+        "pct_outra": 0.3,
+        "pct_no_prazo": 83.4,
+        "pct_critico": 6.4,
+        "mediana_dias": 13.0,
+        "p90_dias": 44
+      },
+      "SER": {
+        "n": 485,
+        "encerradas": 451,
+        "em_andamento": 34,
+        "suficiente": true,
+        "pct_atendida": 43.2,
+        "pct_orientacao": 25.5,
+        "pct_arquivada": 13.1,
+        "pct_outra": 18.2,
+        "pct_no_prazo": 90.0,
+        "pct_critico": 2.9,
+        "mediana_dias": 11,
+        "p90_dias": 30
+      },
+      "SOC": {
+        "n": 917,
+        "encerradas": 256,
+        "em_andamento": 661,
+        "suficiente": true,
+        "pct_atendida": 31.6,
+        "pct_orientacao": 26.6,
+        "pct_arquivada": 9.4,
+        "pct_outra": 32.4,
+        "pct_no_prazo": 34.8,
+        "pct_critico": 44.5,
+        "mediana_dias": 50.0,
+        "p90_dias": 164
+      },
+      "URB": {
+        "n": 54,
+        "encerradas": 54,
+        "em_andamento": 0,
+        "suficiente": true,
+        "pct_atendida": 44.4,
+        "pct_orientacao": 29.6,
+        "pct_arquivada": 24.1,
+        "pct_outra": 1.9,
+        "pct_no_prazo": 92.6,
+        "pct_critico": 0.0,
+        "mediana_dias": 13.5,
+        "p90_dias": 29
+      },
+      "VIA": {
+        "n": 193,
+        "encerradas": 100,
+        "em_andamento": 93,
+        "suficiente": true,
+        "pct_atendida": 27.0,
+        "pct_orientacao": 26.0,
+        "pct_arquivada": 46.0,
+        "pct_outra": 1.0,
+        "pct_no_prazo": 76.0,
+        "pct_critico": 12.0,
+        "mediana_dias": 8.0,
+        "p90_dias": 82
+      },
+      "FIS": {
+        "n": 684,
+        "encerradas": 640,
+        "em_andamento": 44,
+        "suficiente": true,
+        "pct_atendida": 39.8,
+        "pct_orientacao": 24.7,
+        "pct_arquivada": 35.3,
+        "pct_outra": 0.2,
+        "pct_no_prazo": 81.2,
+        "pct_critico": 2.5,
+        "mediana_dias": 13.0,
+        "p90_dias": 41
+      },
+      "ANI": {
+        "n": 114,
+        "encerradas": 111,
+        "em_andamento": 3,
+        "suficiente": true,
+        "pct_atendida": 41.4,
+        "pct_orientacao": 30.6,
+        "pct_arquivada": 27.0,
+        "pct_outra": 0.9,
+        "pct_no_prazo": 87.4,
+        "pct_critico": 2.7,
+        "mediana_dias": 12,
+        "p90_dias": 35
+      },
+      "TRI": {
+        "n": 163,
+        "encerradas": 148,
+        "em_andamento": 15,
+        "suficiente": true,
+        "pct_atendida": 39.2,
+        "pct_orientacao": 39.2,
+        "pct_arquivada": 20.3,
+        "pct_outra": 1.4,
+        "pct_no_prazo": 88.5,
+        "pct_critico": 4.7,
+        "mediana_dias": 9.0,
+        "p90_dias": 36
+      },
+      "ILU": {
+        "n": 27,
+        "encerradas": 22,
+        "em_andamento": 5,
+        "suficiente": true,
+        "pct_atendida": 40.9,
+        "pct_orientacao": 22.7,
+        "pct_arquivada": 36.4,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 90.9,
+        "pct_critico": 9.1,
+        "mediana_dias": 10.5,
+        "p90_dias": 29
+      },
+      "TRA": {
+        "n": 150,
+        "encerradas": 144,
+        "em_andamento": 6,
+        "suficiente": true,
+        "pct_atendida": 17.4,
+        "pct_orientacao": 40.3,
+        "pct_arquivada": 42.4,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 88.2,
+        "pct_critico": 4.9,
+        "mediana_dias": 5.0,
+        "p90_dias": 33
+      },
+      "OUT": {
+        "n": 58,
+        "encerradas": 53,
+        "em_andamento": 5,
+        "suficiente": true,
+        "pct_atendida": 17.0,
+        "pct_orientacao": 47.2,
+        "pct_arquivada": 35.8,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 96.2,
+        "pct_critico": 0.0,
+        "mediana_dias": 4,
+        "p90_dias": 22
+      },
+      "CON": {
+        "n": 2,
+        "encerradas": 2,
+        "em_andamento": 0,
+        "suficiente": false,
+        "pct_atendida": 0.0,
+        "pct_orientacao": 50.0,
+        "pct_arquivada": 50.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 100.0,
+        "pct_critico": 0.0,
+        "mediana_dias": 14.5,
+        "p90_dias": 15
+      },
+      "LIM": {
+        "n": 129,
+        "encerradas": 115,
+        "em_andamento": 14,
+        "suficiente": true,
+        "pct_atendida": 23.5,
+        "pct_orientacao": 20.0,
+        "pct_arquivada": 55.7,
+        "pct_outra": 0.9,
+        "pct_no_prazo": 85.2,
+        "pct_critico": 6.1,
+        "mediana_dias": 4,
+        "p90_dias": 42
+      },
+      "EDU": {
+        "n": 183,
+        "encerradas": 177,
+        "em_andamento": 6,
+        "suficiente": true,
+        "pct_atendida": 48.6,
+        "pct_orientacao": 32.2,
+        "pct_arquivada": 9.6,
+        "pct_outra": 9.6,
+        "pct_no_prazo": 59.9,
+        "pct_critico": 1.7,
+        "mediana_dias": 26,
+        "p90_dias": 47
+      },
+      "ARV": {
+        "n": 122,
+        "encerradas": 80,
+        "em_andamento": 42,
+        "suficiente": true,
+        "pct_atendida": 27.5,
+        "pct_orientacao": 25.0,
+        "pct_arquivada": 47.5,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 82.5,
+        "pct_critico": 7.5,
+        "mediana_dias": 8.5,
+        "p90_dias": 51
+      },
+      "DES": {
+        "n": 2,
+        "encerradas": 2,
+        "em_andamento": 0,
+        "suficiente": false,
+        "pct_atendida": 100.0,
+        "pct_orientacao": 0.0,
+        "pct_arquivada": 0.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 100.0,
+        "pct_critico": 0.0,
+        "mediana_dias": 27.0,
+        "p90_dias": 29
+      },
+      "CUL": {
+        "n": 3,
+        "encerradas": 2,
+        "em_andamento": 1,
+        "suficiente": false,
+        "pct_atendida": 50.0,
+        "pct_orientacao": 50.0,
+        "pct_arquivada": 0.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 50.0,
+        "pct_critico": 0.0,
+        "mediana_dias": 39.5,
+        "p90_dias": 53
+      }
+    },
+    "servicos": [
+      {
+        "id": "denuncias-violacao-direitos-humanos",
+        "n": 834
+      },
+      {
+        "id": "consulta-medica-saude-familia-comunidade",
+        "n": 453
+      },
+      {
+        "id": "comunicacao-irregularidade",
+        "n": 319
+      },
+      {
+        "id": "normas-procedimentos-unidades-saude",
+        "n": 244
+      },
+      {
+        "id": "cirurgia",
+        "n": 141
+      },
+      {
+        "id": "denuncia-servidores-municipais",
+        "n": 135
+      },
+      {
+        "id": "disponibilidade-profissionais-unidades-saude",
+        "n": 133
+      },
+      {
+        "id": "gestao-administrativa",
+        "n": 126
+      },
+      {
+        "id": "marcacao-exame",
+        "n": 105
+      },
+      {
+        "id": "atendimento-recepcao-unidades-saude",
+        "n": 104
+      },
+      {
+        "id": "administracao-escolar",
+        "n": 90
+      },
+      {
+        "id": "poluicao-sonora-fiscalizacao",
+        "n": 88
+      },
+      {
+        "id": "servidor-publico",
+        "n": 76
+      },
+      {
+        "id": "equipes-complementares",
+        "n": 74
+      },
+      {
+        "id": "acesso-medicamentos-farmacias-rede-municipal-saude",
+        "n": 60
+      }
+    ]
+  },
+  "VN": {
+    "nome": "Venda Nova",
+    "n": 6286,
+    "encerradas": 5090,
+    "em_andamento": 1196,
+    "suficiente": true,
+    "pct_atendida": 46.2,
+    "pct_orientacao": 30.2,
+    "pct_arquivada": 19.6,
+    "pct_outra": 3.9,
+    "pct_no_prazo": 81.7,
+    "pct_critico": 7.2,
+    "mediana_dias": 12.0,
+    "p90_dias": 47,
+    "por_ano": {
+      "2022": {
+        "n": 1655,
+        "encerradas": 1525,
+        "em_andamento": 130,
+        "suficiente": true,
+        "pct_atendida": 37.9,
+        "pct_orientacao": 38.7,
+        "pct_arquivada": 20.4,
+        "pct_outra": 3.0,
+        "pct_no_prazo": 78.2,
+        "pct_critico": 8.5,
+        "mediana_dias": 16,
+        "p90_dias": 54
+      },
+      "2024": {
+        "n": 3004,
+        "encerradas": 2364,
+        "em_andamento": 640,
+        "suficiente": true,
+        "pct_atendida": 46.7,
+        "pct_orientacao": 30.0,
+        "pct_arquivada": 18.1,
+        "pct_outra": 5.1,
+        "pct_no_prazo": 80.5,
+        "pct_critico": 8.5,
+        "mediana_dias": 10.0,
+        "p90_dias": 53
+      },
+      "2025": {
+        "n": 1627,
+        "encerradas": 1201,
+        "em_andamento": 426,
+        "suficiente": true,
+        "pct_atendida": 55.9,
+        "pct_orientacao": 20.0,
+        "pct_arquivada": 21.3,
+        "pct_outra": 2.8,
+        "pct_no_prazo": 88.5,
+        "pct_critico": 3.2,
+        "mediana_dias": 9,
+        "p90_dias": 33
+      }
+    },
+    "temas": {
+      "SAU": {
+        "n": 2283,
+        "encerradas": 2225,
+        "em_andamento": 58,
+        "suficiente": true,
+        "pct_atendida": 59.5,
+        "pct_orientacao": 30.0,
+        "pct_arquivada": 10.4,
+        "pct_outra": 0.1,
+        "pct_no_prazo": 90.5,
+        "pct_critico": 2.7,
+        "mediana_dias": 11,
+        "p90_dias": 29
+      },
+      "TRI": {
+        "n": 196,
+        "encerradas": 177,
+        "em_andamento": 19,
+        "suficiente": true,
+        "pct_atendida": 29.4,
+        "pct_orientacao": 37.3,
+        "pct_arquivada": 29.9,
+        "pct_outra": 3.4,
+        "pct_no_prazo": 83.6,
+        "pct_critico": 5.6,
+        "mediana_dias": 8,
+        "p90_dias": 44
+      },
+      "SER": {
+        "n": 611,
+        "encerradas": 573,
+        "em_andamento": 38,
+        "suficiente": true,
+        "pct_atendida": 39.6,
+        "pct_orientacao": 32.5,
+        "pct_arquivada": 14.7,
+        "pct_outra": 13.3,
+        "pct_no_prazo": 86.0,
+        "pct_critico": 3.3,
+        "mediana_dias": 11,
+        "p90_dias": 35
+      },
+      "TRA": {
+        "n": 185,
+        "encerradas": 174,
+        "em_andamento": 11,
+        "suficiente": true,
+        "pct_atendida": 23.6,
+        "pct_orientacao": 39.7,
+        "pct_arquivada": 35.6,
+        "pct_outra": 1.1,
+        "pct_no_prazo": 85.1,
+        "pct_critico": 4.0,
+        "mediana_dias": 5.0,
+        "p90_dias": 36
+      },
+      "SOC": {
+        "n": 1118,
+        "encerradas": 312,
+        "em_andamento": 806,
+        "suficiente": true,
+        "pct_atendida": 29.5,
+        "pct_orientacao": 34.0,
+        "pct_arquivada": 8.7,
+        "pct_outra": 27.9,
+        "pct_no_prazo": 25.6,
+        "pct_critico": 56.4,
+        "mediana_dias": 77.0,
+        "p90_dias": 159
+      },
+      "LIM": {
+        "n": 144,
+        "encerradas": 138,
+        "em_andamento": 6,
+        "suficiente": true,
+        "pct_atendida": 18.1,
+        "pct_orientacao": 13.0,
+        "pct_arquivada": 68.1,
+        "pct_outra": 0.7,
+        "pct_no_prazo": 93.5,
+        "pct_critico": 2.9,
+        "mediana_dias": 3.0,
+        "p90_dias": 25
+      },
+      "FIS": {
+        "n": 710,
+        "encerradas": 666,
+        "em_andamento": 44,
+        "suficiente": true,
+        "pct_atendida": 40.1,
+        "pct_orientacao": 26.1,
+        "pct_arquivada": 32.9,
+        "pct_outra": 0.9,
+        "pct_no_prazo": 76.0,
+        "pct_critico": 4.8,
+        "mediana_dias": 14.0,
+        "p90_dias": 49
+      },
+      "ARV": {
+        "n": 246,
+        "encerradas": 195,
+        "em_andamento": 51,
+        "suficiente": true,
+        "pct_atendida": 35.9,
+        "pct_orientacao": 21.0,
+        "pct_arquivada": 39.5,
+        "pct_outra": 3.6,
+        "pct_no_prazo": 70.8,
+        "pct_critico": 17.4,
+        "mediana_dias": 7,
+        "p90_dias": 120
+      },
+      "VIA": {
+        "n": 302,
+        "encerradas": 174,
+        "em_andamento": 128,
+        "suficiente": true,
+        "pct_atendida": 29.9,
+        "pct_orientacao": 31.0,
+        "pct_arquivada": 38.5,
+        "pct_outra": 0.6,
+        "pct_no_prazo": 83.9,
+        "pct_critico": 8.6,
+        "mediana_dias": 7.0,
+        "p90_dias": 57
+      },
+      "URB": {
+        "n": 28,
+        "encerradas": 26,
+        "em_andamento": 2,
+        "suficiente": true,
+        "pct_atendida": 57.7,
+        "pct_orientacao": 19.2,
+        "pct_arquivada": 19.2,
+        "pct_outra": 3.8,
+        "pct_no_prazo": 80.8,
+        "pct_critico": 0.0,
+        "mediana_dias": 17.0,
+        "p90_dias": 36
+      },
+      "OUT": {
+        "n": 88,
+        "encerradas": 79,
+        "em_andamento": 9,
+        "suficiente": true,
+        "pct_atendida": 26.6,
+        "pct_orientacao": 44.3,
+        "pct_arquivada": 26.6,
+        "pct_outra": 2.5,
+        "pct_no_prazo": 86.1,
+        "pct_critico": 6.3,
+        "mediana_dias": 5,
+        "p90_dias": 39
+      },
+      "ANI": {
+        "n": 108,
+        "encerradas": 106,
+        "em_andamento": 2,
+        "suficiente": true,
+        "pct_atendida": 39.6,
+        "pct_orientacao": 33.0,
+        "pct_arquivada": 27.4,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 85.8,
+        "pct_critico": 2.8,
+        "mediana_dias": 7.5,
+        "p90_dias": 33
+      },
+      "ILU": {
+        "n": 22,
+        "encerradas": 20,
+        "em_andamento": 2,
+        "suficiente": true,
+        "pct_atendida": 40.0,
+        "pct_orientacao": 20.0,
+        "pct_arquivada": 40.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 95.0,
+        "pct_critico": 0.0,
+        "mediana_dias": 7.0,
+        "p90_dias": 30
+      },
+      "EDU": {
+        "n": 232,
+        "encerradas": 213,
+        "em_andamento": 19,
+        "suficiente": true,
+        "pct_atendida": 53.1,
+        "pct_orientacao": 34.7,
+        "pct_arquivada": 8.0,
+        "pct_outra": 4.2,
+        "pct_no_prazo": 70.4,
+        "pct_critico": 1.4,
+        "mediana_dias": 24,
+        "p90_dias": 46
+      },
+      "DES": {
+        "n": 3,
+        "encerradas": 3,
+        "em_andamento": 0,
+        "suficiente": false,
+        "pct_atendida": 0.0,
+        "pct_orientacao": 100.0,
+        "pct_arquivada": 0.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 66.7,
+        "pct_critico": 33.3,
+        "mediana_dias": 30,
+        "p90_dias": 138
+      },
+      "CUL": {
+        "n": 7,
+        "encerradas": 6,
+        "em_andamento": 1,
+        "suficiente": false,
+        "pct_atendida": 83.3,
+        "pct_orientacao": 0.0,
+        "pct_arquivada": 16.7,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 83.3,
+        "pct_critico": 0.0,
+        "mediana_dias": 19.0,
+        "p90_dias": 36
+      },
+      "CON": {
+        "n": 3,
+        "encerradas": 3,
+        "em_andamento": 0,
+        "suficiente": false,
+        "pct_atendida": 33.3,
+        "pct_orientacao": 66.7,
+        "pct_arquivada": 0.0,
+        "pct_outra": 0.0,
+        "pct_no_prazo": 100.0,
+        "pct_critico": 0.0,
+        "mediana_dias": 12,
+        "p90_dias": 24
+      }
+    },
+    "servicos": [
+      {
+        "id": "denuncias-violacao-direitos-humanos",
+        "n": 1033
+      },
+      {
+        "id": "consulta-medica-saude-familia-comunidade",
+        "n": 574
+      },
+      {
+        "id": "comunicacao-irregularidade",
+        "n": 359
+      },
+      {
+        "id": "normas-procedimentos-unidades-saude",
+        "n": 264
+      },
+      {
+        "id": "denuncia-servidores-municipais",
+        "n": 190
+      },
+      {
+        "id": "marcacao-exame",
+        "n": 174
+      },
+      {
+        "id": "gestao-administrativa",
+        "n": 153
+      },
+      {
+        "id": "disponibilidade-profissionais-unidades-saude",
+        "n": 119
+      },
+      {
+        "id": "cirurgia",
+        "n": 114
+      },
+      {
+        "id": "atendimento-recepcao-unidades-saude",
+        "n": 114
+      },
+      {
+        "id": "administracao-escolar",
+        "n": 114
+      },
+      {
+        "id": "servidor-publico",
+        "n": 100
+      },
+      {
+        "id": "via-publica-recapeamento",
+        "n": 88
+      },
+      {
+        "id": "cadastro-usuarios-saude",
+        "n": 80
+      },
+      {
+        "id": "poluicao-sonora-fiscalizacao",
+        "n": 68
+      }
+    ]
+  }
+}

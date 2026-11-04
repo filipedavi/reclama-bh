@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Projeto Aplicado - Reclama BH - Etapa 2</title>
+<style>
+  @page { size: A4; margin: 3cm 2cm 2cm 3cm;
+    @top-right { content: counter(page); font-family: Arial, Helvetica, sans-serif; font-size: 10pt; vertical-align: bottom; padding-bottom: 0.6cm; } }
+  @page pre { @top-right { content: none; } }
+  html { font-family: Arial, Helvetica, sans-serif; font-size: 12pt; color: #000; }
+  body { margin: 0; }
+  .pre { page: pre; }
+  .quebra { break-before: page; }
+  p { text-align: justify; line-height: 1.5; text-indent: 1.25cm; margin: 0; }
+  p.sem-recuo { text-indent: 0; }
+  h1, h2, h3 { font-size: 12pt; margin: 0; line-height: 1.5; break-after: avoid; }
+  h1 { text-transform: uppercase; font-weight: bold; margin-bottom: 1.5em; }
+  h2 { font-weight: normal; margin-top: 1.5em; margin-bottom: 0.75em; }
+  h3 { font-weight: normal; margin-top: 1.2em; margin-bottom: 0.5em; }
+  h1.centro { text-align: center; }
+  ol.alineas { list-style: none; margin: 0.25em 0 0.25em 1.25cm; padding: 0; }
+  ol.alineas li { text-align: justify; line-height: 1.5; padding-left: 0; }
+  .rosto { height: 24.6cm; display: flex; flex-direction: column; text-align: center; }
+  .rosto .autores { line-height: 1.5; }
+  .rosto .titulo { margin-top: 6.5cm; font-weight: bold; line-height: 1.5; }
+  .rosto .subtitulo { font-weight: bold; text-transform: none; }
+  .rosto .natureza { margin: 2cm 0 0 8cm; text-align: justify; font-size: 10pt; line-height: 1.15; }
+  .rosto .orientacao { margin: 1em 0 0 8cm; text-align: left; line-height: 1.5; }
+  .rosto .local { margin-top: auto; line-height: 1.5; }
+  .sumario { width: 100%; border-collapse: collapse; line-height: 1.5; }
+  .sumario td { padding: 0; vertical-align: bottom; }
+  .sumario td.n { width: 1.4cm; white-space: nowrap; }
+  .sumario .lead { position: relative; }
+  .sumario .lead span.txt { background: #fff; position: relative; z-index: 1; padding-right: 4px; }
+  .sumario .lead::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0.35em; border-bottom: 1px dotted #000; }
+  .sumario td.p { width: 1cm; text-align: right; padding-left: 4px; }
+  .sumario tr.prim td { font-weight: bold; text-transform: uppercase; }
+  figure { margin: 1em 0; break-inside: avoid; text-align: center; }
+  figcaption, .legenda { font-size: 10pt; line-height: 1.15; text-align: center; margin-bottom: 0.4em; }
+  .fonte { font-size: 10pt; line-height: 1.15; text-align: left; margin-top: 0.3em; text-indent: 0; }
+  figure img { max-width: 12cm; }
+  .ilustracao { margin: 1em 0; break-inside: avoid; }
+  .ilustracao.longo { break-inside: auto; }
+  .ilustracao.longo .legenda { break-after: avoid; }
+  table.quadro, table.tabela { width: 100%; border-collapse: collapse; font-size: 10pt; line-height: 1.2; }
+  table.quadro th, table.quadro td { border: 1px solid #000; padding: 4px 6px; text-align: left; vertical-align: top; }
+  table.quadro th { font-weight: bold; }
+  table.tabela { border-top: 1.5px solid #000; border-bottom: 1.5px solid #000; }
+  table.tabela th { border-bottom: 1px solid #000; padding: 4px 6px; font-weight: bold; }
+  table.tabela td { padding: 3px 6px; }
+  table.tabela td.num, table.tabela th.num { text-align: right; }
+  table.quadro tr, table.tabela tr { break-inside: avoid; }
+  table.quadro.pequeno { font-size: 9pt; }
+  .refs p { text-indent: 0; text-align: left; line-height: 1.0; margin-bottom: 1em; }
+  figure img.tela { max-width: 15.5cm; width: 15.5cm; border: 1px solid #999; }
+  figure img.tela-media { width: 13cm; border: 1px solid #999; }
+  .celular { width: 5.6cm; height: 13cm; overflow: hidden; margin: 0 auto; border: 1px solid #999; }
+  .celular img { width: 5.6cm; max-width: none; display: block; }
+  svg.diagrama { width: 16cm; height: auto; display: block; margin: 0 auto; }
+  @page paisagem { size: A4 landscape; }
+  .paisagem { page: paisagem; }
+  .paisagem svg.diagrama { width: 23cm; }
+  .paisagem figure { margin: 0; }
+  code, .mono { font-family: "Courier New", Courier, monospace; font-size: 10pt; }
+  table.quadro td code, table.tabela td code { font-size: 9pt; }
+  ol.alineas li p { text-indent: 0; }
+</style>
+</head>
+<body>
+
+<section class="pre rosto">
+  <div class="autores">Filipe Davi Gomes<br>Nathan Filipe Izidorio Alves<br>Victor Cunha Marques</div>
+  <div class="titulo">RECLAMA BH:<br><span class="subtitulo">o que Belo Horizonte reclama e como a Prefeitura responde</span></div>
+  <div class="natureza">Trabalho apresentado à disciplina Organização e Tratamento da Informação (OTI071) do curso de Sistemas de Informação da Universidade Federal de Minas Gerais, como requisito parcial de avaliação – Projeto Aplicado, Etapa 2: Desenvolvimento da solução (trabalho completo).</div>
+  <div class="orientacao">Professora: Patrícia Nascimento Silva</div>
+  <div class="local">Belo Horizonte<br>2026</div>
+</section>
+
+<section class="pre quebra">
+  <h1 class="centro">Sumário</h1>
+  <table class="sumario">
+    <tr class="prim"><td class="n">1</td><td class="lead"><span class="txt">Diagnóstico</span></td><td class="p">3</td></tr>
+    <tr><td class="n">1.1</td><td class="lead"><span class="txt">Nome e logomarca da solução</span></td><td class="p">3</td></tr>
+    <tr><td class="n">1.2</td><td class="lead"><span class="txt">Descrição da aplicação, contexto e perfil do usuário da informação</span></td><td class="p">3</td></tr>
+    <tr><td class="n">1.3</td><td class="lead"><span class="txt">Problema e objetivo da solução</span></td><td class="p">4</td></tr>
+    <tr><td class="n">1.4</td><td class="lead"><span class="txt">Justificativa e motivação do grupo</span></td><td class="p">5</td></tr>
+    <tr><td class="n">1.5</td><td class="lead"><span class="txt">Limitações, impactos e esclarecimentos</span></td><td class="p">6</td></tr>
+    <tr class="prim"><td class="n">2</td><td class="lead"><span class="txt">Definição dos requisitos</span></td><td class="p">7</td></tr>
+    <tr><td class="n">2.1</td><td class="lead"><span class="txt">Conceitos e termos utilizados na aplicação</span></td><td class="p">7</td></tr>
+    <tr><td class="n">2.2</td><td class="lead"><span class="txt">Requisitos funcionais e não funcionais</span></td><td class="p">8</td></tr>
+    <tr><td class="n">2.3</td><td class="lead"><span class="txt">Requisitos de gestão arquivística</span></td><td class="p">8</td></tr>
+    <tr class="prim"><td class="n">3</td><td class="lead"><span class="txt">Métodos e técnicas de organização da informação</span></td><td class="p">10</td></tr>
+    <tr><td class="n">3.1</td><td class="lead"><span class="txt">Fontes de informação e regras de tratamento</span></td><td class="p">10</td></tr>
+    <tr><td class="n">3.2</td><td class="lead"><span class="txt">Tratamento temático</span></td><td class="p">11</td></tr>
+    <tr><td class="n">3.3</td><td class="lead"><span class="txt">Tratamento descritivo</span></td><td class="p">13</td></tr>
+    <tr><td class="n">3.4</td><td class="lead"><span class="txt">Gestão arquivística</span></td><td class="p">14</td></tr>
+    <tr class="prim"><td class="n">4</td><td class="lead"><span class="txt">Modelo de recuperação da informação</span></td><td class="p">15</td></tr>
+    <tr><td class="n">4.1</td><td class="lead"><span class="txt">Recursos da aplicação para recuperação da informação</span></td><td class="p">15</td></tr>
+    <tr class="prim"><td class="n">5</td><td class="lead"><span class="txt">Modelagem da solução</span></td><td class="p">17</td></tr>
+    <tr><td class="n">5.1</td><td class="lead"><span class="txt">Pipeline dos dados e modelo entidade-relacionamento</span></td><td class="p">17</td></tr>
+    <tr><td class="n">5.2</td><td class="lead"><span class="txt">Solução desenvolvida</span></td><td class="p">20</td></tr>
+    <tr class="prim"><td class="n">6</td><td class="lead"><span class="txt">Considerações finais</span></td><td class="p">24</td></tr>
+    <tr class="prim"><td class="n"></td><td class="lead"><span class="txt">Referências</span></td><td class="p">25</td></tr>
+  </table>
+</section>
+
+<section class="quebra">
+<h1>1 Diagnóstico</h1>
+
+<p>Quem registra uma reclamação na Ouvidoria da Prefeitura de Belo Horizonte não sabe o que vai acontecer com ela: se será atendida, arquivada ou apenas respondida com uma orientação, nem quanto tempo isso leva. A Prefeitura publica, no Portal de Dados Abertos, todas as manifestações recebidas desde 2022, com o serviço reclamado, o órgão responsável, o tempo de tramitação e o desfecho (PREFEITURA DE BELO HORIZONTE, 2025). A resposta à pergunta existe, portanto, mas está num formato que só quem domina ferramentas de tratamento de dados consegue ler. A seção 1 descreve esse problema e a solução proposta; as seções 2 a 5 detalham os requisitos, as técnicas de organização da informação, o modelo de recuperação e a solução desenvolvida.</p>
+
+<h2 id="s1-1">1.1 Nome e logomarca da solução</h2>
+
+<p>A solução se chama Reclama BH, com o lema “O que BH reclama e como a Prefeitura responde”. O nome junta o verbo que descreve a ação do cidadão ao nome da cidade; o lema diz os dois lados que o sistema mostra: a demanda e a resposta.</p>
+
+<figure>
+  <figcaption>Figura 1 – Logomarca do Reclama BH</figcaption>
+  <img src="../../assets/logo.svg" alt="Logomarca do Reclama BH">
+  <p class="fonte">Fonte: Elaborado pelos autores (2026).</p>
+</figure>
+
+<p>A logomarca (Figura 1) é um balão de fala, que representa a manifestação do cidadão, com uma marca de verificação em âmbar, que remete à pergunta central do sistema: a manifestação foi atendida? O fundo azul-escuro remete à confiabilidade de dados oficiais.</p>
+
+<h2 id="s1-2">1.2 Descrição da aplicação, contexto e perfil do usuário da informação</h2>
+
+<p>O Reclama BH é um site, acessível por celular e computador, que organiza as manifestações da Ouvidoria e responde, para cada serviço público municipal, o que se pode esperar de uma reclamação. A página de cada serviço informa quantas manifestações houve, qual proporção foi atendida, qual foi arquivada, quanto tempo a resposta levou e se o prazo de trinta dias previsto em lei foi cumprido (BRASIL, 2017). Mostra também por qual canal (telefone 156, portal, aplicativo, presencial) a reclamação daquele serviço costuma ter melhor resultado, a evolução ano a ano e os recortes por regional e por órgão responsável.</p>
+
+<p>O cidadão encontra o serviço escrevendo do seu jeito (“poste apagado”, “barulho de bar”, “vaga na creche”); o sistema traduz a expressão para o nome oficial usado pela Prefeitura. Também há rankings dos serviços mais arquivados, mais demorados e mais atendidos, e páginas por tema, por órgão e por regional. O site não exige cadastro nem coleta dados pessoais.</p>
+
+<p>Iniciativas parecidas existem. A Controladoria-Geral da União mantém o Painel Resolveu?, que mostra resolutividade e tempo de resposta das ouvidorias que usam o sistema federal Fala.BR, inclusive de municípios (CONTROLADORIA-GERAL DA UNIÃO, 2025). A Ouvidoria de Belo Horizonte, porém, usa um sistema próprio, o BH Digital, e divulga apenas totais e relatórios por secretaria. Não encontramos, para a cidade, nenhuma ferramenta com recorte por serviço, comparação entre canais de registro e busca pela linguagem do cidadão, que é o que o Reclama BH se propõe a fazer.</p>
+
+<p>O contexto é o da Lei nº 13.460/2017, que garante ao usuário de serviço público o direito de se manifestar e de receber resposta em até trinta dias, e o da política de dados abertos, que levou a Prefeitura a publicar os registros da Ouvidoria (BRASIL, 2011; PREFEITURA DE BELO HORIZONTE, 2025). Entre janeiro de 2022 e junho de 2025 foram 138.323 manifestações, a maioria reclamações, seguidas de denúncias, pedidos de orientação, sugestões e elogios.</p>
+
+<p>O usuário principal é o cidadão prestes a reclamar, que não conhece o nome administrativo do serviço nem o órgão que responde, e não tem como calibrar sua expectativa. O Quadro 1 resume os perfis de usuário e suas necessidades de informação.</p>
+
+<div class="ilustracao">
+  <p class="legenda">Quadro 1 – Perfis de usuário e necessidades de informação</p>
+  <table class="quadro">
+    <tr><th style="width:30%">Perfil</th><th>Necessidade de informação</th></tr>
+    <tr><td>Cidadão prestes a reclamar</td><td>Saber se vale a pena registrar a manifestação, por qual canal, quanto tempo leva e qual a chance de atendimento.</td></tr>
+    <tr><td>Jornalistas e comunicadores comunitários</td><td>Identificar serviços e órgãos com pior desempenho e comprovar afirmações com dados oficiais.</td></tr>
+    <tr><td>Vereadores, conselhos e associações de bairro</td><td>Acompanhar a resposta da Prefeitura numa regional ou numa política pública.</td></tr>
+    <tr><td>Ouvidoria e controle interno</td><td>Ver os próprios dados organizados por assunto e comparar canais e órgãos.</td></tr>
+    <tr><td>Pesquisadores</td><td>Obter uma base limpa e documentada sobre ouvidoria municipal.</td></tr>
+  </table>
+  <p class="fonte">Fonte: Elaborado pelos autores (2026).</p>
+</div>
+
+<h2 id="s1-3">1.3 Problema e objetivo da solução</h2>
+
+<p>O problema é de organização da informação: os dados existem e são públicos, mas são irrecuperáveis para o cidadão. Ao examinar os arquivos publicados pela Prefeitura, o grupo identificou os seguintes obstáculos:</p>
+
+<p>a) cada ano é um arquivo CSV com uma linha por encaminhamento, e não por manifestação: são 259.033 linhas para 138.323 manifestações, e um mesmo protocolo chega a aparecer 1.442 vezes;</p>
+<p>b) os nomes dos serviços não são controlados: há 1.744 grafias diferentes para cerca de 1.670 serviços. O mesmo serviço aparece como “Vacinação” e “Vacinação de rotina para a população”, e muitos nomes trazem “?” no lugar do travessão (“Árvore ? Poda de Árvore”);</p>
+<p>c) os órgãos responsáveis aparecem só por sigla (SMSA, SUFIS, SUCOR), sem o nome por extenso;</p>
+<p>d) não há agrupamento por assunto: o cidadão que quer saber de “buraco na rua” precisaria adivinhar que o serviço se chama “Via Pública - Recapeamento”;</p>
+<p>e) não há dicionário de dados publicado junto, e o arquivo de cada ano é substituído a cada mês, sem histórico;</p>
+<p>f) o arquivo tem centenas de milhares de linhas, inacessível sem software de tratamento de dados.</p>
+
+<p>A Tabela 1 mostra o tipo de informação que fica escondida nesses arquivos. Reclamações de ônibus, por exemplo, são respondidas em dois dias, mas 64% são arquivadas sem atendimento; denúncias de violação de direitos humanos levam, em mediana, 81 dias.</p>
+
+<div class="ilustracao">
+  <p class="legenda">Tabela 1 – Resposta da Prefeitura a serviços selecionados (janeiro de 2022 a junho de 2025)</p>
+  <table class="tabela">
+    <tr><th>Serviço</th><th class="num">Manifestações</th><th class="num">Atendidas</th><th class="num">Arquivadas</th><th class="num">Mediana (dias)</th><th class="num">No prazo</th></tr>
+    <tr><td>Denúncias de Violação de Direitos Humanos</td><td class="num">8.153</td><td class="num">25%</td><td class="num">2%</td><td class="num">81</td><td class="num">12,5%</td></tr>
+    <tr><td>Denúncia sobre Servidores Municipais</td><td class="num">3.911</td><td class="num">8,5%</td><td class="num">27%</td><td class="num">11</td><td class="num">92%</td></tr>
+    <tr><td>Árvore – Poda de Árvore em Passeios, Praças, Etc</td><td class="num">2.426</td><td class="num">53%</td><td class="num">15%</td><td class="num">38</td><td class="num">45%</td></tr>
+    <tr><td>Reclamação de Ônibus (Transporte Coletivo)</td><td class="num">2.247</td><td class="num">11%</td><td class="num">64%</td><td class="num">2</td><td class="num">86%</td></tr>
+    <tr><td>Cirurgia</td><td class="num">1.813</td><td class="num">69%</td><td class="num">8%</td><td class="num">13</td><td class="num">89%</td></tr>
+    <tr><td>Lei de Acesso à Informação - LAI</td><td class="num">707</td><td class="num">2%</td><td class="num">37%</td><td class="num">2</td><td class="num">98%</td></tr>
+    <tr><td>Coleta de Lixo Domiciliar - Ocorrência/Reclamação</td><td class="num">592</td><td class="num">13%</td><td class="num">72%</td><td class="num">2</td><td class="num">93%</td></tr>
+  </table>
+  <p class="fonte">Fonte: Elaborado pelos autores (2026), a partir de Prefeitura de Belo Horizonte (2025). Taxas calculadas sobre as manifestações encerradas; “no prazo” é a proporção respondida em até trinta dias.</p>
+</div>
+
+<p>O objetivo geral é organizar as manifestações da Ouvidoria de Belo Horizonte de modo que qualquer cidadão descubra, antes de reclamar, como a Prefeitura costuma responder ao serviço que lhe interessa. Os objetivos específicos são:</p>
+<p>a) reunir as linhas repetidas em uma manifestação por protocolo e padronizar os nomes de serviço e de órgão;</p>
+<p>b) agrupar os serviços por tema, para que possam ser encontrados pelo problema e não pelo nome administrativo;</p>
+<p>c) permitir a busca na linguagem do cidadão, com filtros e operadores para quem quiser refinar;</p>
+<p>d) calcular e apresentar, por serviço, tema, órgão, regional, canal e ano, a taxa de atendimento, a taxa de arquivamento, o tempo de resposta e o cumprimento do prazo legal;</p>
+<p>e) preservar os arquivos originais publicados pela Prefeitura, com registro de origem e integridade, já que o portal os substitui a cada mês;</p>
+<p>f) disponibilizar os indicadores em formato aberto.</p>
+
+<h2 id="s1-4">1.4 Justificativa e motivação do grupo</h2>
+
+<p>A Ouvidoria é o instrumento que o cidadão comum tem para cobrar a Prefeitura, e ninguém sabe se ele funciona. Mostrar a resposta da Prefeitura, serviço por serviço, ajuda o cidadão a decidir por onde reclamar, dá base a jornalistas e vereadores e devolve à própria administração um retrato de onde a resposta falha. É uma aplicação direta do que o desafio “Dados Abertos, IA e Impacto Social” propõe (CONTROLADORIA-GERAL DA UNIÃO, 2026).</p>
+
+<p>Para a disciplina, o conjunto de dados é um caso típico de problema de organização da informação: exige controle de vocabulário, classificação por assunto, descrição por metadados, recuperação por busca e gestão das versões dos arquivos. Cada técnica estudada tem um uso necessário na solução.</p>
+
+<p>Quanto à motivação, somos estudantes que já usamos a Ouvidoria e o telefone 156 e conhecemos a experiência de registrar uma manifestação sem saber o que esperar. Ao abrir os dados, vimos que a resposta estava lá, mas escondida atrás de 259 mil linhas, 1.744 nomes de serviço e siglas sem explicação. Organizar isso nos pareceu útil para a cidade e adequado ao que aprendemos no curso.</p>
+
+<h2 id="s1-5">1.5 Limitações, impactos e esclarecimentos</h2>
+
+<p>A principal limitação é que o desfecho de cada manifestação é o que a Prefeitura registrou ao encerrá-la: “atendida” não significa que o cidadão ficou satisfeito, e “arquivada” pode ter motivos legítimos, como dados insuficientes ou assunto de outro ente. O sistema mostra o comportamento da resposta, não a qualidade do serviço na rua.</p>
+
+<p>Os dados publicados vão até junho de 2025; a Prefeitura não divulgou arquivos mais recentes até a data deste trabalho. Metade das manifestações não informa a regional e um terço não informa o órgão responsável, o que limita os recortes territoriais e por órgão. Não há dicionário de dados oficial: o significado dos campos de prazo e de situação foi inferido dos próprios dados e da Lei nº 13.460/2017. O agrupamento por tema é feito pelo nome do serviço e pode errar em casos de fronteira. Manifestações ainda em andamento não entram nas taxas, o que pode inflar o resultado dos meses mais recentes.</p>
+
+<p>O impacto esperado é dar ao cidadão uma expectativa realista antes de reclamar e apontar, com dados oficiais, os serviços e órgãos em que a resposta falha. Os dados da Ouvidoria já são publicados sem identificação do cidadão, e o sistema não coleta nenhum dado pessoal (BRASIL, 2018). Todos os números apresentados neste documento foram calculados pelo grupo a partir dos arquivos publicados pela Prefeitura e podem ser reproduzidos.</p>
+</section>
+
+<section class="quebra">
+<h1 id="s2">2 Definição dos requisitos</h1>
+
+<h2 id="s2-1">2.1 Conceitos e termos utilizados na aplicação</h2>
+
+<p>Dahlberg (1978) define o conceito como a unidade de conhecimento formada por um referente, pelas características que o delimitam e pelo termo que o designa. Num sistema que conta coisas, a definição precisa dizer também como o conceito é reconhecido nos dados; caso contrário, contam-se coisas diferentes com o mesmo nome. O Quadro 2 apresenta os conceitos centrais do Reclama BH com a definição e a definição operacional, que é a aplicada literalmente pelo código.</p>
+
+<div class="ilustracao longo">
+<p class="legenda">Quadro 2 – Sistema de conceitos do Reclama BH</p>
+<table class="quadro pequeno">
+  <tr><th style="width:19%">Termo</th><th>Definição</th><th style="width:40%">Definição operacional</th></tr>
+  <tr><td>Manifestação</td><td>Registro formal feito por um cidadão junto à Ouvidoria sobre um serviço público: reclamação, denúncia, sugestão, elogio ou pedido de orientação.</td><td>Um número de protocolo distinto. As linhas repetidas do arquivo (uma por encaminhamento) são reunidas numa só manifestação.</td></tr>
+  <tr><td>Serviço</td><td>Serviço ou atividade da Prefeitura sobre o qual o cidadão se manifesta, com o nome do catálogo de serviços da PBH.</td><td>Campo “Serviço”, após controle de autoridade: variantes de grafia reunidas sob a forma autorizada.</td></tr>
+  <tr><td>Tema e subtema</td><td>Agrupamento dos serviços por assunto, em dois níveis, para que o cidadão encontre o serviço pelo problema que vive.</td><td>Atribuídos automaticamente pelas regras da taxonomia sobre o nome normalizado do serviço.</td></tr>
+  <tr><td>Motivo</td><td>Razão da manifestação, segundo o vocabulário controlado da própria Ouvidoria.</td><td>Valores do campo multivalorado “Assunto”; os que identificam grupos prioritários vão para uma faceta própria.</td></tr>
+  <tr><td>Órgão responsável</td><td>Unidade da Prefeitura que respondeu à manifestação.</td><td>Primeira sigla do campo “Responsável pela Resposta”, conferida na lista de autoridade; vazio vira “não informado”.</td></tr>
+  <tr><td>Manifestação encerrada</td><td>Manifestação cuja tramitação terminou e recebeu um desfecho.</td><td>Campo “Etapa” igual a “Encerrado”; as demais contam como “em andamento” e ficam fora das taxas.</td></tr>
+  <tr><td>Resultado</td><td>Atendida, gerou orientação, arquivada ou outro desfecho.</td><td>Campo “Situação da demanda”. É o que a Prefeitura registrou, não a avaliação do cidadão.</td></tr>
+  <tr><td>Taxa de atendimento</td><td>Proporção das manifestações encerradas registradas como atendidas.</td><td>atendidas ÷ encerradas, no recorte escolhido.</td></tr>
+  <tr><td>Taxa de arquivamento</td><td>Proporção das encerradas arquivadas sem atendimento.</td><td>arquivadas ÷ encerradas.</td></tr>
+  <tr><td>Tempo de tramitação</td><td>Dias entre o registro e o encerramento.</td><td>Campo “Dias em tramitação com a PBH”, só para encerradas; resumido pela mediana.</td></tr>
+  <tr><td>Prazo legal</td><td>Trinta dias, prorrogáveis uma vez (Lei nº 13.460/2017, art. 16).</td><td>Campo “SLA”: no prazo até 30 dias; atenção de 31 a 60; crítico acima de 60.</td></tr>
+  <tr><td>Canal</td><td>Meio de registro: portal, aplicativo, telefone 156, presencial ou origem interna.</td><td>Campo “Canal de captação”.</td></tr>
+  <tr><td>Versão do conjunto de dados</td><td>Arquivo CSV anual publicado pela PBH numa data; cada publicação acumula os meses do ano e substitui a anterior.</td><td>Arquivo capturado, identificado por ano e último mês coberto, com hash SHA-256 e eventos de preservação no manifesto.</td></tr>
+</table>
+<p class="fonte">Fonte: Elaborado pelos autores (2026), a partir de <code>pipeline/vocabulario/conceitos.json</code>.</p>
+</div>
+
+<p>Duas escolhas merecem destaque. As taxas são calculadas sobre as manifestações encerradas, e não sobre o total, porque uma demanda em andamento ainda não tem resultado. O tempo de resposta é resumido pela mediana, e não pela média, porque a distribuição tem uma cauda longa de casos que ficam meses em tramitação.</p>
+
+<h2 id="s2-2">2.2 Requisitos funcionais e não funcionais</h2>
+
+<p>Os requisitos foram levantados a partir das necessidades do Quadro 1 e estão todos implementados. O Quadro 3 os resume.</p>
+
+<div class="ilustracao longo">
+<p class="legenda">Quadro 3 – Requisitos funcionais (RF) e não funcionais (RNF)</p>
+<table class="quadro pequeno">
+  <tr><th style="width:10%">Código</th><th>Requisito</th></tr>
+  <tr><td>RF01</td><td>Descobrir no portal da PBH, pela API CKAN, o arquivo mais completo de cada ano e baixá-lo quando houver versão nova.</td></tr>
+  <tr><td>RF02</td><td>Registrar cada versão capturada num manifesto com metadados descritivos e de preservação, mantendo as versões substituídas.</td></tr>
+  <tr><td>RF03</td><td>Reunir as linhas do arquivo em uma por manifestação e normalizar cabeçalhos, datas, prazos, situações e campos multivalorados entre os anos.</td></tr>
+  <tr><td>RF04</td><td>Aplicar controle de autoridade aos nomes de serviço e de órgão e classificar cada serviço em tema e subtema.</td></tr>
+  <tr><td>RF05</td><td>Calcular os indicadores por serviço, tema, subtema, órgão, regional, canal, tipologia e ano.</td></tr>
+  <tr><td>RF06</td><td>Oferecer busca em linguagem natural, interpretada pelo tesauro, que mostre como a pergunta foi entendida.</td></tr>
+  <tr><td>RF07</td><td>Oferecer busca booleana com operadores, parênteses, frase exata, truncamento e campos, com facetas e ordenação.</td></tr>
+  <tr><td>RF08</td><td>Apresentar, para cada serviço, a página “O que esperar”, com indicadores, comparação com a média, canal, regional, órgão, motivo e séries por ano e mês.</td></tr>
+  <tr><td>RF09</td><td>Permitir navegação por tema, órgão (tabela ordenável) e regional (mapa).</td></tr>
+  <tr><td>RF10</td><td>Publicar os indicadores em JSON com catálogo DCAT e documentar vocabulários, conceitos, arquivo e limitações no próprio site; executar o pipeline automaticamente todo mês.</td></tr>
+  <tr><td>RNF01</td><td>Funcionar em celulares e computadores, com leiaute responsivo, tema claro e escuro e instalação como aplicativo.</td></tr>
+  <tr><td>RNF02</td><td>Não coletar dados pessoais nem exigir cadastro: site estático, sem servidor de aplicação; preferências ficam só no navegador.</td></tr>
+  <tr><td>RNF03</td><td>Ser reproduzível: qualquer pessoa com Python 3.10 regenera os dados a partir dos originais, sem bibliotecas externas.</td></tr>
+  <tr><td>RNF04</td><td>Ser transparente: toda regra de tratamento, definição de indicador e regra de classificação é pública.</td></tr>
+  <tr><td>RNF05</td><td>Não mostrar taxas com amostra pequena: mínimo de 20 manifestações encerradas; rankings só com 200 ou mais.</td></tr>
+  <tr><td>RNF06</td><td>Ser acessível (navegação por teclado, textos alternativos, tabela alternativa para cada gráfico) e custar zero para operar.</td></tr>
+</table>
+<p class="fonte">Fonte: Elaborado pelos autores (2026).</p>
+</div>
+
+<h2 id="s2-3">2.3 Requisitos de gestão arquivística</h2>
+
+<p>O e-ARQ Brasil (CONSELHO NACIONAL DE ARQUIVOS, 2022) especifica o que um sistema informatizado deve cumprir para que os documentos nele mantidos sejam confiáveis, autênticos e acessíveis ao longo do tempo. O Reclama BH custodia os arquivos originais publicados pela Prefeitura e os indicadores que produz. O Quadro 4 relaciona os requisitos adotados.</p>
+
+<div class="ilustracao longo">
+<p class="legenda">Quadro 4 – Requisitos de gestão arquivística (e-ARQ Brasil) e sua implementação</p>
+<table class="quadro pequeno">
+  <tr><th style="width:24%">Aspecto</th><th>Requisito adotado e situação</th></tr>
+  <tr><td>Captura e classificação</td><td>Todo arquivo publicado pela PBH é capturado sem alteração, recebe identificador único (ano e último mês coberto) e o código do plano de classificação (02.01.01). Implementado em <code>coletar.py</code>.</td></tr>
+  <tr><td>Integridade e fixidez</td><td>O hash SHA-256 é calculado na captura e conferido a cada verificação (<code>coletar.py --verificar</code>); qualquer alteração é detectada.</td></tr>
+  <tr><td>Trilha de auditoria</td><td>Todo evento sobre a versão (captura, verificação de fonte, verificação de fixidez, substituição) é registrado no manifesto com data, agente e resultado.</td></tr>
+  <tr><td>Metadados</td><td>Cada versão tem metadados descritivos (Dublin Core) e de preservação (PREMIS), descritos na seção 3.3.</td></tr>
+  <tr><td>Versões substituídas</td><td>Quando a PBH publica um arquivo mais completo do mesmo ano, a versão anterior não é apagada: muda para “substituída” e continua guardada. Implementado; ainda sem caso real, porque não houve publicação nova desde julho de 2025.</td></tr>
+  <tr><td>Temporalidade, armazenamento e acesso</td><td>Prazos e destinação definidos na tabela de temporalidade (seção 3.4). Os originais têm guarda permanente como <i>releases</i> do repositório; originais, base limpa, indicadores e vocabulários são acessíveis a qualquer pessoa, com licença indicada.</td></tr>
+  <tr><td>Segurança e privacidade</td><td>Não há dados pessoais no acervo e o sistema não os cria: o arquivo da PBH não traz nome, CPF nem texto livre.</td></tr>
+</table>
+<p class="fonte">Fonte: Elaborado pelos autores (2026), com base em Conselho Nacional de Arquivos (2022).</p>
+</div>
+</section>
+
+<section class="quebra">
+<h1 id="s3">3 Métodos e técnicas de organização da informação</h1>
+
+<h2 id="s3-1">3.1 Fontes de informação e regras de tratamento</h2>
+
+<p>A fonte primária é o conjunto “Dados gerais das manifestações processadas pela Ouvidoria de Belo Horizonte no sistema BH Digital”, mantido pela Subcontroladoria de Ouvidoria no Portal de Dados Abertos da PBH sob licença Creative Commons Atribuição (PREFEITURA DE BELO HORIZONTE, 2025). São arquivos CSV anuais, com separador ponto e vírgula e codificação ISO-8859-1, publicados mês a mês de forma acumulada: o último arquivo de cada ano contém o ano inteiro. O sistema descobre automaticamente, pela API CKAN do portal, qual é o arquivo mais completo de cada ano. Estão vigentes quatro arquivos: 2022, 2023 e 2024 completos e 2025 até junho (publicado em 14/07/2025). A fonte auxiliar é o conjunto de polígonos das nove regiões administrativas, do BHGeo, usado no mapa.</p>
+
+<p>Outras bases foram levantadas e descartadas. O Fala.BR, da Controladoria-Geral da União, não cobre a Ouvidoria de Belo Horizonte, que usa sistema próprio. O conjunto “Solicitações dos cidadãos por meio dos canais de atendimento” da PBH registra pedidos de serviço (o 156), e não manifestações de ouvidoria; é um cruzamento possível em trabalho futuro. Nenhuma das bases consultadas traz dados pessoais: o arquivo da Ouvidoria não tem nome, documento nem texto livre, só os campos de classificação do registro.</p>
+
+<p>Os quatro arquivos somam 259.033 linhas. O tratamento aplicado por <code>processar.py</code> está resumido no Quadro 5; o efeito de cada regra é registrado em <code>data/processed/limpeza.json</code>.</p>
+
+<div class="ilustracao longo">
+<p class="legenda">Quadro 5 – Regras de tratamento dos dados</p>
+<table class="quadro pequeno">
+  <tr><th style="width:4%">Nº</th><th style="width:40%">Regra</th><th>Justificativa e efeito</th></tr>
+  <tr><td>1</td><td>Normalizar os cabeçalhos por uma tabela de equivalência.</td><td>Os cabeçalhos variam entre anos (“Nº do ticket” e “N.º do ticket”) e 2023 tem uma coluna a mais; a leitura por posição misturaria colunas.</td></tr>
+  <tr><td>2</td><td>Reunir as linhas pelo número do protocolo, uma por manifestação; os campos de estado vêm da tramitação mais recente.</td><td>O arquivo tem uma linha por encaminhamento: 120.710 linhas são repetições. Resultado: 138.323 manifestações (36.070 em 2022, 35.455 em 2023, 44.791 em 2024 e 22.007 no primeiro semestre de 2025).</td></tr>
+  <tr><td>3</td><td>Converter datas para ISO 8601 e dias para inteiro; separar o campo multivalorado “Assunto” em motivos e grupos prioritários.</td><td>Permite agrupar por mês e ano. O campo “Assunto” mistura o motivo da reclamação com a vulnerabilidade do manifestante; misturá-los falsearia a contagem de motivos.</td></tr>
+  <tr><td>4</td><td>Considerar com resultado só as manifestações com Etapa “Encerrado”.</td><td>18.732 manifestações estão em andamento e não têm desfecho.</td></tr>
+  <tr><td>5</td><td>Interpretar o campo “SLA” como: no prazo (até 30 dias), atenção (31 a 60), crítico (acima de 60).</td><td>Limiares inferidos dos dados (maior valor em “no prazo” é 30; menor em “crítico” é 61), coerentes com a Lei nº 13.460/2017.</td></tr>
+  <tr><td>6</td><td>Controle de autoridade dos serviços: chave normalizada (sem acentos, pontuação, palavras vazias e sufixo de ano); forma autorizada é a grafia mais frequente que não esteja toda em maiúsculas; “?” vira travessão; sinônimos declarados são aplicados.</td><td>1.744 grafias viraram 1.670 serviços. Exemplos: “Vacinação de rotina para a população” com e sem maiúsculas; “Cadastro Escolar - 2024” e “- 2025”; “Árvore ? Poda de Árvore”, em que o “?” é falha de codificação do travessão no arquivo da PBH.</td></tr>
+  <tr><td>7</td><td>Classificar cada serviço em tema e subtema pelas regras da taxonomia (seção 3.2).</td><td>2.136 manifestações (1,5%) ficam sem classe.</td></tr>
+  <tr><td>8</td><td>Órgão: primeira sigla do campo “Responsável pela Resposta”, validada na lista de autoridade. Regional: sigla padronizada das nove regionais.</td><td>48.410 manifestações (35%) não informam o órgão e 71.024 (51%) não informam a regional; os recortes valem para a parcela que traz esses campos.</td></tr>
+</table>
+<p class="fonte">Fonte: Elaborado pelos autores (2026), a partir de <code>pipeline/processar.py</code>.</p>
+</div>
+
+<h2 id="s3-2">3.2 Tratamento temático</h2>
+
+<p>A PBH já fornece o nível mais fino do assunto, o nome do serviço, e uma faceta de motivo. O que falta é o nível intermediário, o tema, e a ponte entre a linguagem administrativa e a linguagem comum. O projeto adotou quatro técnicas: uma taxonomia, as facetas existentes, um tesauro e a indexação automática.</p>
+
+<h3>3.2.1 Taxonomia de temas</h3>
+
+<p>A taxonomia é uma classificação hierárquica de dois níveis, com 17 temas e 69 subtemas, construída de cima para baixo a partir das funções municipais e refinada de baixo para cima pela leitura dos 300 nomes de serviço mais frequentes, que cobrem 90% das manifestações. É uma classificação enumerativa no sentido de Cintra <i>et al.</i> (2002): cada classe é listada e definida, e cada serviço pertence a exatamente uma classe folha, numa relação de gênero e espécie (“Poda de árvore” é uma espécie de “Árvores, praças e parques”). O Quadro 6 mostra a estrutura.</p>
+
+<div class="ilustracao longo">
+<p class="legenda">Quadro 6 – Taxonomia de temas com volume de manifestações</p>
+<table class="quadro pequeno">
+  <tr><th style="width:8%">Código</th><th style="width:27%">Tema</th><th>Subtemas</th><th class="num" style="width:13%">Manifestações</th></tr>
+  <tr><td>SAU</td><td>Saúde</td><td>Vacinação; Medicamentos; Cirurgias e internação; Exames; Urgência; Saúde mental; Odontologia; Atendimento domiciliar; Especialidades e agendamento; Centros de saúde</td><td class="num">37.620</td></tr>
+  <tr><td>SER</td><td>Servidores e atendimento da Prefeitura</td><td>Denúncias e conduta de servidores; Concursos; Carreira e pagamento; Canais de atendimento; Acesso à informação e ouvidoria; Gestão administrativa</td><td class="num">18.863</td></tr>
+  <tr><td>FIS</td><td>Fiscalização urbana e ambiental</td><td>Barulho; Obras irregulares; Comércio irregular; Lotes vagos; Publicidade e obstrução; Veículos abandonados; Poluição; Vigilância sanitária; Outras</td><td class="num">16.855</td></tr>
+  <tr><td>TRI</td><td>Impostos e taxas</td><td>IPTU; ITBI; ISSQN e nota fiscal; Dívida ativa; Outros</td><td class="num">11.806</td></tr>
+  <tr><td>SOC</td><td>Assistência social e direitos humanos</td><td>Violação de direitos humanos; População em situação de rua; Benefícios e CadÚnico; CRAS e CREAS</td><td class="num">11.405</td></tr>
+  <tr><td>TRA</td><td>Transporte e trânsito</td><td>Ônibus; Multas; Táxi, aplicativos e transporte escolar; Estacionamento; Sinalização</td><td class="num">11.404</td></tr>
+  <tr><td>ARV</td><td>Árvores, praças e parques</td><td>Poda; Corte e raiz; Plantio; Praças e parques</td><td class="num">7.425</td></tr>
+  <tr><td>VIA</td><td>Ruas, calçadas e obras</td><td>Buracos e asfalto; Calçadas; Drenagem; Esgoto e água; Defesa civil; Obras e habitação</td><td class="num">6.269</td></tr>
+  <tr><td>ANI</td><td>Animais, pragas e vetores</td><td>Dengue; Zoonoses; Ratos e pragas; Cães e gatos</td><td class="num">3.578</td></tr>
+  <tr><td>EDU</td><td>Educação</td><td>Vagas e matrícula; Creches; Escolas</td><td class="num">3.178</td></tr>
+  <tr><td>LIM</td><td>Limpeza urbana e lixo</td><td>Coleta; Varrição; Entulho; Lixeiras</td><td class="num">3.153</td></tr>
+  <tr><td>URB</td><td>Licenciamento e regulação urbana</td><td>Alvarás, licenças e regularização</td><td class="num">1.969</td></tr>
+  <tr><td>CUL</td><td>Cultura, esporte, lazer e turismo</td><td>Carnaval e eventos; Cultura, esporte e turismo</td><td class="num">847</td></tr>
+  <tr><td>ILU</td><td>Iluminação pública</td><td>Luminária apagada ou quebrada; Rede e postes</td><td class="num">628</td></tr>
+  <tr><td>CON</td><td>Consumidor (PROCON)</td><td>Defesa do consumidor</td><td class="num">192</td></tr>
+  <tr><td>DES</td><td>Desenvolvimento econômico e trabalho</td><td>Emprego e empreendedorismo</td><td class="num">158</td></tr>
+  <tr><td>OUT</td><td>Outros assuntos</td><td>Não é competência da PBH; Não classificados</td><td class="num">2.973</td></tr>
+</table>
+<p class="fonte">Fonte: Elaborado pelos autores (2026), a partir de <code>taxonomia.json</code>.</p>
+</div>
+
+<p>A classificação é atribuída por regras: cada subtema tem uma lista de expressões (689 no total) procuradas no nome normalizado do serviço, e a primeira que casa decide. A ordem dos temas é parte da técnica: temas de vocabulário específico (animais, iluminação, vias, árvores) vêm antes dos de vocabulário amplo (saúde, servidores), porque palavras como “saúde” e “atendimento” aparecem em nomes de muitos temas. A primeira versão das regras casava a expressão em qualquer posição e produziu um resultado absurdo: 54.924 manifestações caíram em “Cães e gatos”, porque “cao” casava dentro de “comunicação”, e “Identificação do Condutor Infrator” foi parar em “Ratos e pragas”. O erro foi detectado ao listar os serviços mais frequentes de cada subtema e corrigido exigindo que a expressão case no início de uma palavra e, quando curta, a palavra inteira. É o que Lancaster (2004) observa sobre a indexação automática: barata e consistente, mas dependente de regras explícitas e de verificação humana por amostragem, porque seus erros são sistemáticos.</p>
+
+<h3>3.2.2 Facetas</h3>
+
+<p>Além da hierarquia, cada manifestação é descrita por facetas independentes, no sentido de Ranganathan (1967): o tema diz do que se trata; as facetas dizem por que o cidadão reclamou (motivo), que tipo de manifestação é (tipologia) e se envolve um grupo prioritário. A faceta de motivo é a lista de assuntos da própria Ouvidoria (“Discordância”, 31.962 ocorrências; “Dificuldade de Acesso”, 31.887; “Irregularidade”, 29.300; “Descumprimento de Prazo”, 15.465), que o projeto não alterou, apenas separou dos grupos prioritários e tornou pesquisável. A combinação permite perguntas como “serviços de árvores com reclamação de descumprimento de prazo”.</p>
+
+<h3>3.2.3 Tesauro</h3>
+
+<p>O tesauro liga a linguagem do cidadão ao vocabulário do sistema. Tem 1.783 termos e 869 formas não preferidas, com as relações clássicas (CINTRA <i>et al.</i>, 2002): UP (usado para), TG (termo genérico), TE (termo específico), TR (termo relacionado) e NE (nota de escopo). Os termos de tema e subtema vêm da taxonomia e ligam-se por TG e TE; suas formas não preferidas são as expressões que o cidadão usa (“buraco na rua”, “poste apagado”, “busão”, “vaga na creche”). Os termos de serviço são as 1.670 formas autorizadas, com as grafias variantes como UP e o subtema como TG, gerados do controle de autoridade. Os termos de motivo, tipologia e regional ligam expressões comuns às facetas (“demora” e “atraso” levam a “Descumprimento de Prazo”). Os termos de resultado (“mais demorada”, “mais arquivada”) não restringem a busca: viram uma ordenação. A parte manual está em <code>tesauro_base.json</code>; a completa é montada pelo pipeline e pode ser consultada termo a termo no site.</p>
+
+<h3>3.2.4 Indexação automática</h3>
+
+<p>A indexação é automática. Cada serviço, que é o documento recuperável do sistema, recebe termos controlados: tema e subtema (com postagem genérica), órgãos que o respondem, motivos e tipologias mais frequentes e regionais. As palavras do nome autorizado e das grafias variantes são indexadas como palavras livres, normalizadas e reduzidas ao singular por uma versão simplificada do passo de plural do algoritmo RSLP (ORENGO; HUYCK, 2001). A folksonomia foi considerada e não adotada: exigiria coletar contribuições de pessoas, contra o requisito de não tratar dados pessoais, e introduziria vocabulário sem controle. A linguagem do usuário foi obtida de outra forma: as formas não preferidas do tesauro foram escritas a partir de como as pessoas descrevem os problemas.</p>
+
+<h2 id="s3-3">3.3 Tratamento descritivo</h2>
+
+<p>O tratamento descritivo identifica e descreve os objetos informacionais do sistema: as versões do conjunto de dados, os serviços e órgãos e os conjuntos de indicadores publicados. Para cada tipo foi escolhido um padrão de metadados.</p>
+
+<h3>3.3.1 Versões do conjunto de dados: Dublin Core e PREMIS</h3>
+
+<p>Cada versão capturada é descrita no manifesto por elementos que mapeiam o Dublin Core (DUBLIN CORE METADATA INITIATIVE, 2020), para a descrição do recurso, e o PREMIS (PREMIS EDITORIAL COMMITTEE, 2015), para a preservação. O Quadro 7 mostra o mapeamento com os valores reais da versão de 2025.</p>
+
+<div class="ilustracao longo">
+<p class="legenda">Quadro 7 – Metadados de cada versão: mapeamento para Dublin Core e PREMIS</p>
+<table class="quadro pequeno">
+  <tr><th style="width:24%">Campo do manifesto</th><th style="width:24%">Padrão e elemento</th><th>Valor na versão ouvidoria-bh-2025-06</th></tr>
+  <tr><td>identificador; titulo</td><td>dc:identifier; dc:title</td><td>ouvidoria-bh-2025-06; Manifestações da Ouvidoria de Belo Horizonte, 2025 (janeiro a junho)</td></tr>
+  <tr><td>criador; publicador</td><td>dc:creator; dc:publisher</td><td>Subcontroladoria de Ouvidoria (SUOUVI), CGM-BH; Prefeitura de Belo Horizonte, Portal de Dados Abertos</td></tr>
+  <tr><td>data; fonte</td><td>dc:date; dc:source</td><td>2025-07-14; URL do recurso no CKAN e nome original “2025.jan-jun.dados.abertos.csv”</td></tr>
+  <tr><td>formato; idioma; direitos</td><td>dc:format; dc:language; dc:rights</td><td>text/csv (ponto e vírgula, ISO-8859-1); pt-BR; Creative Commons Attribution</td></tr>
+  <tr><td>cobertura</td><td>dc:coverage</td><td>Belo Horizonte, MG; 2025-01 a 2025-06</td></tr>
+  <tr><td>extensao_bytes; sha256</td><td>premis:size; premis:fixity</td><td>15.498.191; 12eb831a6779… (SHA-256, 64 caracteres)</td></tr>
+  <tr><td>eventos[]</td><td>premis:event (tipo, data, agente, resultado)</td><td>captura (2026-10-21); verificação de fonte; verificação de fixidez; substituição. Agente: <code>pipeline/coletar.py</code></td></tr>
+  <tr><td>estado; codigo_classificacao</td><td>(gestão)</td><td>vigente ou substituída; 02.01.01, guarda permanente</td></tr>
+</table>
+<p class="fonte">Fonte: Elaborado pelos autores (2026), a partir de <code>data/arquivo/manifesto.json</code>.</p>
+</div>
+
+<h3>3.3.2 Serviços e órgãos: controle de autoridade</h3>
+
+<p>Serviços e órgãos são descritos por registros de autoridade, no sentido da catalogação (MEY; SILVEIRA, 2009): uma forma autorizada do nome, as formas variantes que remetem a ela e notas. O registro de serviço tem identificador (usado na URL), nome autorizado, grafias variantes, tema, subtema, órgãos, motivos e tipologias mais frequentes, regionais e indicadores. A lista de autoridade de órgãos cobre 59 siglas com a forma por extenso e a área da administração; em oito casos o nome está marcado “a confirmar”, por ter sido inferido da estrutura administrativa. Ela resolve o arquivo trazer só a sigla, a mesma função ter mudado de sigla ao longo do tempo (BHTRANS e SUMOB) e siglas compostas (“SUASS|SUDC”).</p>
+
+<h3>3.3.3 Conjuntos de indicadores: DCAT</h3>
+
+<p>Os indicadores publicados são, eles mesmos, conjuntos de dados abertos, descritos num catálogo no vocabulário DCAT do W3C (2024), em JSON-LD, com título, descrição, cobertura, fonte, licença e distribuição de cada conjunto. O site é descrito em schema.org como aplicação web baseada no conjunto da PBH. O DCAT é o vocabulário adotado pelos portais de dados abertos brasileiros.</p>
+
+<h2 id="s3-4">3.4 Gestão arquivística</h2>
+
+<p>As manifestações de ouvidoria são documentos de arquivo: produzidas no exercício de uma função pública, servem de prova do que foi pedido e respondido e têm prazo legal. Os arquivos que a Prefeitura publica são derivados desse acervo, e cada publicação mensal substitui a anterior no portal. O Reclama BH os trata como um fundo a preservar, segundo os princípios da arquivologia (BELLOTTO, 2006): proveniência (cada versão guarda quem a produziu e de onde foi obtida), organicidade (as versões são mantidas por ano e mês de cobertura), unicidade, integridade (o hash impede alteração sem detecção) e cumulatividade (nada é descartado).</p>
+
+<p>O plano de classificação (Quadro 8) é funcional, como recomenda o Conselho Nacional de Arquivos (2001; 2022): as classes correspondem às funções do sistema. A tabela de temporalidade, no mesmo quadro, define para cada classe os prazos e a destinação. Os originais têm guarda permanente, como <i>releases</i> do repositório; a base limpa e os indicadores são derivados e podem ser refeitos. Quando o portal publicar o arquivo “2025.jan-dez”, a versão “2025.jan-jun” não será apagada: passará a “substituída”, com um evento registrando a substituição.</p>
+
+<div class="ilustracao longo">
+<p class="legenda">Quadro 8 – Plano de classificação e tabela de temporalidade</p>
+<table class="quadro pequeno">
+  <tr><th style="width:30%">Classe</th><th style="width:20%">Fase corrente</th><th style="width:22%">Destinação</th><th>Justificativa</th></tr>
+  <tr><td>01.01 Documentação técnica e vocabulários</td><td>Enquanto vigente; 5 anos após substituição</td><td>Guarda permanente da versão final</td><td>Documenta como cada indicador foi calculado.</td></tr>
+  <tr><td>01.02 Registros de execução</td><td>1 ano</td><td>Eliminação, exceto os eventos do manifesto</td><td>Os eventos são metadados de preservação; os logs perdem valor após a auditoria.</td></tr>
+  <tr><td>02.01.01 Versões integrais dos arquivos anuais</td><td>Enquanto for a mais completa do ano</td><td>Guarda permanente (<i>releases</i> + manifesto)</td><td>Prova do que a Prefeitura publicou em cada data.</td></tr>
+  <tr><td>02.01.02 Base limpa</td><td>Enquanto as regras estiverem vigentes</td><td>Eliminação após reprocessamento</td><td>Documento derivado; o original garante a reprodução.</td></tr>
+  <tr><td>02.02 Indicadores publicados</td><td>Enquanto for a publicação mais recente; 5 anos no histórico git</td><td>Guarda permanente da série</td><td>Permite citar “em tal data o site mostrava X”.</td></tr>
+  <tr><td>03.01 Catálogo DCAT; 03.02 preferências do usuário</td><td>Enquanto vigente; até o usuário apagar</td><td>Eliminação</td><td>Derivado dos indicadores; preferências ficam só no navegador (LGPD).</td></tr>
+</table>
+<p class="fonte">Fonte: Elaborado pelos autores (2026), a partir de <code>plano_classificacao.json</code>.</p>
+</div>
+</section>
+
+<section class="quebra">
+<h1 id="s4">4 Modelo de recuperação da informação</h1>
+
+<h2 id="s4-1">4.1 Recursos da aplicação para recuperação da informação</h2>
+
+<p>O sistema adota o modelo booleano sobre um índice invertido (BAEZA-YATES; RIBEIRO-NETO, 2013). Os documentos recuperáveis são os 1.670 serviços: o cidadão não procura uma manifestação específica, e sim o serviço sobre o qual quer reclamar, e é no serviço que estão os indicadores. O índice tem duas partes: uma mapeia cada termo controlado (<code>tema:TRA</code>, <code>subtema:ARV.POD</code>, <code>orgao:SLU</code>, <code>motivo:Descumprimento de Prazo</code>, <code>regional:BA</code>) para os serviços indexados com ele; a outra mapeia cada palavra livre, normalizada e no singular, para os serviços em cujo nome ou grafias variantes ela ocorre. O modelo booleano foi escolhido porque a coleção é pequena, os termos controlados são precisos e o usuário precisa entender por que um serviço apareceu; uma ordenação por relevância seria menos transparente e, com documentos tão curtos, pouco útil.</p>
+
+<p>A busca avançada aceita a linguagem booleana completa: AND, OR e NOT (também E, OU e NAO), o sinal de menos como negação, parênteses, aspas para frase exata, asterisco para truncamento e o prefixo <code>campo:</code>. A busca em linguagem natural é uma tradução para essa mesma linguagem: a pergunta é normalizada e percorrida da esquerda para a direita e, em cada posição, o sistema procura no tesauro a expressão mais longa que case, de modo que “poda de árvore” é reconhecida como unidade antes de “árvore”. Termos do mesmo campo combinam-se com OU; de campos diferentes, com E; se há um subtema e seu tema, o subtema prevalece. Palavras não reconhecidas entram como palavras livres. Os termos de resultado viram ordenação. O sistema mostra a interpretação (“Entendi assim: Subtema Poda de árvore”) e a busca booleana equivalente, que o usuário pode editar. A Tabela 2 traz consultas medidas no sistema.</p>
+
+<div class="ilustracao longo">
+<p class="legenda">Tabela 2 – Consultas de exemplo e seus resultados</p>
+<table class="tabela">
+  <tr><th>Consulta</th><th>Modo</th><th>Busca equivalente</th><th class="num">Serviços</th></tr>
+  <tr><td><code>poda de árvore</code></td><td>natural</td><td><code>subtema:ARV.POD</code></td><td class="num">4</td></tr>
+  <tr><td><code>poste apagado</code></td><td>natural</td><td><code>subtema:ILU.MAN</code></td><td class="num">14</td></tr>
+  <tr><td><code>barulho de bar</code></td><td>natural</td><td><code>subtema:FIS.SOM</code></td><td class="num">3</td></tr>
+  <tr><td><code>vaga na creche</code></td><td>natural</td><td><code>subtema:EDU.CRE</code></td><td class="num">8</td></tr>
+  <tr><td><code>cachorro abandonado</code></td><td>natural</td><td><code>subtema:ANI.CAO</code></td><td class="num">19</td></tr>
+  <tr><td><code>o que mais demora</code></td><td>natural</td><td>(todos) ordenação: mais demorada</td><td class="num">1.670</td></tr>
+  <tr><td><code>tema:TRA AND orgao:BHTRANS</code></td><td>booleana</td><td>–</td><td class="num">139</td></tr>
+  <tr><td><code>motivo:"Descumprimento de Prazo" -tema:SAU</code></td><td>booleana</td><td>–</td><td class="num">654</td></tr>
+  <tr><td><code>"boca de lobo"</code></td><td>booleana</td><td>–</td><td class="num">10</td></tr>
+</table>
+<p class="fonte">Fonte: Elaborado pelos autores (2026). Medido no sistema em 21 de outubro de 2026.</p>
+</div>
+
+<p>A tabela documenta também como o tesauro evoluiu. Na primeira medição, “barulho de bar” reconhecia o subtema certo, mas a palavra livre “bar” não ocorria em nenhum serviço e o E estrito devolvia zero: é a conhecida falta de degradação suave do modelo booleano (BAEZA-YATES; RIBEIRO-NETO, 2013). A correção foi ampliar o tesauro e relaxar as palavras livres quando há termo controlado, e não trocar de modelo, para preservar a transparência. Os resultados podem ser refinados por facetas com contagem (tema, subtema, órgão, tipologia) e ordenados por seis critérios; serviços com menos de vinte manifestações encerradas não participam das ordenações por taxa. Além da busca, o sistema oferece navegação pela taxonomia, pelos órgãos (tabela ordenável), pelas regionais (mapa) e por ligações cruzadas dentro de cada página de serviço.</p>
+</section>
+
+<section class="quebra">
+<h1 id="s5">5 Modelagem da solução</h1>
+
+<h2 id="s5-1">5.1 Pipeline dos dados e modelo entidade-relacionamento</h2>
+
+<p>O pipeline (Figura 2) tem três programas em Python, executados em sequência pelo GitHub Actions no dia 5 de cada mês. O <code>coletar.py</code> consulta a API CKAN, identifica para cada ano o recurso que cobre mais meses, baixa o que for novo, calcula o SHA-256 e registra a versão no manifesto; os originais novos são publicados como <i>releases</i>. O <code>processar.py</code> aplica as regras do Quadro 5 e gera a base limpa, uma linha por manifestação. O <code>indicadores.py</code> calcula os indicadores por dimensão, monta o tesauro completo e o catálogo DCAT e grava os JSON lidos pelo site. Os vocabulários (taxonomia, tesauro, órgãos, sinônimos, conceitos, plano de classificação) são arquivos JSON editáveis, separados do código.</p>
+
+<p>O modelo entidade-relacionamento (Figura 3) descreve a estrutura lógica da informação. A entidade central é Manifestação, identificada pelo protocolo, que pertence a uma Versão do conjunto de dados e se relaciona com um Serviço, um Órgão, uma Regional, um Canal e uma Tipologia; com Motivo a relação é de muitos para muitos. Serviço é o registro de autoridade: pertence a um Subtema, que pertence a um Tema, e tem Grafias variantes como entidade fraca. Versão tem Eventos de preservação e uma Classe do plano. O Termo do tesauro tem formas não preferidas (UP) e relações TG, TE e TR. Os Indicadores agregados são uma visão materializada calculada por dimensão. A implementação não usa banco relacional: cada entidade está num arquivo CSV ou JSON, com as chaves estrangeiras como campos.</p>
+
+
+<div class="paisagem">
+<figure>
+  <figcaption>Figura 2 – Pipeline dos dados do Reclama BH</figcaption>
+<svg class="diagrama" viewBox="0 0 1000 430" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Pipeline dos dados">
+  <defs><marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+  <rect x="6" y="6" width="988" height="300" rx="14" fill="none" stroke="#555" stroke-dasharray="6 5"/>
+  <text x="22" y="30" font-size="15" font-weight="bold">GitHub Actions: execução mensal (dia 5, 06:00) ou manual</text>
+  <g font-size="12">
+    <rect x="20" y="50" width="180" height="120" rx="8" fill="#eef3f7" stroke="#0B3D5C" stroke-width="1.5"/>
+    <text x="110" y="74" font-size="14" font-weight="bold" text-anchor="middle">Fonte</text>
+    <text x="30" y="96">Portal de Dados Abertos PBH</text><text x="30" y="114">API CKAN: lista de recursos</text><text x="30" y="132">CSV acumulado por ano</text><text x="30" y="150">(jan, jan-fev, ... jan-dez)</text>
+    <rect x="250" y="50" width="200" height="120" rx="8" fill="#eef3f7" stroke="#0B3D5C" stroke-width="1.5"/>
+    <text x="350" y="74" font-size="14" font-weight="bold" text-anchor="middle">coletar.py</text>
+    <text x="260" y="96">descobre o recurso mais completo</text><text x="260" y="114">de cada ano; baixa se for novo</text><text x="260" y="132">SHA-256, metadados DC/PREMIS</text><text x="260" y="150">versão anterior = substituída</text>
+    <rect x="500" y="50" width="200" height="120" rx="8" fill="#fff4dc" stroke="#B8860B" stroke-width="1.5"/>
+    <text x="600" y="74" font-size="14" font-weight="bold" text-anchor="middle">Arquivo de versões</text>
+    <text x="510" y="96">originais (.csv) em</text><text x="510" y="114">GitHub Releases (permanente)</text><text x="510" y="132">manifesto.json: eventos,</text><text x="510" y="150">fixidez, classificação 02.01.01</text>
+    <rect x="750" y="50" width="230" height="120" rx="8" fill="#eef3f7" stroke="#0B3D5C" stroke-width="1.5"/>
+    <text x="865" y="74" font-size="14" font-weight="bold" text-anchor="middle">processar.py</text>
+    <text x="760" y="96">1 linha por manifestação</text><text x="760" y="114">normalização de campos</text><text x="760" y="132">autoridade de serviços e órgãos</text><text x="760" y="150">classificação na taxonomia</text>
+    <rect x="750" y="190" width="230" height="100" rx="8" fill="#eef3f7" stroke="#0B3D5C" stroke-width="1.5"/>
+    <text x="865" y="214" font-size="14" font-weight="bold" text-anchor="middle">indicadores.py</text>
+    <text x="760" y="236">taxas, mediana, prazo por</text><text x="760" y="254">serviço, tema, órgão, regional,</text><text x="760" y="272">canal, ano; tesauro; DCAT</text>
+    <rect x="500" y="190" width="200" height="100" rx="8" fill="#e8f1e8" stroke="#2f6f2f" stroke-width="1.5"/>
+    <text x="600" y="214" font-size="14" font-weight="bold" text-anchor="middle">Site estático (Pages)</text>
+    <text x="510" y="236">JSON: geral, serviços, temas,</text><text x="510" y="254">órgãos, regionais, vocabulário</text><text x="510" y="272">catalogo.jsonld</text>
+    <rect x="250" y="190" width="200" height="100" rx="8" fill="#e8f1e8" stroke="#2f6f2f" stroke-width="1.5"/>
+    <text x="350" y="214" font-size="14" font-weight="bold" text-anchor="middle">Navegador (PWA)</text>
+    <text x="260" y="236">busca booleana e natural</text><text x="260" y="254">facetas, páginas de serviço,</text><text x="260" y="272">tema, órgão, regional, mapa</text>
+    <rect x="20" y="190" width="180" height="100" rx="8" fill="#fff" stroke="#000" stroke-width="1.2"/>
+    <text x="110" y="214" font-size="14" font-weight="bold" text-anchor="middle">Usuários</text>
+    <text x="30" y="236">cidadãos, associações,</text><text x="30" y="254">imprensa, MP, vereadores,</text><text x="30" y="272">gestores, pesquisadores</text>
+    <rect x="20" y="330" width="440" height="80" rx="8" fill="#fff" stroke="#000" stroke-dasharray="4 3"/>
+    <text x="30" y="352" font-size="13" font-weight="bold">Vocabulários (pipeline/vocabulario)</text>
+    <text x="30" y="372">taxonomia.json · tesauro_base.json · orgaos.json</text><text x="30" y="390">servicos_sinonimos.json · conceitos.json · plano_classificacao.json</text>
+    <rect x="500" y="330" width="480" height="80" rx="8" fill="#fff" stroke="#000" stroke-dasharray="4 3"/>
+    <text x="510" y="352" font-size="13" font-weight="bold">Regras de tratamento registradas</text>
+    <text x="510" y="372">limpeza.json: linhas lidas, repetidas, grafias reunidas, sem regional, sem órgão,</text><text x="510" y="390">não classificados · servicos_autoridade.json: forma autorizada e variantes</text>
+  </g>
+  <g stroke="#000" stroke-width="1.5" fill="none" marker-end="url(#seta)">
+    <path d="M200,110 L248,110"/><path d="M450,110 L498,110"/><path d="M700,110 L748,110"/>
+    <path d="M865,170 L865,188"/><path d="M750,240 L702,240"/><path d="M500,240 L452,240"/><path d="M250,240 L202,240"/>
+    <path d="M240,330 L240,292" stroke-dasharray="4 3"/><path d="M700,330 L720,292" stroke-dasharray="4 3"/>
+  </g>
+</svg>
+  <p class="fonte">Fonte: Elaborado pelos autores (2026).</p>
+</figure>
+</div>
+
+<div class="paisagem">
+<figure>
+  <figcaption>Figura 3 – Modelo entidade-relacionamento</figcaption>
+<svg class="diagrama" viewBox="0 0 1060 620" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Modelo entidade-relacionamento">
+  <defs><marker id="s2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+  <g font-size="11">
+    <!-- Versão -->
+    <rect x="20" y="20" width="190" height="110" fill="#fff" stroke="#000"/><rect x="20" y="20" width="190" height="20" fill="#dde6ee" stroke="#000"/>
+    <text x="115" y="34" font-weight="bold" text-anchor="middle" font-size="12">VERSÃO DO CONJUNTO</text>
+    <text x="26" y="56">PK identificador</text><text x="26" y="70">ano, mes_final, data, fonte</text><text x="26" y="84">sha256, extensao_bytes, estado</text><text x="26" y="98">criador, publicador, direitos</text><text x="26" y="112">FK codigo_classificacao</text>
+    <!-- Evento -->
+    <rect x="260" y="20" width="170" height="80" fill="#fff" stroke="#000"/><rect x="263" y="23" width="164" height="74" fill="none" stroke="#000"/>
+    <rect x="260" y="20" width="170" height="20" fill="#dde6ee" stroke="#000"/>
+    <text x="345" y="34" font-weight="bold" text-anchor="middle" font-size="12">EVENTO DE PRESERVAÇÃO</text>
+    <text x="266" y="56">PK (FK versao, n)</text><text x="266" y="70">tipo, data, agente</text><text x="266" y="84">resultado, detalhe</text>
+    <!-- Classe plano -->
+    <rect x="20" y="170" width="190" height="80" fill="#fff" stroke="#000"/><rect x="20" y="170" width="190" height="20" fill="#dde6ee" stroke="#000"/>
+    <text x="115" y="184" font-weight="bold" text-anchor="middle" font-size="12">CLASSE DO PLANO</text>
+    <text x="26" y="206">PK codigo</text><text x="26" y="220">titulo, fase_corrente</text><text x="26" y="234">fase_intermediaria, destinacao</text>
+    <!-- Manifestação -->
+    <rect x="400" y="190" width="230" height="150" fill="#fff" stroke="#000" stroke-width="1.5"/><rect x="400" y="190" width="230" height="20" fill="#f6e3b5" stroke="#000"/>
+    <text x="515" y="204" font-weight="bold" text-anchor="middle" font-size="12">MANIFESTAÇÃO</text>
+    <text x="406" y="226">PK ticket (protocolo)</text><text x="406" y="240">data_registro, ano, mes, dias</text><text x="406" y="254">prazo, encerrada, situacao</text><text x="406" y="268">genero, manifestante</text>
+    <text x="406" y="282">FK versao, FK servico, FK orgao</text><text x="406" y="296">FK regional, FK canal, FK tipologia</text><text x="406" y="310">grupos_prioritarios</text>
+    <!-- Motivo + associativa -->
+    <rect x="700" y="20" width="150" height="60" fill="#fff" stroke="#000"/><rect x="700" y="20" width="150" height="20" fill="#dde6ee" stroke="#000"/>
+    <text x="775" y="34" font-weight="bold" text-anchor="middle" font-size="12">MOTIVO</text><text x="706" y="56">PK nome</text><text x="706" y="70">(vocabulário da PBH)</text>
+    <rect x="700" y="110" width="150" height="50" fill="#fff" stroke="#000"/><rect x="700" y="110" width="150" height="20" fill="#dde6ee" stroke="#000"/>
+    <text x="775" y="124" font-weight="bold" text-anchor="middle" font-size="12">MANIFESTAÇÃO-MOTIVO</text><text x="706" y="146">PK (FK ticket, FK motivo)</text>
+    <!-- Tipologia, Canal, Regional, Órgão -->
+    <rect x="880" y="190" width="160" height="50" fill="#fff" stroke="#000"/><rect x="880" y="190" width="160" height="20" fill="#dde6ee" stroke="#000"/>
+    <text x="960" y="204" font-weight="bold" text-anchor="middle" font-size="12">TIPOLOGIA</text><text x="886" y="226">PK nome (Lei 13.460)</text>
+    <rect x="880" y="260" width="160" height="50" fill="#fff" stroke="#000"/><rect x="880" y="260" width="160" height="20" fill="#dde6ee" stroke="#000"/>
+    <text x="960" y="274" font-weight="bold" text-anchor="middle" font-size="12">CANAL</text><text x="886" y="296">PK nome, origem</text>
+    <rect x="880" y="330" width="160" height="50" fill="#fff" stroke="#000"/><rect x="880" y="330" width="160" height="20" fill="#dde6ee" stroke="#000"/>
+    <text x="960" y="344" font-weight="bold" text-anchor="middle" font-size="12">REGIONAL</text><text x="886" y="366">PK sigla, nome, polígono</text>
+    <rect x="880" y="400" width="160" height="80" fill="#fff" stroke="#000"/><rect x="880" y="400" width="160" height="20" fill="#dde6ee" stroke="#000"/>
+    <text x="960" y="414" font-weight="bold" text-anchor="middle" font-size="12">ÓRGÃO</text><text x="886" y="436">PK sigla</text><text x="886" y="450">nome_autorizado, area</text><text x="886" y="464">confirmacao, nota</text>
+    <!-- Serviço, variante, subtema, tema -->
+    <rect x="400" y="420" width="230" height="110" fill="#fff" stroke="#000"/><rect x="400" y="420" width="230" height="20" fill="#dde6ee" stroke="#000"/>
+    <text x="515" y="434" font-weight="bold" text-anchor="middle" font-size="12">SERVIÇO (registro de autoridade)</text>
+    <text x="406" y="456">PK id (chave normalizada)</text><text x="406" y="470">nome_autorizado</text><text x="406" y="484">FK subtema, FK orgao_principal</text><text x="406" y="498">motivos_frequentes, regionais</text><text x="406" y="512">n, encerradas, indicadores</text>
+    <rect x="660" y="440" width="160" height="60" fill="#fff" stroke="#000"/><rect x="663" y="443" width="154" height="54" fill="none" stroke="#000"/><rect x="660" y="440" width="160" height="20" fill="#dde6ee" stroke="#000"/>
+    <text x="740" y="454" font-weight="bold" text-anchor="middle" font-size="12">GRAFIA VARIANTE</text><text x="666" y="476">PK (FK servico, grafia)</text><text x="666" y="490">ocorrencias</text>
+    <rect x="160" y="420" width="190" height="70" fill="#fff" stroke="#000"/><rect x="160" y="420" width="190" height="20" fill="#dde6ee" stroke="#000"/>
+    <text x="255" y="434" font-weight="bold" text-anchor="middle" font-size="12">SUBTEMA</text><text x="166" y="456">PK id (ex.: ARV.POD)</text><text x="166" y="470">nome, regras[]</text><text x="166" y="484">FK tema</text>
+    <rect x="20" y="420" width="110" height="70" fill="#fff" stroke="#000"/><rect x="20" y="420" width="110" height="20" fill="#dde6ee" stroke="#000"/>
+    <text x="75" y="434" font-weight="bold" text-anchor="middle" font-size="12">TEMA</text><text x="26" y="456">PK id</text><text x="26" y="470">nome</text>
+    <!-- Termo tesauro -->
+    <rect x="20" y="300" width="190" height="90" fill="#fff" stroke="#000"/><rect x="20" y="300" width="190" height="20" fill="#dde6ee" stroke="#000"/>
+    <text x="115" y="314" font-weight="bold" text-anchor="middle" font-size="12">TERMO DO TESAURO</text>
+    <text x="26" y="336">PK id (campo:valor)</text><text x="26" y="350">termo, campo, nota_escopo</text><text x="26" y="364">FK termo_generico (TG/TE)</text><text x="26" y="378">relacionados[] (TR)</text>
+    <rect x="240" y="300" width="130" height="50" fill="#fff" stroke="#000"/><rect x="243" y="303" width="124" height="44" fill="none" stroke="#000"/><rect x="240" y="300" width="130" height="20" fill="#dde6ee" stroke="#000"/>
+    <text x="305" y="314" font-weight="bold" text-anchor="middle" font-size="12">FORMA NÃO PREF. (UP)</text><text x="246" y="336">PK (FK termo, forma)</text>
+    <!-- Indicador agregado -->
+    <rect x="660" y="540" width="380" height="70" fill="#fff" stroke="#000" stroke-dasharray="5 3"/><rect x="660" y="540" width="380" height="20" fill="#e8f1e8" stroke="#000"/>
+    <text x="850" y="554" font-weight="bold" text-anchor="middle" font-size="12">INDICADOR AGREGADO (visão materializada)</text>
+    <text x="666" y="576">PK (dimensao, valor, ano) · dimensao ∈ {serviço, tema, subtema, órgão, regional, canal, tipologia}</text>
+    <text x="666" y="590">n, encerradas, em_andamento, pct_atendida, pct_orientacao, pct_arquivada, pct_no_prazo, mediana_dias, p90_dias</text>
+  </g>
+  <g stroke="#000" stroke-width="1.2" fill="none" font-size="10">
+    <path d="M210,60 L260,60"/><text x="214" y="56" font-size="10">1</text><text x="248" y="56" font-size="10">N</text><text x="222" y="72" font-size="9">registra</text>
+    <path d="M115,130 L115,170"/><text x="120" y="142" font-size="10">N</text><text x="120" y="166" font-size="10">1</text><text x="60" y="152" font-size="9">classificada</text>
+    <path d="M210,75 L300,75 L300,190 L400,190" stroke-dasharray="0"/><text x="304" y="186" font-size="10">N</text><text x="214" y="88" font-size="10">1</text><text x="306" y="130" font-size="9">contém</text>
+    <path d="M630,240 L700,240 L700,160"/><text x="636" y="236" font-size="10">1</text><text x="704" y="172" font-size="10">N</text><path d="M775,110 L775,80"/><text x="780" y="106" font-size="10">N</text><text x="780" y="92" font-size="10">1</text>
+    <path d="M630,215 L880,215"/><text x="636" y="211" font-size="10">N</text><text x="868" y="211" font-size="10">1</text>
+    <path d="M630,285 L880,285"/><text x="636" y="281" font-size="10">N</text><text x="868" y="281" font-size="10">1</text>
+    <path d="M630,320 L760,320 L760,355 L880,355"/><text x="636" y="316" font-size="10">N</text><text x="868" y="351" font-size="10">1</text>
+    <path d="M600,340 L600,400 L880,400 L880,440" /><text x="604" y="352" font-size="10">N</text><text x="866" y="436" font-size="10">1</text>
+    <path d="M515,340 L515,420"/><text x="520" y="352" font-size="10">N</text><text x="520" y="416" font-size="10">1</text><text x="524" y="384" font-size="9">sobre</text>
+    <path d="M630,470 L660,470"/><text x="634" y="466" font-size="10">1</text><text x="648" y="466" font-size="10">N</text>
+    <path d="M400,455 L350,455"/><text x="388" y="451" font-size="10">N</text><text x="354" y="451" font-size="10">1</text>
+    <path d="M160,455 L130,455"/><text x="148" y="451" font-size="10">N</text><text x="134" y="451" font-size="10">1</text>
+    <path d="M210,325 L240,325"/><text x="214" y="321" font-size="10">1</text><text x="228" y="321" font-size="10">N</text>
+    <path d="M60,390 L60,405 L10,405 L10,330 L20,330" stroke-dasharray="3 2"/><text x="14" y="400" font-size="9">TG/TE, TR</text>
+    <path d="M255,490 L255,520 L120,520 L120,390" stroke-dasharray="3 2"/><text x="126" y="516" font-size="9">gera termos</text>
+    <path d="M515,530 L515,575 L660,575" stroke-dasharray="5 3"/><text x="530" y="571" font-size="9">agrega por dimensão</text>
+    <path d="M630,330 L645,330 L645,610 L660,610" stroke-dasharray="5 3"/>
+  </g>
+</svg>
+  <p class="fonte">Fonte: Elaborado pelos autores (2026). Notação: PK, chave primária; FK, chave estrangeira; 1 e N indicam a cardinalidade; a dupla borda indica entidade fraca; a borda tracejada indica visão materializada.</p>
+</figure>
+</div>
+
+
+<h2 id="s5-2">5.2 Solução desenvolvida</h2>
+
+<p>A solução foi desenvolvida por completo. A pasta <code>pipeline/</code> contém os três programas e os vocabulários; <code>data/</code>, o manifesto, os originais e a base limpa; <code>web/</code>, o site em HTML, CSS e JavaScript sem frameworks, com a biblioteca Leaflet para o mapa; <code>.github/workflows/</code>, a automação mensal. Para rodar localmente basta Python 3.10 ou mais novo: <code>python pipeline/executar.py</code> regenera tudo, e <code>abrir-site.sh</code> (ou <code>.bat</code>) serve o site. As Figuras 4 a 8 mostram as principais telas.</p>
+
+<p>A página inicial (Figura 4) é organizada em torno da pergunta do cidadão: a busca pede “sobre o que você quer reclamar?”, seguida dos quatro indicadores gerais, da distribuição dos desfechos, da evolução anual, do volume por tema, de três rankings (só entre serviços com ao menos 200 manifestações) e dos indicadores por canal. O mesmo leiaute se adapta ao celular (Figura 5), onde o site pode ser instalado como aplicativo.</p>
+
+<table class="par"><tr><td>
+<figure>
+  <figcaption>Figura 4 – Página inicial</figcaption>
+  <img class="tela-p" src="img/inicio.png" alt="Página inicial do Reclama BH">
+  <p class="fonte">Fonte: Elaborado pelos autores (2026).</p>
+</figure>
+</td><td>
+<figure>
+  <figcaption>Figura 5 – Página de serviço em um celular</figcaption>
+  <div class="celular" style="height:11cm"><img src="img/celular.png" alt="Página de serviço em tela de celular"></div>
+  <p class="fonte">Fonte: Elaborado pelos autores (2026).</p>
+</figure>
+</td></tr></table>
+
+<p>A página de busca (Figura 6) mostra a interpretação da pergunta, a busca booleana equivalente, as facetas com contagem, a ordenação e os resultados, cada um com os indicadores principais e a trilha tema, subtema e órgão. A página de regionais (Figura 7) é um mapa coroplético com o indicador escolhido e a tabela correspondente; as páginas de tema e de órgão seguem a mesma lógica, com tabelas ordenáveis.</p>
+
+<figure>
+  <figcaption>Figura 6 – Busca em linguagem natural: “poda de árvore”</figcaption>
+  <img class="tela-media" src="img/busca.png" alt="Resultado da busca por poda de árvore">
+  <p class="fonte">Fonte: Elaborado pelos autores (2026).</p>
+</figure>
+
+<figure>
+  <figcaption>Figura 7 – Regionais: mapa coroplético</figcaption>
+  <img class="tela-media" src="img/regionais.png" alt="Mapa das regionais">
+  <p class="fonte">Fonte: Elaborado pelos autores (2026).</p>
+</figure>
+
+<p>A página de serviço (Figura 8) é o principal produto do sistema. No alto, “O que esperar”: número de manifestações, taxa de atendimento e de arquivamento com a diferença em relação à média da cidade, tempo mediano e proporção no prazo. Seguem o desfecho por ano, os indicadores por canal (com o canal de melhor resultado em destaque), os motivos, os recortes por regional e por órgão e a série mensal. No exemplo, a reclamação de ônibus: 11% atendidas, 64% arquivadas, 2 dias de mediana. A seção “Sobre” documenta o sistema dentro dele mesmo: conceitos, taxonomia com contagens, tesauro navegável, lista de órgãos, arquivo de versões com hash e eventos, plano de classificação, dados abertos e limitações.</p>
+
+<figure>
+  <figcaption>Figura 8 – Página do serviço “Reclamação de Ônibus (Transporte Coletivo)”</figcaption>
+  <img class="tela-s" src="img/servico.png" alt="Página do serviço de reclamação de ônibus">
+  <p class="fonte">Fonte: Elaborado pelos autores (2026).</p>
+</figure>
+</section>
+
+<section class="quebra">
+<h1 id="s6">6 Considerações finais</h1>
+
+<p>O Reclama BH partiu de um conjunto de dados que a Prefeitura já publicava e que ninguém conseguia ler, e o transformou num serviço de informação que responde a uma pergunta concreta. O caminho foi o da disciplina: definir os conceitos antes de contar, controlar o vocabulário antes de agrupar, classificar antes de buscar e descrever e preservar antes de publicar. Sem a regra de uma linha por manifestação, os volumes estariam inflados em quase o dobro; sem o controle de autoridade, o mesmo serviço apareceria repartido em várias grafias; sem a taxonomia e o tesauro, o cidadão precisaria adivinhar o nome administrativo do serviço.</p>
+
+<p>Os achados têm interesse público. A Prefeitura responde às reclamações de ônibus em dois dias, mas arquiva 64% delas e registra apenas 11% como atendidas. As denúncias de violação de direitos humanos, o serviço mais reclamado da base, levam 81 dias na mediana e só 12,5% ficam dentro do prazo legal. Os pedidos pela Lei de Acesso à Informação têm 2% de atendimento. O canal faz diferença: o aplicativo tem a menor taxa de atendimento e a maior de arquivamento. O grupo aprendeu que a indexação automática exige verificação, que os metadados de preservação são o que permite a alguém, daqui a anos, confirmar que estes números correspondem ao que a Prefeitura publicou, e que a recuperação da informação para o cidadão começa no vocabulário dele.</p>
+
+<p>As limitações estão na seção 1.5 e no próprio site: o desfecho é o registrado pela Prefeitura; os dados param em junho de 2025; metade das manifestações não informa regional; a classificação automática tem 1,5% de resíduo; oito siglas de órgão têm o nome a confirmar. O site não substitui os canais oficiais: cada página de serviço orienta o cidadão sobre o canal com melhor resultado e remete à Ouvidoria. Como trabalhos futuros, o grupo propõe um pedido de acesso à informação à Controladoria-Geral do Município pelo dicionário de dados do conjunto e pela retomada das publicações, e o cruzamento com os pedidos de serviço do 156.</p>
+</section>
+
+<section class="quebra refs">
+<h1 class="centro">Referências</h1>
+<p>BAEZA-YATES, Ricardo; RIBEIRO-NETO, Berthier. <b>Recuperação de informação</b>: conceitos e tecnologia das máquinas de busca. 2. ed. Porto Alegre: Bookman, 2013.</p>
+<p>BELLOTTO, Heloísa Liberalli. <b>Arquivos permanentes</b>: tratamento documental. 4. ed. Rio de Janeiro: FGV, 2006.</p>
+<p>BRASIL. Lei nº 12.527, de 18 de novembro de 2011. Regula o acesso a informações previsto no inciso XXXIII do art. 5º, no inciso II do § 3º do art. 37 e no § 2º do art. 216 da Constituição Federal; e dá outras providências. <b>Diário Oficial da União</b>: seção 1, Brasília, DF, 18 nov. 2011. Edição extra.</p>
+<p>BRASIL. Lei nº 13.460, de 26 de junho de 2017. Dispõe sobre participação, proteção e defesa dos direitos do usuário dos serviços públicos da administração pública. <b>Diário Oficial da União</b>: seção 1, Brasília, DF, 27 jun. 2017.</p>
+<p>BRASIL. Lei nº 13.709, de 14 de agosto de 2018. Lei Geral de Proteção de Dados Pessoais (LGPD). <b>Diário Oficial da União</b>: seção 1, Brasília, DF, 15 ago. 2018.</p>
+<p>CINTRA, Anna Maria Marques <i>et al.</i> <b>Para entender as linguagens documentárias</b>. 2. ed. São Paulo: Polis, 2002.</p>
+<p>CONSELHO NACIONAL DE ARQUIVOS (Brasil). <b>Classificação, temporalidade e destinação de documentos de arquivo relativos às atividades-meio da administração pública</b>. Rio de Janeiro: Arquivo Nacional, 2001.</p>
+<p>CONSELHO NACIONAL DE ARQUIVOS (Brasil). <b>e-ARQ Brasil</b>: modelo de requisitos para sistemas informatizados de gestão arquivística de documentos. Versão 2. Rio de Janeiro: Arquivo Nacional, 2022.</p>
+<p>CONTROLADORIA-GERAL DA UNIÃO. <b>1º Concurso de Dados Abertos</b>. Brasília, DF: CGU, 2026. Disponível em: https://www.gov.br/cgu/pt-br/acesso-a-informacao/dados-abertos/1-concurso-dados-abertos. Acesso em: 21 out. 2026.</p>
+<p>CONTROLADORIA-GERAL DA UNIÃO. <b>Painel Resolveu?</b> Brasília, DF: CGU, 2025. Disponível em: https://www.gov.br/ouvidorias/pt-br/cidadao/painel-resolveu. Acesso em: 22 out. 2026.</p>
+<p>DAHLBERG, Ingetraut. Teoria do conceito. <b>Ciência da Informação</b>, Rio de Janeiro, v. 7, n. 2, p. 101-107, 1978.</p>
+<p>DUBLIN CORE METADATA INITIATIVE. <b>DCMI Metadata Terms</b>. [S. l.]: DCMI, 2020. Disponível em: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/. Acesso em: 21 out. 2026.</p>
+<p>LANCASTER, F. W. <b>Indexação e resumos</b>: teoria e prática. 2. ed. Brasília, DF: Briquet de Lemos, 2004.</p>
+<p>MEY, Eliane Serrão Alves; SILVEIRA, Naira Christofoletti. <b>Catalogação no plural</b>. Brasília, DF: Briquet de Lemos, 2009.</p>
+<p>ORENGO, Viviane Moreira; HUYCK, Christian. A stemming algorithm for the Portuguese language. <i>In</i>: INTERNATIONAL SYMPOSIUM ON STRING PROCESSING AND INFORMATION RETRIEVAL, 8., 2001, Laguna de San Rafael. <b>Proceedings</b> [...]. [S. l.]: IEEE, 2001. p. 186-193.</p>
+<p>PREFEITURA DE BELO HORIZONTE. <b>Dados gerais das manifestações processadas pela Ouvidoria de Belo Horizonte no Sistema BH Digital</b>. Belo Horizonte: PBH, 2025. Disponível em: https://dados.pbh.gov.br/dataset/dados-gerais-das-manifestacoes-processadas-pela-ouvidoria-de-belo-horizonte-no-sistema-bh-digital. Acesso em: 21 out. 2026.</p>
+<p>PREMIS EDITORIAL COMMITTEE. <b>PREMIS data dictionary for preservation metadata</b>. Version 3.0. [S. l.], 2015.</p>
+<p>RANGANATHAN, S. R. <b>Prolegomena to library classification</b>. 3. ed. Bombay: Asia Publishing House, 1967.</p>
+<p>W3C. <b>Data Catalog Vocabulary (DCAT)</b>: version 3. [S. l.]: W3C, 2024. Disponível em: https://www.w3.org/TR/vocab-dcat-3/. Acesso em: 21 out. 2026.</p>
+</section>
+
+</body>
+</html>

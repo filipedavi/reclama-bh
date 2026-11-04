@@ -1,0 +1,57 @@
+{
+  "titulo": "Plano de classificação e tabela de temporalidade do Reclama BH",
+  "descricao": "Instrumentos de gestão arquivística dos documentos produzidos e custodiados pelo sistema. Classificação funcional (função > atividade > tipo documental), como recomenda o e-ARQ Brasil; prazos pelo ciclo vital (fase corrente, intermediária e destinação final).",
+  "classes": [
+    {"codigo": "01", "titulo": "Gestão do sistema", "subclasses": [
+      {"codigo": "01.01", "titulo": "Documentação técnica e configuração",
+       "exemplos": "README, código do pipeline, fontes.json, vocabulários (taxonomia, tesauro, lista de órgãos, conceitos)",
+       "corrente": "Enquanto vigente", "intermediaria": "5 anos após substituição",
+       "destinacao": "Guarda permanente da versão final", "local": "Repositório git (histórico de commits)",
+       "justificativa": "Documenta como cada indicador foi calculado; sem isso os números não podem ser auditados."},
+      {"codigo": "01.02", "titulo": "Registros de execução",
+       "exemplos": "Logs do GitHub Actions, limpeza.json",
+       "corrente": "1 ano", "intermediaria": "Não se aplica",
+       "destinacao": "Eliminação, exceto os eventos registrados no manifesto (permanentes)",
+       "local": "GitHub Actions e repositório",
+       "justificativa": "Os eventos ligados a cada versão são metadados de preservação; os logs brutos perdem valor após a auditoria."}
+    ]},
+    {"codigo": "02", "titulo": "Acervo da Ouvidoria", "subclasses": [
+      {"codigo": "02.01", "titulo": "Dados abertos da Ouvidoria (fonte primária)", "subclasses": [
+        {"codigo": "02.01.01", "titulo": "Versões integrais dos arquivos anuais",
+         "exemplos": "CSV original de cada ano como publicado pela PBH, inclusive versões substituídas",
+         "corrente": "Enquanto for a versão mais completa do ano", "intermediaria": "Não se aplica",
+         "destinacao": "Guarda permanente", "local": "GitHub Releases (um por versão) + manifesto.json",
+         "justificativa": "Prova documental do que a Prefeitura publicou em cada data; o portal substitui o arquivo a cada mês e não guarda as versões anteriores."},
+        {"codigo": "02.01.02", "titulo": "Base limpa (manifestacoes.csv)",
+         "exemplos": "Uma linha por manifestação, com os campos normalizados, tema e órgão",
+         "corrente": "Enquanto as regras de tratamento estiverem vigentes", "intermediaria": "Não se aplica",
+         "destinacao": "Eliminação após reprocessamento (pode ser refeita a partir de 02.01.01)",
+         "local": "Repositório git",
+         "justificativa": "Documento derivado; o original permanente garante a reprodução."}
+      ]},
+      {"codigo": "02.02", "titulo": "Indicadores publicados",
+       "exemplos": "geral.json, temas.json, servicos/*.json, regionais.json, orgaos.json",
+       "corrente": "Enquanto for a publicação mais recente", "intermediaria": "5 anos (versões anteriores no histórico git)",
+       "destinacao": "Guarda permanente da série (uma publicação por versão da fonte)",
+       "local": "web/data no repositório git",
+       "justificativa": "Valor informativo e probatório: permite citar 'em tal data o site mostrava X'."},
+      {"codigo": "02.03", "titulo": "Bases de referência",
+       "exemplos": "Polígonos das regionais da PBH",
+       "corrente": "Enquanto vigente", "intermediaria": "5 anos após substituição",
+       "destinacao": "Guarda permanente da versão usada", "local": "web/data + manifesto",
+       "justificativa": "Garante a reprodução dos mapas."}
+    ]},
+    {"codigo": "03", "titulo": "Comunicação com o público", "subclasses": [
+      {"codigo": "03.01", "titulo": "Catálogo de dados (DCAT) e feeds",
+       "exemplos": "catalogo.jsonld",
+       "corrente": "Enquanto vigente (regerado a cada publicação)", "intermediaria": "Não se aplica",
+       "destinacao": "Eliminação", "local": "Site",
+       "justificativa": "Derivado dos indicadores."},
+      {"codigo": "03.02", "titulo": "Preferências do usuário",
+       "exemplos": "Tema do site (claro/escuro), serviços marcados",
+       "corrente": "Até o usuário apagar", "intermediaria": "Não se aplica",
+       "destinacao": "Eliminação pelo próprio usuário", "local": "Navegador do usuário (localStorage); o sistema não recebe",
+       "justificativa": "O site não coleta dados pessoais (LGPD, princípio da necessidade). Os dados da Ouvidoria já vêm sem identificação do cidadão."}
+    ]}
+  ]
+}

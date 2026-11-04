@@ -1,0 +1,12 @@
+{
+  "name": "Reclama BH",
+  "short_name": "Reclama BH",
+  "description": "O que BH reclama e como a Prefeitura responde.",
+  "lang": "pt-BR",
+  "start_url": "./#/",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f6f3",
+  "theme_color": "#0B3D5C",
+  "icons": [{"src": "img/icone.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}]
+}

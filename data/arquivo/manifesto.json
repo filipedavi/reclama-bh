@@ -1,0 +1,226 @@
+{
+  "titulo": "Arquivo dos dados abertos da Ouvidoria de Belo Horizonte",
+  "descricao": "Cada versão capturada dos arquivos anuais de manifestações, com metadados de descrição e preservação.",
+  "custodiador": "Projeto Reclama BH (UFMG - OTI071)",
+  "versoes": [
+    {
+      "identificador": "ouvidoria-bh-2022-12",
+      "codigo_classificacao": "02.01.01",
+      "titulo": "Manifestações da Ouvidoria de Belo Horizonte, 2022 (janeiro a 12)",
+      "criador": "Subcontroladoria de Ouvidoria (SUOUVI), Controladoria-Geral do Município de Belo Horizonte",
+      "publicador": "Prefeitura de Belo Horizonte, Portal de Dados Abertos",
+      "data": "2023-02-10",
+      "data_captura": "2026-10-21T15:17:26-03:00",
+      "fonte": "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/479561aa-7614-426b-a8de-8036f885f192/download/2022.jan-dez.dados.abertos.csv",
+      "pagina": "https://dados.pbh.gov.br/dataset/dados-gerais-das-manifestacoes-processadas-pela-ouvidoria-de-belo-horizonte-no-sistema-bh-digital",
+      "nome_original": "2022.jan-dez.dados.abertos.csv",
+      "formato": "text/csv; separador ponto e vírgula; codificação ISO-8859-1",
+      "idioma": "pt-BR",
+      "cobertura_espacial": "Belo Horizonte, MG, Brasil",
+      "cobertura_temporal": {
+        "inicio": "2022-01-01",
+        "fim": "2022-12"
+      },
+      "direitos": "Creative Commons Attribution",
+      "arquivo_local": "data/raw/ouvidoria/ouvidoria-bh-2022-12.csv",
+      "extensao_bytes": 8842333,
+      "sha256": "c85d9968356352eeeed7492f3412b0a32c7ce53e4122c27391bc16f2506b5a2e",
+      "ano": 2022,
+      "mes_final": 12,
+      "estado": "vigente",
+      "temporalidade": {
+        "prazo": "permanente",
+        "destinacao": "guarda permanente"
+      },
+      "eventos": [
+        {
+          "tipo": "captura",
+          "data": "2026-10-21T15:17:26-03:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sucesso",
+          "detalhe": "baixado de https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/479561aa-7614-426b-a8de-8036f885f192/download/2022.jan-dez.dados.abertos.csv"
+        },
+        {
+          "tipo": "verificacao_fixidez",
+          "data": "2026-10-21T15:39:21-03:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sucesso",
+          "detalhe": "SHA-256 confere"
+        },
+        {
+          "tipo": "restauracao",
+          "data": "2026-11-04T15:21:24-03:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sucesso",
+          "detalhe": "baixado da fonte; SHA-256 confere"
+        },
+        {
+          "tipo": "verificacao_fixidez",
+          "data": "2026-11-04T15:21:24-03:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sucesso",
+          "detalhe": "SHA-256 confere"
+        }
+      ]
+    },
+    {
+      "identificador": "ouvidoria-bh-2023-12",
+      "codigo_classificacao": "02.01.01",
+      "titulo": "Manifestações da Ouvidoria de Belo Horizonte, 2023 (janeiro a 12)",
+      "criador": "Subcontroladoria de Ouvidoria (SUOUVI), Controladoria-Geral do Município de Belo Horizonte",
+      "publicador": "Prefeitura de Belo Horizonte, Portal de Dados Abertos",
+      "data": "2024-01-08",
+      "data_captura": "2026-10-21T15:17:26-03:00",
+      "fonte": "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/138d2993-7cbd-4081-ae06-385db23de891/download/2023.jan-dez.-dados.abertos.csv",
+      "pagina": "https://dados.pbh.gov.br/dataset/dados-gerais-das-manifestacoes-processadas-pela-ouvidoria-de-belo-horizonte-no-sistema-bh-digital",
+      "nome_original": "2023.jan-dez. dados.abertos.csv",
+      "formato": "text/csv; separador ponto e vírgula; codificação ISO-8859-1",
+      "idioma": "pt-BR",
+      "cobertura_espacial": "Belo Horizonte, MG, Brasil",
+      "cobertura_temporal": {
+        "inicio": "2023-01-01",
+        "fim": "2023-12"
+      },
+      "direitos": "Creative Commons Attribution",
+      "arquivo_local": "data/raw/ouvidoria/ouvidoria-bh-2023-12.csv",
+      "extensao_bytes": 8685524,
+      "sha256": "6880d089a8facab6d5f163b42b775f19015c3ff358e6a5fcbe342e549d60c877",
+      "ano": 2023,
+      "mes_final": 12,
+      "estado": "vigente",
+      "temporalidade": {
+        "prazo": "permanente",
+        "destinacao": "guarda permanente"
+      },
+      "eventos": [
+        {
+          "tipo": "captura",
+          "data": "2026-10-21T15:17:26-03:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sucesso",
+          "detalhe": "baixado de https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/138d2993-7cbd-4081-ae06-385db23de891/download/2023.jan-dez.-dados.abertos.csv"
+        },
+        {
+          "tipo": "verificacao_fixidez",
+          "data": "2026-10-21T15:39:21-03:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sucesso",
+          "detalhe": "SHA-256 confere"
+        },
+        {
+          "tipo": "verificacao_fixidez",
+          "data": "2026-11-04T15:21:25-03:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sucesso",
+          "detalhe": "SHA-256 confere"
+        }
+      ]
+    },
+    {
+      "identificador": "ouvidoria-bh-2024-12",
+      "codigo_classificacao": "02.01.01",
+      "titulo": "Manifestações da Ouvidoria de Belo Horizonte, 2024 (janeiro a 12)",
+      "criador": "Subcontroladoria de Ouvidoria (SUOUVI), Controladoria-Geral do Município de Belo Horizonte",
+      "publicador": "Prefeitura de Belo Horizonte, Portal de Dados Abertos",
+      "data": "2025-01-06",
+      "data_captura": "2026-10-21T15:17:26-03:00",
+      "fonte": "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/9b870282-11d9-4283-8134-0183b700a278/download/2024.jan-dez.dados.abertos.csv",
+      "pagina": "https://dados.pbh.gov.br/dataset/dados-gerais-das-manifestacoes-processadas-pela-ouvidoria-de-belo-horizonte-no-sistema-bh-digital",
+      "nome_original": "2024.jan-dez.dados.abertos.csv",
+      "formato": "text/csv; separador ponto e vírgula; codificação ISO-8859-1",
+      "idioma": "pt-BR",
+      "cobertura_espacial": "Belo Horizonte, MG, Brasil",
+      "cobertura_temporal": {
+        "inicio": "2024-01-01",
+        "fim": "2024-12"
+      },
+      "direitos": "Creative Commons Attribution",
+      "arquivo_local": "data/raw/ouvidoria/ouvidoria-bh-2024-12.csv",
+      "extensao_bytes": 29975788,
+      "sha256": "7c7a460ff12da6c6c49c4307ccc3b0383baed28adb40d6d0742807c5ccab0bc2",
+      "ano": 2024,
+      "mes_final": 12,
+      "estado": "vigente",
+      "temporalidade": {
+        "prazo": "permanente",
+        "destinacao": "guarda permanente"
+      },
+      "eventos": [
+        {
+          "tipo": "captura",
+          "data": "2026-10-21T15:17:26-03:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sucesso",
+          "detalhe": "baixado de https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/9b870282-11d9-4283-8134-0183b700a278/download/2024.jan-dez.dados.abertos.csv"
+        },
+        {
+          "tipo": "verificacao_fixidez",
+          "data": "2026-10-21T15:39:21-03:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sucesso",
+          "detalhe": "SHA-256 confere"
+        },
+        {
+          "tipo": "verificacao_fixidez",
+          "data": "2026-11-04T15:21:25-03:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sucesso",
+          "detalhe": "SHA-256 confere"
+        }
+      ]
+    },
+    {
+      "identificador": "ouvidoria-bh-2025-06",
+      "codigo_classificacao": "02.01.01",
+      "titulo": "Manifestações da Ouvidoria de Belo Horizonte, 2025 (janeiro a 06)",
+      "criador": "Subcontroladoria de Ouvidoria (SUOUVI), Controladoria-Geral do Município de Belo Horizonte",
+      "publicador": "Prefeitura de Belo Horizonte, Portal de Dados Abertos",
+      "data": "2025-07-14",
+      "data_captura": "2026-10-21T15:17:26-03:00",
+      "fonte": "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/e61425be-3332-4b4b-88c6-5b9f5596ca93/download/2025.jan-jun.dados.abertos.csv",
+      "pagina": "https://dados.pbh.gov.br/dataset/dados-gerais-das-manifestacoes-processadas-pela-ouvidoria-de-belo-horizonte-no-sistema-bh-digital",
+      "nome_original": "2025.jan-jun.dados.abertos.csv",
+      "formato": "text/csv; separador ponto e vírgula; codificação ISO-8859-1",
+      "idioma": "pt-BR",
+      "cobertura_espacial": "Belo Horizonte, MG, Brasil",
+      "cobertura_temporal": {
+        "inicio": "2025-01-01",
+        "fim": "2025-06"
+      },
+      "direitos": "Creative Commons Attribution",
+      "arquivo_local": "data/raw/ouvidoria/ouvidoria-bh-2025-06.csv",
+      "extensao_bytes": 15498191,
+      "sha256": "12eb831a67794f38665880068e8e0e53b41eca59513679a23b343e13b6583fad",
+      "ano": 2025,
+      "mes_final": 6,
+      "estado": "vigente",
+      "temporalidade": {
+        "prazo": "permanente",
+        "destinacao": "guarda permanente"
+      },
+      "eventos": [
+        {
+          "tipo": "captura",
+          "data": "2026-10-21T15:17:26-03:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sucesso",
+          "detalhe": "baixado de https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/e61425be-3332-4b4b-88c6-5b9f5596ca93/download/2025.jan-jun.dados.abertos.csv"
+        },
+        {
+          "tipo": "verificacao_fixidez",
+          "data": "2026-10-21T15:39:21-03:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sucesso",
+          "detalhe": "SHA-256 confere"
+        },
+        {
+          "tipo": "verificacao_fixidez",
+          "data": "2026-11-04T15:21:25-03:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sucesso",
+          "detalhe": "SHA-256 confere"
+        }
+      ]
+    }
+  ]
+}

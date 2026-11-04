@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Projeto Aplicado - Reclama BH - Etapa 1</title>
+<style>
+  @page {
+    size: A4;
+    margin: 3cm 2cm 2cm 3cm;
+    @top-right {
+      content: counter(page);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10pt;
+      vertical-align: bottom;
+      padding-bottom: 0.6cm;
+    }
+  }
+  @page pre {
+    @top-right { content: none; }
+  }
+  html { font-family: Arial, Helvetica, sans-serif; font-size: 12pt; color: #000; }
+  body { margin: 0; }
+  .pre { page: pre; }
+  .quebra { break-before: page; }
+
+  p { text-align: justify; line-height: 1.5; text-indent: 1.25cm; margin: 0; }
+  p.sem-recuo { text-indent: 0; }
+
+  h1, h2, h3 { font-size: 12pt; margin: 0; line-height: 1.5; break-after: avoid; }
+  h1 { text-transform: uppercase; font-weight: bold; margin-bottom: 1.5em; }
+  h2 { font-weight: normal; margin-top: 1.5em; margin-bottom: 0.75em; }
+  h3 { font-weight: normal; margin-top: 1.2em; margin-bottom: 0.5em; }
+  h1.centro { text-align: center; }
+
+  ol.alineas { list-style: none; margin: 0.25em 0 0.25em 1.25cm; padding: 0; }
+  ol.alineas li { text-align: justify; line-height: 1.5; padding-left: 0; }
+
+  .rosto { height: 24.6cm; display: flex; flex-direction: column; text-align: center; }
+  .rosto .autores { line-height: 1.5; }
+  .rosto .titulo { margin-top: 6.5cm; font-weight: bold; line-height: 1.5; }
+  .rosto .subtitulo { font-weight: bold; text-transform: none; }
+  .rosto .natureza { margin: 2cm 0 0 8cm; text-align: justify; font-size: 10pt; line-height: 1.15; }
+  .rosto .orientacao { margin: 1em 0 0 8cm; text-align: left; line-height: 1.5; }
+  .rosto .local { margin-top: auto; line-height: 1.5; }
+
+  .sumario { width: 100%; border-collapse: collapse; line-height: 1.5; }
+  .sumario td { padding: 0; vertical-align: bottom; }
+  .sumario td.n { width: 1.4cm; white-space: nowrap; }
+  .sumario .lead { position: relative; }
+  .sumario .lead span.txt { background: #fff; position: relative; z-index: 1; padding-right: 4px; }
+  .sumario .lead::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0.35em; border-bottom: 1px dotted #000; }
+  .sumario td.p { width: 1cm; text-align: right; padding-left: 4px; }
+  .sumario tr.prim td { font-weight: bold; text-transform: uppercase; }
+
+  figure { margin: 1em 0; break-inside: avoid; text-align: center; }
+  figcaption, .legenda { font-size: 10pt; line-height: 1.15; text-align: center; margin-bottom: 0.4em; }
+  .fonte { font-size: 10pt; line-height: 1.15; text-align: left; margin-top: 0.3em; text-indent: 0; }
+  figure img { max-width: 12cm; }
+  .ilustracao { margin: 1em 0; break-inside: avoid; }
+  table.quadro, table.tabela { width: 100%; border-collapse: collapse; font-size: 10pt; line-height: 1.2; }
+  table.quadro th, table.quadro td { border: 1px solid #000; padding: 4px 6px; text-align: left; vertical-align: top; }
+  table.quadro th { font-weight: bold; }
+  table.tabela { border-top: 1.5px solid #000; border-bottom: 1.5px solid #000; }
+  table.tabela th { border-bottom: 1px solid #000; padding: 4px 6px; font-weight: bold; }
+  table.tabela td { padding: 3px 6px; }
+  table.tabela td.num, table.tabela th.num { text-align: right; }
+
+  .refs p { text-indent: 0; text-align: left; line-height: 1.0; margin-bottom: 1em; }
+</style>
+</head>
+<body>
+
+<section class="pre rosto">
+  <div class="autores">
+    Filipe Davi Gomes<br>Nathan Filipe Izidorio Alves<br>Victor Cunha Marques
+  </div>
+  <div class="titulo">
+    RECLAMA BH:<br>
+    <span class="subtitulo">o que Belo Horizonte reclama e como a Prefeitura responde</span>
+  </div>
+  <div class="natureza">
+    Trabalho apresentado à disciplina Organização e Tratamento da Informação (OTI071) do curso de Sistemas de Informação da Universidade Federal de Minas Gerais, como requisito parcial de avaliação – Projeto Aplicado, Etapa 1: Diagnóstico.
+  </div>
+  <div class="orientacao">Professora: Patrícia Nascimento Silva</div>
+  <div class="local">Belo Horizonte<br>2026</div>
+</section>
+
+<section class="pre quebra">
+  <h1 class="centro">Sumário</h1>
+  <table class="sumario">
+    <tr class="prim"><td class="n">1</td><td class="lead"><span class="txt">Diagnóstico</span></td><td class="p">3</td></tr>
+    <tr><td class="n">1.1</td><td class="lead"><span class="txt">Nome e logomarca da solução</span></td><td class="p">3</td></tr>
+    <tr><td class="n">1.2</td><td class="lead"><span class="txt">Descrição da aplicação, contexto e perfil do usuário da informação</span></td><td class="p">3</td></tr>
+    <tr><td class="n">1.3</td><td class="lead"><span class="txt">Problema e objetivo da solução</span></td><td class="p">5</td></tr>
+    <tr><td class="n">1.4</td><td class="lead"><span class="txt">Justificativa e motivação do grupo</span></td><td class="p">6</td></tr>
+    <tr><td class="n">1.5</td><td class="lead"><span class="txt">Limitações, impactos e esclarecimentos</span></td><td class="p">7</td></tr>
+    <tr class="prim"><td class="n"></td><td class="lead"><span class="txt">Referências</span></td><td class="p">8</td></tr>
+  </table>
+</section>
+
+<section class="quebra">
+<h1>1 Diagnóstico</h1>
+
+<p>Quem registra uma reclamação na Ouvidoria da Prefeitura de Belo Horizonte não sabe o que vai acontecer com ela: se será atendida, arquivada ou apenas respondida com uma orientação, nem quanto tempo isso leva. A Prefeitura publica, no Portal de Dados Abertos, todas as manifestações recebidas desde 2022, com o serviço reclamado, o órgão responsável, o tempo de tramitação e o desfecho (PREFEITURA DE BELO HORIZONTE, 2025). A resposta à pergunta existe, portanto, mas está num formato que só quem domina ferramentas de tratamento de dados consegue ler. Este diagnóstico descreve esse problema e apresenta a solução proposta pelo grupo.</p>
+
+<h2>1.1 Nome e logomarca da solução</h2>
+
+<p>A solução se chama Reclama BH, com o lema “O que BH reclama e como a Prefeitura responde”. O nome junta o verbo que descreve a ação do cidadão ao nome da cidade; o lema diz os dois lados que o sistema mostra: a demanda e a resposta.</p>
+
+<figure>
+  <figcaption>Figura 1 – Logomarca do Reclama BH</figcaption>
+  <img src="../../assets/logo.svg" alt="Logomarca do Reclama BH">
+  <p class="fonte">Fonte: Elaborado pelos autores (2026).</p>
+</figure>
+
+<p>A logomarca (Figura 1) é um balão de fala, que representa a manifestação do cidadão, com uma marca de verificação em âmbar, que remete à pergunta central do sistema: a manifestação foi atendida? O fundo azul-escuro remete à confiabilidade de dados oficiais.</p>
+
+<h2>1.2 Descrição da aplicação, contexto e perfil do usuário da informação</h2>
+
+<p>O Reclama BH é um site, acessível por celular e computador, que organiza as manifestações da Ouvidoria e responde, para cada serviço público municipal, o que se pode esperar de uma reclamação. A página de cada serviço informa quantas manifestações houve, qual proporção foi atendida, qual foi arquivada, quanto tempo a resposta levou e se o prazo de trinta dias previsto em lei foi cumprido (BRASIL, 2017). Mostra também por qual canal (telefone 156, portal, aplicativo, presencial) a reclamação daquele serviço costuma ter melhor resultado, a evolução ano a ano e os recortes por regional e por órgão responsável.</p>
+
+<p>O cidadão encontra o serviço escrevendo do seu jeito (“poste apagado”, “barulho de bar”, “vaga na creche”); o sistema traduz a expressão para o nome oficial usado pela Prefeitura. Também há rankings dos serviços mais arquivados, mais demorados e mais atendidos, e páginas por tema, por órgão e por regional. O site não exige cadastro nem coleta dados pessoais.</p>
+
+<p>Iniciativas parecidas existem. A Controladoria-Geral da União mantém o Painel Resolveu?, que mostra resolutividade e tempo de resposta das ouvidorias que usam o sistema federal Fala.BR, inclusive de municípios (CONTROLADORIA-GERAL DA UNIÃO, 2025). A Ouvidoria de Belo Horizonte, porém, usa um sistema próprio, o BH Digital, e divulga apenas totais e relatórios por secretaria. Não encontramos, para a cidade, nenhuma ferramenta com recorte por serviço, comparação entre canais de registro e busca pela linguagem do cidadão, que é o que o Reclama BH se propõe a fazer.</p>
+
+<p>O contexto é o da Lei nº 13.460/2017, que garante ao usuário de serviço público o direito de se manifestar e de receber resposta em até trinta dias, e o da política de dados abertos, que levou a Prefeitura a publicar os registros da Ouvidoria (BRASIL, 2011; PREFEITURA DE BELO HORIZONTE, 2025). Entre janeiro de 2022 e junho de 2025 foram 138.323 manifestações, a maioria reclamações, seguidas de denúncias, pedidos de orientação, sugestões e elogios.</p>
+
+<p>O usuário principal é o cidadão prestes a reclamar, que não conhece o nome administrativo do serviço nem o órgão que responde, e não tem como calibrar sua expectativa. O Quadro 1 resume os perfis de usuário e suas necessidades de informação.</p>
+
+<div class="ilustracao">
+  <p class="legenda">Quadro 1 – Perfis de usuário e necessidades de informação</p>
+  <table class="quadro">
+    <tr><th style="width:30%">Perfil</th><th>Necessidade de informação</th></tr>
+    <tr><td>Cidadão prestes a reclamar</td><td>Saber se vale a pena registrar a manifestação, por qual canal, quanto tempo leva e qual a chance de atendimento.</td></tr>
+    <tr><td>Jornalistas e comunicadores comunitários</td><td>Identificar serviços e órgãos com pior desempenho e comprovar afirmações com dados oficiais.</td></tr>
+    <tr><td>Vereadores, conselhos e associações de bairro</td><td>Acompanhar a resposta da Prefeitura numa regional ou numa política pública.</td></tr>
+    <tr><td>Ouvidoria e controle interno</td><td>Ver os próprios dados organizados por assunto e comparar canais e órgãos.</td></tr>
+    <tr><td>Pesquisadores</td><td>Obter uma base limpa e documentada sobre ouvidoria municipal.</td></tr>
+  </table>
+  <p class="fonte">Fonte: Elaborado pelos autores (2026).</p>
+</div>
+
+<h2>1.3 Problema e objetivo da solução</h2>
+
+<p>O problema é de organização da informação: os dados existem e são públicos, mas são irrecuperáveis para o cidadão. Ao examinar os arquivos publicados pela Prefeitura, o grupo identificou os seguintes obstáculos:</p>
+
+<p>a) cada ano é um arquivo CSV com uma linha por encaminhamento, e não por manifestação: são 259.033 linhas para 138.323 manifestações, e um mesmo protocolo chega a aparecer 1.442 vezes;</p>
+<p>b) os nomes dos serviços não são controlados: há 1.744 grafias diferentes para cerca de 1.670 serviços. O mesmo serviço aparece como “Vacinação” e “Vacinação de rotina para a população”, e muitos nomes trazem “?” no lugar do travessão (“Árvore ? Poda de Árvore”);</p>
+<p>c) os órgãos responsáveis aparecem só por sigla (SMSA, SUFIS, SUCOR), sem o nome por extenso;</p>
+<p>d) não há agrupamento por assunto: o cidadão que quer saber de “buraco na rua” precisaria adivinhar que o serviço se chama “Via Pública - Recapeamento”;</p>
+<p>e) não há dicionário de dados publicado junto, e o arquivo de cada ano é substituído a cada mês, sem histórico;</p>
+<p>f) o arquivo tem centenas de milhares de linhas, inacessível sem software de tratamento de dados.</p>
+
+<p>A Tabela 1 mostra o tipo de informação que fica escondida nesses arquivos. Reclamações de ônibus, por exemplo, são respondidas em dois dias, mas 64% são arquivadas sem atendimento; denúncias de violação de direitos humanos levam, em mediana, 81 dias.</p>
+
+<div class="ilustracao">
+  <p class="legenda">Tabela 1 – Resposta da Prefeitura a serviços selecionados (janeiro de 2022 a junho de 2025)</p>
+  <table class="tabela">
+    <tr><th>Serviço</th><th class="num">Manifestações</th><th class="num">Atendidas</th><th class="num">Arquivadas</th><th class="num">Mediana (dias)</th><th class="num">No prazo</th></tr>
+    <tr><td>Denúncias de Violação de Direitos Humanos</td><td class="num">8.153</td><td class="num">25%</td><td class="num">2%</td><td class="num">81</td><td class="num">12,5%</td></tr>
+    <tr><td>Denúncia sobre Servidores Municipais</td><td class="num">3.911</td><td class="num">8,5%</td><td class="num">27%</td><td class="num">11</td><td class="num">92%</td></tr>
+    <tr><td>Árvore – Poda de Árvore em Passeios, Praças, Etc</td><td class="num">2.426</td><td class="num">53%</td><td class="num">15%</td><td class="num">38</td><td class="num">45%</td></tr>
+    <tr><td>Reclamação de Ônibus (Transporte Coletivo)</td><td class="num">2.247</td><td class="num">11%</td><td class="num">64%</td><td class="num">2</td><td class="num">86%</td></tr>
+    <tr><td>Cirurgia</td><td class="num">1.813</td><td class="num">69%</td><td class="num">8%</td><td class="num">13</td><td class="num">89%</td></tr>
+    <tr><td>Lei de Acesso à Informação - LAI</td><td class="num">707</td><td class="num">2%</td><td class="num">37%</td><td class="num">2</td><td class="num">98%</td></tr>
+    <tr><td>Coleta de Lixo Domiciliar - Ocorrência/Reclamação</td><td class="num">592</td><td class="num">13%</td><td class="num">72%</td><td class="num">2</td><td class="num">93%</td></tr>
+  </table>
+  <p class="fonte">Fonte: Elaborado pelos autores (2026), a partir de Prefeitura de Belo Horizonte (2025). Taxas calculadas sobre as manifestações encerradas; “no prazo” é a proporção respondida em até trinta dias.</p>
+</div>
+
+<p>O objetivo geral é organizar as manifestações da Ouvidoria de Belo Horizonte de modo que qualquer cidadão descubra, antes de reclamar, como a Prefeitura costuma responder ao serviço que lhe interessa. Os objetivos específicos são:</p>
+<p>a) reunir as linhas repetidas em uma manifestação por protocolo e padronizar os nomes de serviço e de órgão;</p>
+<p>b) agrupar os serviços por tema, para que possam ser encontrados pelo problema e não pelo nome administrativo;</p>
+<p>c) permitir a busca na linguagem do cidadão, com filtros e operadores para quem quiser refinar;</p>
+<p>d) calcular e apresentar, por serviço, tema, órgão, regional, canal e ano, a taxa de atendimento, a taxa de arquivamento, o tempo de resposta e o cumprimento do prazo legal;</p>
+<p>e) preservar os arquivos originais publicados pela Prefeitura, com registro de origem e integridade, já que o portal os substitui a cada mês;</p>
+<p>f) disponibilizar os indicadores em formato aberto.</p>
+
+<h2>1.4 Justificativa e motivação do grupo</h2>
+
+<p>A Ouvidoria é o instrumento que o cidadão comum tem para cobrar a Prefeitura, e ninguém sabe se ele funciona. Mostrar a resposta da Prefeitura, serviço por serviço, ajuda o cidadão a decidir por onde reclamar, dá base a jornalistas e vereadores e devolve à própria administração um retrato de onde a resposta falha. É uma aplicação direta do que o desafio “Dados Abertos, IA e Impacto Social” propõe (CONTROLADORIA-GERAL DA UNIÃO, 2026).</p>
+
+<p>Para a disciplina, o conjunto de dados é um caso típico de problema de organização da informação: exige controle de vocabulário, classificação por assunto, descrição por metadados, recuperação por busca e gestão das versões dos arquivos. Cada técnica estudada tem um uso necessário na solução.</p>
+
+<p>Quanto à motivação, somos estudantes que já usamos a Ouvidoria e o telefone 156 e conhecemos a experiência de registrar uma manifestação sem saber o que esperar. Ao abrir os dados, vimos que a resposta estava lá, mas escondida atrás de 259 mil linhas, 1.744 nomes de serviço e siglas sem explicação. Organizar isso nos pareceu útil para a cidade e adequado ao que aprendemos no curso.</p>
+
+<h2>1.5 Limitações, impactos e esclarecimentos</h2>
+
+<p>A principal limitação é que o desfecho de cada manifestação é o que a Prefeitura registrou ao encerrá-la: “atendida” não significa que o cidadão ficou satisfeito, e “arquivada” pode ter motivos legítimos, como dados insuficientes ou assunto de outro ente. O sistema mostra o comportamento da resposta, não a qualidade do serviço na rua.</p>
+
+<p>Os dados publicados vão até junho de 2025; a Prefeitura não divulgou arquivos mais recentes até a data deste trabalho. Metade das manifestações não informa a regional e um terço não informa o órgão responsável, o que limita os recortes territoriais e por órgão. Não há dicionário de dados oficial: o significado dos campos de prazo e de situação foi inferido dos próprios dados e da Lei nº 13.460/2017. O agrupamento por tema é feito pelo nome do serviço e pode errar em casos de fronteira. Manifestações ainda em andamento não entram nas taxas, o que pode inflar o resultado dos meses mais recentes.</p>
+
+<p>O impacto esperado é dar ao cidadão uma expectativa realista antes de reclamar e apontar, com dados oficiais, os serviços e órgãos em que a resposta falha. Os dados da Ouvidoria já são publicados sem identificação do cidadão, e o sistema não coleta nenhum dado pessoal (BRASIL, 2018). Todos os números apresentados neste documento foram calculados pelo grupo a partir dos arquivos publicados pela Prefeitura e podem ser reproduzidos.</p>
+</section>
+
+<section class="quebra">
+<h1 class="centro">Referências</h1>
+
+<p>BRASIL. Lei nº 12.527, de 18 de novembro de 2011. Regula o acesso a informações previsto no inciso XXXIII do art. 5º, no inciso II do § 3º do art. 37 e no § 2º do art. 216 da Constituição Federal; e dá outras providências. <b>Diário Oficial da União</b>: seção 1, Brasília, DF, 18 nov. 2011. Edição extra.</p>
+
+<p>BRASIL. Lei nº 13.460, de 26 de junho de 2017. Dispõe sobre participação, proteção e defesa dos direitos do usuário dos serviços públicos da administração pública. <b>Diário Oficial da União</b>: seção 1, Brasília, DF, 27 jun. 2017.</p>
+
+<p>BRASIL. Lei nº 13.709, de 14 de agosto de 2018. Lei Geral de Proteção de Dados Pessoais (LGPD). <b>Diário Oficial da União</b>: seção 1, Brasília, DF, 15 ago. 2018.</p>
+
+<p>CONTROLADORIA-GERAL DA UNIÃO. <b>1º Concurso de Dados Abertos</b>. Brasília, DF: CGU, 2026. Disponível em: https://www.gov.br/cgu/pt-br/acesso-a-informacao/dados-abertos/1-concurso-dados-abertos. Acesso em: 21 out. 2026.</p>
+
+<p>CONTROLADORIA-GERAL DA UNIÃO. <b>Painel Resolveu?</b> Brasília, DF: CGU, 2025. Disponível em: https://www.gov.br/ouvidorias/pt-br/cidadao/painel-resolveu. Acesso em: 22 out. 2026.</p>
+
+<p>PREFEITURA DE BELO HORIZONTE. <b>Dados gerais das manifestações processadas pela Ouvidoria de Belo Horizonte no Sistema BH Digital</b>. Belo Horizonte: PBH, 2025. Disponível em: https://dados.pbh.gov.br/dataset/dados-gerais-das-manifestacoes-processadas-pela-ouvidoria-de-belo-horizonte-no-sistema-bh-digital. Acesso em: 21 out. 2026.</p>
+</section>
+
+</body>
+</html>
