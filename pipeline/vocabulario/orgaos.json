@@ -1,0 +1,251 @@
+{
+  "titulo": "Lista de autoridade dos órgãos da PBH",
+  "descricao": "Forma autorizada (sigla + nome por extenso) de cada órgão que aparece como responsável pela resposta. Siglas marcadas com 'confirmacao': 'pendente' tiveram o nome inferido pela estrutura administrativa publicada pela PBH e devem ser conferidas antes da apresentação.",
+  "orgaos": {
+    "SMSA": {
+      "nome": "Secretaria Municipal de Saúde",
+      "area": "Saúde"
+    },
+    "SMFA": {
+      "nome": "Secretaria Municipal de Fazenda",
+      "area": "Fazenda"
+    },
+    "SUOUVI": {
+      "nome": "Subcontroladoria de Ouvidoria (Controladoria-Geral do Município)",
+      "area": "Controle"
+    },
+    "SMED": {
+      "nome": "Secretaria Municipal de Educação",
+      "area": "Educação"
+    },
+    "BHTRANS": {
+      "nome": "Empresa de Transportes e Trânsito de Belo Horizonte",
+      "area": "Mobilidade",
+      "nota": "Funções transferidas à SUMOB a partir de 2023."
+    },
+    "SUMOB": {
+      "nome": "Superintendência de Mobilidade Urbana",
+      "area": "Mobilidade"
+    },
+    "SUFIS": {
+      "nome": "Subsecretaria de Fiscalização",
+      "area": "Política Urbana"
+    },
+    "SMOBI": {
+      "nome": "Secretaria Municipal de Obras e Infraestrutura",
+      "area": "Obras"
+    },
+    "SUCOR": {
+      "nome": "Subcontroladoria de Correição (Controladoria-Geral do Município)",
+      "area": "Controle"
+    },
+    "SUAUDI": {
+      "nome": "Subcontroladoria de Auditoria (Controladoria-Geral do Município)",
+      "area": "Controle"
+    },
+    "CTGM": {
+      "nome": "Controladoria-Geral do Município",
+      "area": "Controle"
+    },
+    "SMASAC": {
+      "nome": "Secretaria Municipal de Assistência Social, Segurança Alimentar e Cidadania",
+      "area": "Assistência social"
+    },
+    "SMASDH": {
+      "nome": "Secretaria Municipal de Assistência Social e Direitos Humanos (denominação anterior)",
+      "area": "Assistência social"
+    },
+    "SUASS": {
+      "nome": "Subsecretaria de Assistência Social",
+      "area": "Assistência social"
+    },
+    "SUDC": {
+      "nome": "Subsecretaria de Direitos de Cidadania",
+      "area": "Assistência social"
+    },
+    "SUDH": {
+      "nome": "Subsecretaria de Direitos Humanos",
+      "area": "Assistência social"
+    },
+    "SMSAN": {
+      "nome": "Subsecretaria de Segurança Alimentar e Nutricional",
+      "area": "Assistência social",
+      "confirmacao": "pendente"
+    },
+    "SUREG": {
+      "nome": "Subsecretaria de Regulação Urbana",
+      "area": "Política Urbana"
+    },
+    "SUPLAN": {
+      "nome": "Subsecretaria de Planejamento Urbano",
+      "area": "Política Urbana"
+    },
+    "SMPU": {
+      "nome": "Secretaria Municipal de Política Urbana",
+      "area": "Política Urbana"
+    },
+    "SUGESP": {
+      "nome": "Subsecretaria de Gestão de Pessoas",
+      "area": "Planejamento e gestão"
+    },
+    "SUPREV": {
+      "nome": "Subsecretaria de Previdência",
+      "area": "Planejamento e gestão"
+    },
+    "SUMOG": {
+      "nome": "Subsecretaria de Modernização da Gestão",
+      "area": "Planejamento e gestão"
+    },
+    "SUALOG": {
+      "nome": "Subsecretaria de Administração e Logística",
+      "area": "Planejamento e gestão"
+    },
+    "SMALOG": {
+      "nome": "Subsecretaria de Administração e Logística (sigla alternativa)",
+      "area": "Planejamento e gestão",
+      "confirmacao": "pendente"
+    },
+    "SMPOG": {
+      "nome": "Secretaria Municipal de Planejamento, Orçamento e Gestão",
+      "area": "Planejamento e gestão"
+    },
+    "PRODABEL": {
+      "nome": "Empresa de Informática e Informação do Município de Belo Horizonte",
+      "area": "Planejamento e gestão"
+    },
+    "GCEAT": {
+      "nome": "Gerência de Canais Eletrônicos de Atendimento (BH Digital / 156)",
+      "area": "Planejamento e gestão",
+      "confirmacao": "pendente"
+    },
+    "GCPAT": {
+      "nome": "Gerência de Canais Presenciais de Atendimento (BH Resolve)",
+      "area": "Planejamento e gestão",
+      "confirmacao": "pendente"
+    },
+    "SLU": {
+      "nome": "Superintendência de Limpeza Urbana",
+      "area": "Obras"
+    },
+    "URBEL": {
+      "nome": "Companhia Urbanizadora e de Habitação de Belo Horizonte",
+      "area": "Obras"
+    },
+    "SUDECAP": {
+      "nome": "Superintendência de Desenvolvimento da Capital",
+      "area": "Obras"
+    },
+    "BHIP": {
+      "nome": "BH Iluminação Pública (concessionária)",
+      "area": "Obras"
+    },
+    "SUPDEC": {
+      "nome": "Subsecretaria de Proteção e Defesa Civil",
+      "area": "Obras"
+    },
+    "FPMZB": {
+      "nome": "Fundação de Parques Municipais e Zoobotânica",
+      "area": "Meio ambiente"
+    },
+    "SMMA": {
+      "nome": "Secretaria Municipal de Meio Ambiente",
+      "area": "Meio ambiente"
+    },
+    "SMSP": {
+      "nome": "Secretaria Municipal de Segurança e Prevenção",
+      "area": "Segurança"
+    },
+    "FMC": {
+      "nome": "Fundação Municipal de Cultura",
+      "area": "Cultura"
+    },
+    "SMC": {
+      "nome": "Secretaria Municipal de Cultura",
+      "area": "Cultura"
+    },
+    "SMEL": {
+      "nome": "Secretaria Municipal de Esportes e Lazer",
+      "area": "Esportes"
+    },
+    "SMDE": {
+      "nome": "Secretaria Municipal de Desenvolvimento Econômico",
+      "area": "Desenvolvimento econômico"
+    },
+    "BELOTUR": {
+      "nome": "Empresa Municipal de Turismo de Belo Horizonte",
+      "area": "Desenvolvimento econômico"
+    },
+    "PGM": {
+      "nome": "Procuradoria-Geral do Município",
+      "area": "Jurídico"
+    },
+    "SMGO": {
+      "nome": "Secretaria Municipal de Governo",
+      "area": "Governo"
+    },
+    "GP": {
+      "nome": "Gabinete do Prefeito",
+      "area": "Governo"
+    },
+    "GAB-EL": {
+      "nome": "Gabinete (sigla não expandida)",
+      "area": "Governo",
+      "confirmacao": "pendente"
+    },
+    "DICC": {
+      "nome": "Diretoria (sigla não expandida)",
+      "area": "Governo",
+      "confirmacao": "pendente"
+    },
+    "CARE-B": {
+      "nome": "Coordenadoria de Atendimento Regional Barreiro",
+      "area": "Regionais"
+    },
+    "CARE-CS": {
+      "nome": "Coordenadoria de Atendimento Regional Centro-Sul",
+      "area": "Regionais"
+    },
+    "CARE-L": {
+      "nome": "Coordenadoria de Atendimento Regional Leste",
+      "area": "Regionais"
+    },
+    "CARE-NE": {
+      "nome": "Coordenadoria de Atendimento Regional Nordeste",
+      "area": "Regionais"
+    },
+    "CARE-NO": {
+      "nome": "Coordenadoria de Atendimento Regional Noroeste",
+      "area": "Regionais"
+    },
+    "CARE-N": {
+      "nome": "Coordenadoria de Atendimento Regional Norte",
+      "area": "Regionais"
+    },
+    "CARE-O": {
+      "nome": "Coordenadoria de Atendimento Regional Oeste",
+      "area": "Regionais"
+    },
+    "CARE-P": {
+      "nome": "Coordenadoria de Atendimento Regional Pampulha",
+      "area": "Regionais"
+    },
+    "CARE-VN": {
+      "nome": "Coordenadoria de Atendimento Regional Venda Nova",
+      "area": "Regionais"
+    },
+    "GCMBH": {
+      "nome": "Guarda Civil Municipal de Belo Horizonte",
+      "area": "Segurança"
+    },
+    "SUTE": {
+      "nome": "Subsecretaria (sigla não expandida)",
+      "area": "Outros",
+      "confirmacao": "pendente"
+    },
+    "SMAICS": {
+      "nome": "Secretaria Municipal (sigla não expandida)",
+      "area": "Outros",
+      "confirmacao": "pendente"
+    }
+  }
+}

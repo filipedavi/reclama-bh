@@ -1,0 +1,169 @@
+{
+  "@context": {
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/"
+  },
+  "@id": "https://SEU-USUARIO.github.io/reclama-bh/catalogo.jsonld",
+  "@type": "dcat:Catalog",
+  "dct:title": "Catálogo de dados do Reclama BH",
+  "dct:description": "Indicadores derivados dos dados abertos da Ouvidoria de Belo Horizonte.",
+  "dct:language": "pt-BR",
+  "dct:modified": "2026-11-04T15:21:33-03:00",
+  "dct:publisher": {
+    "@type": "foaf:Organization",
+    "foaf:name": "Projeto Reclama BH (UFMG)"
+  },
+  "dcat:dataset": [
+    {
+      "@type": "dcat:Dataset",
+      "@id": "https://SEU-USUARIO.github.io/reclama-bh/data/geral",
+      "dct:title": "Manifestações da Ouvidoria de BH: visão geral",
+      "dct:description": "Totais, séries mensais e distribuições gerais.",
+      "dct:spatial": "Belo Horizonte, MG",
+      "dct:source": [
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/479561aa-7614-426b-a8de-8036f885f192/download/2022.jan-dez.dados.abertos.csv",
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/138d2993-7cbd-4081-ae06-385db23de891/download/2023.jan-dez.-dados.abertos.csv",
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/9b870282-11d9-4283-8134-0183b700a278/download/2024.jan-dez.dados.abertos.csv",
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/e61425be-3332-4b4b-88c6-5b9f5596ca93/download/2025.jan-jun.dados.abertos.csv"
+      ],
+      "dct:temporal": {
+        "dcat:startDate": "2022-01",
+        "dcat:endDate": "2025-06"
+      },
+      "dct:license": "https://creativecommons.org/licenses/by/4.0/",
+      "dcat:distribution": [
+        {
+          "@type": "dcat:Distribution",
+          "dcat:downloadURL": "https://SEU-USUARIO.github.io/reclama-bh/data/geral.json",
+          "dcat:mediaType": "application/json"
+        }
+      ]
+    },
+    {
+      "@type": "dcat:Dataset",
+      "@id": "https://SEU-USUARIO.github.io/reclama-bh/data/servicos",
+      "dct:title": "Indicadores por serviço",
+      "dct:description": "Taxa de atendimento, arquivamento, prazo e tempo mediano por serviço público.",
+      "dct:spatial": "Belo Horizonte, MG",
+      "dct:source": [
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/479561aa-7614-426b-a8de-8036f885f192/download/2022.jan-dez.dados.abertos.csv",
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/138d2993-7cbd-4081-ae06-385db23de891/download/2023.jan-dez.-dados.abertos.csv",
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/9b870282-11d9-4283-8134-0183b700a278/download/2024.jan-dez.dados.abertos.csv",
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/e61425be-3332-4b4b-88c6-5b9f5596ca93/download/2025.jan-jun.dados.abertos.csv"
+      ],
+      "dct:temporal": {
+        "dcat:startDate": "2022-01",
+        "dcat:endDate": "2025-06"
+      },
+      "dct:license": "https://creativecommons.org/licenses/by/4.0/",
+      "dcat:distribution": [
+        {
+          "@type": "dcat:Distribution",
+          "dcat:downloadURL": "https://SEU-USUARIO.github.io/reclama-bh/data/servicos.json",
+          "dcat:mediaType": "application/json"
+        }
+      ]
+    },
+    {
+      "@type": "dcat:Dataset",
+      "@id": "https://SEU-USUARIO.github.io/reclama-bh/data/temas",
+      "dct:title": "Indicadores por tema",
+      "dct:description": "Os mesmos indicadores agregados pela taxonomia de temas.",
+      "dct:spatial": "Belo Horizonte, MG",
+      "dct:source": [
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/479561aa-7614-426b-a8de-8036f885f192/download/2022.jan-dez.dados.abertos.csv",
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/138d2993-7cbd-4081-ae06-385db23de891/download/2023.jan-dez.-dados.abertos.csv",
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/9b870282-11d9-4283-8134-0183b700a278/download/2024.jan-dez.dados.abertos.csv",
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/e61425be-3332-4b4b-88c6-5b9f5596ca93/download/2025.jan-jun.dados.abertos.csv"
+      ],
+      "dct:temporal": {
+        "dcat:startDate": "2022-01",
+        "dcat:endDate": "2025-06"
+      },
+      "dct:license": "https://creativecommons.org/licenses/by/4.0/",
+      "dcat:distribution": [
+        {
+          "@type": "dcat:Distribution",
+          "dcat:downloadURL": "https://SEU-USUARIO.github.io/reclama-bh/data/temas.json",
+          "dcat:mediaType": "application/json"
+        }
+      ]
+    },
+    {
+      "@type": "dcat:Dataset",
+      "@id": "https://SEU-USUARIO.github.io/reclama-bh/data/regionais",
+      "dct:title": "Indicadores por regional",
+      "dct:description": "Indicadores por região administrativa.",
+      "dct:spatial": "Belo Horizonte, MG",
+      "dct:source": [
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/479561aa-7614-426b-a8de-8036f885f192/download/2022.jan-dez.dados.abertos.csv",
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/138d2993-7cbd-4081-ae06-385db23de891/download/2023.jan-dez.-dados.abertos.csv",
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/9b870282-11d9-4283-8134-0183b700a278/download/2024.jan-dez.dados.abertos.csv",
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/e61425be-3332-4b4b-88c6-5b9f5596ca93/download/2025.jan-jun.dados.abertos.csv"
+      ],
+      "dct:temporal": {
+        "dcat:startDate": "2022-01",
+        "dcat:endDate": "2025-06"
+      },
+      "dct:license": "https://creativecommons.org/licenses/by/4.0/",
+      "dcat:distribution": [
+        {
+          "@type": "dcat:Distribution",
+          "dcat:downloadURL": "https://SEU-USUARIO.github.io/reclama-bh/data/regionais.json",
+          "dcat:mediaType": "application/json"
+        }
+      ]
+    },
+    {
+      "@type": "dcat:Dataset",
+      "@id": "https://SEU-USUARIO.github.io/reclama-bh/data/orgaos",
+      "dct:title": "Indicadores por órgão responsável",
+      "dct:description": "Indicadores por órgão da Prefeitura.",
+      "dct:spatial": "Belo Horizonte, MG",
+      "dct:source": [
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/479561aa-7614-426b-a8de-8036f885f192/download/2022.jan-dez.dados.abertos.csv",
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/138d2993-7cbd-4081-ae06-385db23de891/download/2023.jan-dez.-dados.abertos.csv",
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/9b870282-11d9-4283-8134-0183b700a278/download/2024.jan-dez.dados.abertos.csv",
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/e61425be-3332-4b4b-88c6-5b9f5596ca93/download/2025.jan-jun.dados.abertos.csv"
+      ],
+      "dct:temporal": {
+        "dcat:startDate": "2022-01",
+        "dcat:endDate": "2025-06"
+      },
+      "dct:license": "https://creativecommons.org/licenses/by/4.0/",
+      "dcat:distribution": [
+        {
+          "@type": "dcat:Distribution",
+          "dcat:downloadURL": "https://SEU-USUARIO.github.io/reclama-bh/data/orgaos.json",
+          "dcat:mediaType": "application/json"
+        }
+      ]
+    },
+    {
+      "@type": "dcat:Dataset",
+      "@id": "https://SEU-USUARIO.github.io/reclama-bh/data/vocabulario",
+      "dct:title": "Vocabulário controlado do Reclama BH",
+      "dct:description": "Taxonomia, tesauro, lista de órgãos e conceitos.",
+      "dct:spatial": "Belo Horizonte, MG",
+      "dct:source": [
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/479561aa-7614-426b-a8de-8036f885f192/download/2022.jan-dez.dados.abertos.csv",
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/138d2993-7cbd-4081-ae06-385db23de891/download/2023.jan-dez.-dados.abertos.csv",
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/9b870282-11d9-4283-8134-0183b700a278/download/2024.jan-dez.dados.abertos.csv",
+        "https://ckan.pbh.gov.br/dataset/3cd99298-1f99-410d-b541-00884dccc4d2/resource/e61425be-3332-4b4b-88c6-5b9f5596ca93/download/2025.jan-jun.dados.abertos.csv"
+      ],
+      "dct:temporal": {
+        "dcat:startDate": "2022-01",
+        "dcat:endDate": "2025-06"
+      },
+      "dct:license": "https://creativecommons.org/licenses/by/4.0/",
+      "dcat:distribution": [
+        {
+          "@type": "dcat:Distribution",
+          "dcat:downloadURL": "https://SEU-USUARIO.github.io/reclama-bh/data/vocabulario.json",
+          "dcat:mediaType": "application/json"
+        }
+      ]
+    }
+  ]
+}

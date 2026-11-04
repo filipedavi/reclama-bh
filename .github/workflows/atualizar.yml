@@ -1,0 +1,75 @@
+# Verifica todo mês se a PBH publicou um arquivo mais completo da Ouvidoria; se sim, arquiva a
+# versão (Release, guarda permanente), recalcula os indicadores e publica o site no GitHub Pages.
+name: Atualizar Reclama BH
+on:
+  schedule:
+    - cron: "0 9 5 * *"   # dia 5 de cada mês, 06:00 em Brasília
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: atualizar
+  cancel-in-progress: false
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONIOENCODING: utf-8
+      URL_SITE: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Coleta
+        id: coleta
+        run: |
+          python pipeline/coletar.py | tee coleta.log
+          grep -oP 'arquivada versão até mês \d+ \(\K[^)]+' coleta.log > novas.txt || true
+          echo "novas=$(paste -sd' ' novas.txt)" >> "$GITHUB_OUTPUT"
+      - name: Restaurar originais ausentes (data/raw não é versionado)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p data/raw/ouvidoria
+          # primeiro tenta as releases do próprio repositório; o que faltar vem da fonte, conferido pelo SHA-256
+          for id in $(python -c "import json;print(' '.join(v['identificador'] for v in json.load(open('data/arquivo/manifesto.json',encoding='utf-8'))['versoes'] if v['estado']=='vigente'))"); do
+            [ -f "data/raw/ouvidoria/$id.csv" ] || gh release download "$id" -p "$id.csv" -D data/raw/ouvidoria 2>/dev/null || true
+          done
+          python pipeline/coletar.py --restaurar
+      - name: Guardar originais como Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for id in $(python -c "import json;print(' '.join(v['identificador'] for v in json.load(open('data/arquivo/manifesto.json',encoding='utf-8'))['versoes'] if v['estado']=='vigente'))"); do
+            gh release view "$id" >/dev/null 2>&1 && continue
+            sha=$(sha256sum "data/raw/ouvidoria/$id.csv" | cut -d' ' -f1)
+            gh release create "$id" "data/raw/ouvidoria/$id.csv#$id" --title "$id" \
+              --notes "Arquivo original da Ouvidoria de BH capturado em $(date -u +%FT%TZ). SHA-256: $sha. Classe 02.01.01, guarda permanente."
+          done
+      - name: Tratamento e indicadores
+        if: steps.coleta.outputs.novas != ''
+        run: |
+          python pipeline/processar.py
+          python pipeline/indicadores.py
+      - name: Registrar no repositório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/arquivo data/processed web
+          git diff --cached --quiet || git commit -m "Atualização: $(date -u +%F)"
+          git push
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+  publicar:
+    needs: atualizar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

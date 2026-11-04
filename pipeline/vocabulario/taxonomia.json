@@ -1,0 +1,1223 @@
+{
+  "titulo": "Taxonomia de temas das manifestações",
+  "descricao": "Classificação hierárquica (tema > subtema) dos cerca de 1.700 nomes de serviço usados pela PBH. A indexação é automática por regras: cada regra é uma expressão procurada no nome normalizado do serviço (sem acentos, minúsculas, sem palavras vazias), casando só no início de palavra; regras curtas (até 4 letras) precisam casar a palavra inteira. A primeira regra que casa, na ordem do arquivo, define o subtema; por isso os temas com vocabulário mais específico vêm antes dos temas com vocabulário amplo (Saúde, Servidores). Serviços sem regra vão para 'Outros e não classificados'.",
+  "temas": [
+    {
+      "id": "ANI",
+      "nome": "Animais, pragas e vetores",
+      "subtemas": [
+        {
+          "id": "ANI.AED",
+          "nome": "Dengue e Aedes aegypti",
+          "regras": [
+            "aedes",
+            "dengue",
+            "mosquito",
+            "arbovirose",
+            "fumace"
+          ]
+        },
+        {
+          "id": "ANI.ZOO",
+          "nome": "Zoonoses (leishmaniose, raiva)",
+          "regras": [
+            "leishmaniose",
+            "raiva",
+            "zoonose",
+            "animais agressores",
+            "agentes de combate"
+          ]
+        },
+        {
+          "id": "ANI.PRA",
+          "nome": "Ratos, escorpiões e outras pragas",
+          "regras": [
+            "roedor",
+            "rato",
+            "ratos",
+            "escorpi",
+            "peconhento",
+            "vetores",
+            "carrapato",
+            "pombo",
+            "caramujo",
+            "morcego",
+            "abelha",
+            "cupim",
+            "inseto",
+            "pernilongo",
+            "praga"
+          ]
+        },
+        {
+          "id": "ANI.CAO",
+          "nome": "Cães, gatos e maus-tratos",
+          "regras": [
+            "castracao",
+            "caes",
+            "cao",
+            "gato",
+            "gatos",
+            "maus tratos",
+            "animal",
+            "animais",
+            "veterinar",
+            "equino",
+            "cavalo",
+            "criacao"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ILU",
+      "nome": "Iluminação pública",
+      "subtemas": [
+        {
+          "id": "ILU.MAN",
+          "nome": "Luminária apagada, quebrada ou piscando",
+          "regras": [
+            "luminaria",
+            "apagad",
+            "piscando",
+            "intermitente",
+            "lampada"
+          ]
+        },
+        {
+          "id": "ILU.RED",
+          "nome": "Rede, postes e ampliação",
+          "regras": [
+            "iluminacao",
+            "poste"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VIA",
+      "nome": "Ruas, calçadas e obras",
+      "subtemas": [
+        {
+          "id": "VIA.BUR",
+          "nome": "Buracos e asfalto",
+          "regras": [
+            "tapa buraco",
+            "buraco",
+            "recapeamento",
+            "pavimenta",
+            "asfalto",
+            "patrolamento"
+          ]
+        },
+        {
+          "id": "VIA.CAL",
+          "nome": "Calçadas e passeios",
+          "regras": [
+            "passeio publico",
+            "passeio manutencao",
+            "calcada",
+            "calcadas",
+            "meio fio",
+            "acessibilidade",
+            "construcao ausencia",
+            "obra ruas calcadas"
+          ]
+        },
+        {
+          "id": "VIA.DRE",
+          "nome": "Drenagem, bocas de lobo e enchentes",
+          "regras": [
+            "drenagem",
+            "boca lobo",
+            "bocas lobo",
+            "enchente",
+            "inunda",
+            "alagamento",
+            "corrego",
+            "canal",
+            "galeria"
+          ]
+        },
+        {
+          "id": "VIA.ESG",
+          "nome": "Esgoto e água",
+          "regras": [
+            "esgoto",
+            "esgotos",
+            "agua servida",
+            "abastecimento agua",
+            "vazamento agua",
+            "rede agua"
+          ]
+        },
+        {
+          "id": "VIA.DEF",
+          "nome": "Defesa civil e áreas de risco",
+          "regras": [
+            "defesa civil",
+            "risco geologico",
+            "deslizamento",
+            "desabamento",
+            "muro arrimo",
+            "areas risco",
+            "area risco",
+            "vistoria risco"
+          ]
+        },
+        {
+          "id": "VIA.OBR",
+          "nome": "Obras públicas, habitação e vilas",
+          "regras": [
+            "obras publicas",
+            "obra publica",
+            "sudecap",
+            "escada",
+            "beco",
+            "viaduto",
+            "ponte",
+            "contencao",
+            "infraestrutura urbana",
+            "orcamento participativo",
+            "vila",
+            "vilas",
+            "favela",
+            "habitacao",
+            "urbel",
+            "fundiaria",
+            "muro",
+            "passarela",
+            "minha casa minha vida",
+            "bolsa moradia",
+            "moradia"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "LIM",
+      "nome": "Limpeza urbana e lixo",
+      "subtemas": [
+        {
+          "id": "LIM.COL",
+          "nome": "Coleta de lixo",
+          "regras": [
+            "coleta lixo",
+            "coleta seletiva",
+            "coleta domiciliar",
+            "coleta residuos",
+            "lixo domiciliar",
+            "coleta"
+          ]
+        },
+        {
+          "id": "LIM.VAR",
+          "nome": "Varrição e lavação",
+          "regras": [
+            "varricao",
+            "lavacao",
+            "limpeza via",
+            "limpeza urbana",
+            "lavagem",
+            "limpeza"
+          ]
+        },
+        {
+          "id": "LIM.DEP",
+          "nome": "Entulho e descarte irregular",
+          "regras": [
+            "deposicao irregular",
+            "deposicoes clandestinas",
+            "entulho",
+            "descarte",
+            "cacamba",
+            "residuos construcao",
+            "volumosos",
+            "ponto limpo",
+            "urpv",
+            "bota fora",
+            "lixo"
+          ]
+        },
+        {
+          "id": "LIM.LIX",
+          "nome": "Lixeiras e contêineres",
+          "regras": [
+            "lixeira",
+            "cesto coletor",
+            "conteiner",
+            "container",
+            "papeleira"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ARV",
+      "nome": "Árvores, praças e parques",
+      "subtemas": [
+        {
+          "id": "ARV.POD",
+          "nome": "Poda de árvore",
+          "regras": [
+            "poda"
+          ]
+        },
+        {
+          "id": "ARV.COR",
+          "nome": "Corte, supressão e raiz",
+          "regras": [
+            "supressao",
+            "seccao raiz",
+            "raiz",
+            "destoca",
+            "toco",
+            "galhos",
+            "arvore caida",
+            "corte arvore",
+            "arvore",
+            "arvores"
+          ]
+        },
+        {
+          "id": "ARV.PLA",
+          "nome": "Plantio",
+          "regras": [
+            "plantio"
+          ]
+        },
+        {
+          "id": "ARV.PRA",
+          "nome": "Praças, parques e áreas verdes",
+          "regras": [
+            "praca",
+            "pracas",
+            "parque",
+            "parques",
+            "area verde",
+            "areas verdes",
+            "canteiro",
+            "jardim",
+            "zoologico",
+            "zoobotanica",
+            "capina",
+            "rocada",
+            "mato",
+            "academia ceu aberto",
+            "quadra",
+            "quadras",
+            "campo futebol",
+            "enquadramento ambiental"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TRA",
+      "nome": "Transporte e trânsito",
+      "subtemas": [
+        {
+          "id": "TRA.ONI",
+          "nome": "Ônibus e transporte coletivo",
+          "regras": [
+            "onibus",
+            "transporte coletivo",
+            "transporte publico",
+            "bhbus",
+            "passe livre",
+            "meio passe",
+            "vale transporte",
+            "gratuidade",
+            "move",
+            "estacao",
+            "linha",
+            "ponto embarque",
+            "itinerario"
+          ]
+        },
+        {
+          "id": "TRA.MUL",
+          "nome": "Multas e infrações de trânsito",
+          "regras": [
+            "multa",
+            "multas",
+            "infracao",
+            "infracoes",
+            "jari",
+            "autuacao transito",
+            "fici",
+            "condutor infrator",
+            "notificacoes transito",
+            "pontuacao",
+            "cnh",
+            "reboque",
+            "patio",
+            "autos transito"
+          ]
+        },
+        {
+          "id": "TRA.TAX",
+          "nome": "Táxi, aplicativos e transporte escolar",
+          "regras": [
+            "taxi",
+            "aplicativos transporte",
+            "aplicativo uber",
+            "condutor escolar",
+            "transporte escolar",
+            "mototaxi",
+            "fretamento",
+            "motorista"
+          ]
+        },
+        {
+          "id": "TRA.EST",
+          "nome": "Estacionamento",
+          "regras": [
+            "estacionamento",
+            "estacionad",
+            "rotativo",
+            "zona azul"
+          ]
+        },
+        {
+          "id": "TRA.SIN",
+          "nome": "Sinalização, trânsito e segurança viária",
+          "regras": [
+            "sinalizacao",
+            "sinalizacoes",
+            "semaforo",
+            "quebra mola",
+            "redutor velocidade",
+            "faixa pedestre",
+            "faixa pedestres",
+            "dispositivos seguranca",
+            "estudo circulacao",
+            "circulacao",
+            "radar",
+            "lombada",
+            "trafego",
+            "transito",
+            "ciclovia",
+            "ciclofaixa",
+            "bicicleta",
+            "bicicletario",
+            "pedestre",
+            "mao direcao",
+            "velocidade",
+            "bhtrans"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FIS",
+      "nome": "Fiscalização urbana e ambiental",
+      "subtemas": [
+        {
+          "id": "FIS.SOM",
+          "nome": "Barulho e poluição sonora",
+          "regras": [
+            "sonora",
+            "barulho",
+            "ruido",
+            "som alto"
+          ]
+        },
+        {
+          "id": "FIS.OBR",
+          "nome": "Obras e construções irregulares",
+          "regras": [
+            "obra andamento",
+            "obra irregular",
+            "edificacao concluida",
+            "obra ruas",
+            "construcao irregular",
+            "reforma irregular",
+            "obra sem"
+          ]
+        },
+        {
+          "id": "FIS.COM",
+          "nome": "Comércio e estabelecimentos irregulares",
+          "regras": [
+            "estabelecimento sem licenca",
+            "estabelecimento irregular",
+            "camelo",
+            "camelos",
+            "ambulante",
+            "ambulantes",
+            "mesas cadeiras",
+            "comercio vias",
+            "feiras eventos",
+            "circo",
+            "comercio industria servico",
+            "bar",
+            "bares",
+            "food truck"
+          ]
+        },
+        {
+          "id": "FIS.LOT",
+          "nome": "Lotes vagos e invasões",
+          "regras": [
+            "lote vago",
+            "lotes vagos",
+            "invasao",
+            "terreno",
+            "ocupacao irregular"
+          ]
+        },
+        {
+          "id": "FIS.PUB",
+          "nome": "Publicidade e obstrução de via",
+          "regras": [
+            "publicidade",
+            "obstrucao",
+            "cone cavalete",
+            "outdoor",
+            "panfleto",
+            "pichacao",
+            "grafite",
+            "engenho"
+          ]
+        },
+        {
+          "id": "FIS.VEI",
+          "nome": "Veículos abandonados",
+          "regras": [
+            "abandonad",
+            "carcaca",
+            "carcacas",
+            "abandono"
+          ]
+        },
+        {
+          "id": "FIS.AMB",
+          "nome": "Poluição e meio ambiente",
+          "regras": [
+            "poluicao",
+            "ambiental",
+            "meio ambiente",
+            "queimada",
+            "fumaca",
+            "nascente",
+            "fauna",
+            "flora"
+          ]
+        },
+        {
+          "id": "FIS.SAN",
+          "nome": "Vigilância sanitária",
+          "regras": [
+            "vigilancia sanitaria",
+            "condicoes sanitarias",
+            "alimentos improprios",
+            "responsabilidade tecnica",
+            "higiene",
+            "sanitaria",
+            "sanitarias"
+          ]
+        },
+        {
+          "id": "FIS.GER",
+          "nome": "Outras fiscalizações e denúncias de irregularidade",
+          "regras": [
+            "fiscalizacao",
+            "comunicacao irregularidade",
+            "irregularidade",
+            "denuncia prestador",
+            "auto infracao",
+            "autos emitidos",
+            "olho vivo",
+            "banheiro quimico"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "URB",
+      "nome": "Licenciamento e regulação urbana",
+      "subtemas": [
+        {
+          "id": "URB.LIC",
+          "nome": "Alvarás, licenças e regularização de imóveis",
+          "regras": [
+            "alvara",
+            "licenca atividade",
+            "licenca mesa",
+            "licenca comercio",
+            "licenca cacamba",
+            "licenca engenho",
+            "viabilidade",
+            "regularizacao edificacao",
+            "regularizacao",
+            "parcelamento solo",
+            "baixa construcao",
+            "termino obra",
+            "edificacoes",
+            "aprovacao projeto",
+            "projeto arquitetonico",
+            "habite se",
+            "regulacao urbana",
+            "plano diretor",
+            "zoneamento",
+            "uso solo",
+            "numeracao",
+            "endereco oficial",
+            "logradouro",
+            "banca jornais",
+            "permissao",
+            "concessao",
+            "politica urbana",
+            "relatorio fotografico",
+            "diretrizes ambientais",
+            "vistoria acompanhamento",
+            "cadep",
+            "licenca funcionamento",
+            "licenca ambiental",
+            "licenciamento"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TRI",
+      "nome": "Impostos e taxas",
+      "subtemas": [
+        {
+          "id": "TRI.IPT",
+          "nome": "IPTU",
+          "regras": [
+            "iptu"
+          ]
+        },
+        {
+          "id": "TRI.ITB",
+          "nome": "ITBI",
+          "regras": [
+            "itbi"
+          ]
+        },
+        {
+          "id": "TRI.ISS",
+          "nome": "ISSQN e nota fiscal",
+          "regras": [
+            "issqn",
+            "iss",
+            "nota fiscal",
+            "nfs",
+            "nfse",
+            "bhiss",
+            "simples nacional",
+            "autonomo"
+          ]
+        },
+        {
+          "id": "TRI.DIV",
+          "nome": "Dívida ativa, parcelamento e cobrança",
+          "regras": [
+            "divida ativa",
+            "divida",
+            "parcelamento",
+            "protesto",
+            "protestada",
+            "reativa bh",
+            "perdao debitos",
+            "cobranca",
+            "debito",
+            "debitos"
+          ]
+        },
+        {
+          "id": "TRI.GER",
+          "nome": "Outros assuntos da Fazenda",
+          "regras": [
+            "receita municipal",
+            "fazenda",
+            "taxa",
+            "taxas",
+            "certidao",
+            "restituicao",
+            "tributo",
+            "tributos",
+            "tributari",
+            "guia",
+            "guias",
+            "credito",
+            "cnd",
+            "agravo",
+            "cemiterio",
+            "jazigo",
+            "imunidade",
+            "cadastro tributario",
+            "cartorio",
+            "balancos",
+            "consulta previa",
+            "juntas integradas",
+            "lancamento",
+            "bh nota 10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EDU",
+      "nome": "Educação",
+      "subtemas": [
+        {
+          "id": "EDU.VAG",
+          "nome": "Vagas, cadastro e matrícula",
+          "regras": [
+            "vagas",
+            "vaga",
+            "cadastro escolar",
+            "matricula",
+            "cadastro educacao",
+            "transferencia escolar",
+            "transferencia"
+          ]
+        },
+        {
+          "id": "EDU.CRE",
+          "nome": "Creches e educação infantil",
+          "regras": [
+            "creche",
+            "creches",
+            "educacao infantil",
+            "umei"
+          ]
+        },
+        {
+          "id": "EDU.ESC",
+          "nome": "Escolas municipais",
+          "regras": [
+            "escola",
+            "escolas",
+            "escolar",
+            "escolares",
+            "merenda",
+            "uniforme",
+            "uniformes",
+            "educacao",
+            "educacionais",
+            "professor",
+            "professores",
+            "aluno",
+            "alunos",
+            "ensino",
+            "monitores apoio",
+            "inclusao"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SAU",
+      "nome": "Saúde",
+      "subtemas": [
+        {
+          "id": "SAU.VAC",
+          "nome": "Vacinação",
+          "regras": [
+            "vacina",
+            "sala vacinacao"
+          ]
+        },
+        {
+          "id": "SAU.MED",
+          "nome": "Medicamentos e insumos",
+          "regras": [
+            "medicament",
+            "farmacia",
+            "farmacias",
+            "insumo",
+            "insumos",
+            "dispensacao",
+            "fralda",
+            "dieta enteral",
+            "oxigenio"
+          ]
+        },
+        {
+          "id": "SAU.CIR",
+          "nome": "Cirurgias e internação",
+          "regras": [
+            "cirurgia",
+            "cirurgias",
+            "internacao",
+            "leito",
+            "transplante"
+          ]
+        },
+        {
+          "id": "SAU.EXA",
+          "nome": "Exames e diagnóstico",
+          "regras": [
+            "exame",
+            "exames",
+            "laborator",
+            "apoio diagnostico",
+            "mamografia",
+            "ultrassom",
+            "tomografia",
+            "ressonancia"
+          ]
+        },
+        {
+          "id": "SAU.URG",
+          "nome": "Urgência e emergência",
+          "regras": [
+            "upa",
+            "pronto atendimento",
+            "samu",
+            "urgencia",
+            "emergencia"
+          ]
+        },
+        {
+          "id": "SAU.MEN",
+          "nome": "Saúde mental",
+          "regras": [
+            "cersam",
+            "saude mental",
+            "caps",
+            "psicolog",
+            "psiquiatr",
+            "drogas",
+            "alcool"
+          ]
+        },
+        {
+          "id": "SAU.ODO",
+          "nome": "Odontologia",
+          "regras": [
+            "odonto",
+            "dentista",
+            "ceo"
+          ]
+        },
+        {
+          "id": "SAU.DOM",
+          "nome": "Atendimento domiciliar e transporte sanitário",
+          "regras": [
+            "medico domiciliar",
+            "atencao domiciliar",
+            "internacao domiciliar",
+            "sad",
+            "transporte sanitario",
+            "tratamento fora domicilio",
+            "tfd",
+            "vale transporte saude",
+            "acamado"
+          ]
+        },
+        {
+          "id": "SAU.ESP",
+          "nome": "Especialidades e agendamento",
+          "regras": [
+            "especializad",
+            "especialidade",
+            "especialidades",
+            "agendamento",
+            "marcacao",
+            "regulacao",
+            "fila",
+            "encaminhamento",
+            "teleconsulta",
+            "fisioterap",
+            "nutri",
+            "fonoaudio",
+            "oftalmo",
+            "ortoped",
+            "cardio",
+            "dermato",
+            "neuro",
+            "oncolog",
+            "mulher gestante",
+            "pre natal",
+            "gestante",
+            "saude crianca",
+            "saude idoso",
+            "saude homem",
+            "rede conveniada"
+          ]
+        },
+        {
+          "id": "SAU.UNI",
+          "nome": "Atendimento nos centros de saúde",
+          "regras": [
+            "centro saude",
+            "centros saude",
+            "unidades saude",
+            "unidade saude",
+            "saude familia",
+            "esf",
+            "equipes complementares",
+            "clinico ginecologista",
+            "triagem",
+            "acolhimento",
+            "cadastro usuarios",
+            "cadastro usuario",
+            "cartao sus",
+            "academia cidade",
+            "atencao basica",
+            "atencao primaria",
+            "agente comunitario",
+            "consulta medica",
+            "hospital",
+            "hospitalar",
+            "covid",
+            "coronavirus",
+            "assistencia medica",
+            "enfermagem",
+            "joaninhas",
+            "saude",
+            "medic",
+            "medico",
+            "medicos"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SOC",
+      "nome": "Assistência social e direitos humanos",
+      "subtemas": [
+        {
+          "id": "SOC.DIR",
+          "nome": "Denúncias de violação de direitos humanos",
+          "regras": [
+            "direitos humanos",
+            "violacao direitos",
+            "disque 100",
+            "violencia",
+            "discriminacao",
+            "racismo",
+            "lgbt",
+            "direitos mulher",
+            "direitos idoso",
+            "mulher",
+            "idoso",
+            "idosos",
+            "crianca",
+            "criancas",
+            "adolescente",
+            "adolescentes",
+            "pessoa deficiencia",
+            "trabalho infantil",
+            "escravo"
+          ]
+        },
+        {
+          "id": "SOC.RUA",
+          "nome": "População em situação de rua",
+          "regras": [
+            "situacao rua",
+            "abrigo",
+            "abrigos",
+            "albergue",
+            "centro pop",
+            "morador rua"
+          ]
+        },
+        {
+          "id": "SOC.BEN",
+          "nome": "Benefícios e CadÚnico",
+          "regras": [
+            "bolsa familia",
+            "cadunico",
+            "cadastro unico",
+            "beneficio",
+            "beneficios",
+            "bpc",
+            "auxilio",
+            "cesta",
+            "restaurante popular",
+            "seguranca alimentar",
+            "banco alimentos"
+          ]
+        },
+        {
+          "id": "SOC.CRA",
+          "nome": "CRAS, CREAS e serviços sociais",
+          "regras": [
+            "cras",
+            "creas",
+            "assistencia social",
+            "assistencial",
+            "conselho tutelar",
+            "conselhos tutelares",
+            "conselheiro",
+            "acolhimento institucional",
+            "familia",
+            "suas",
+            "centro convivencia",
+            "programa assistencia"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SER",
+      "nome": "Servidores e atendimento da Prefeitura",
+      "subtemas": [
+        {
+          "id": "SER.DEN",
+          "nome": "Denúncias e conduta de servidores",
+          "regras": [
+            "servidores municipais",
+            "conduta servidor",
+            "conduta agente",
+            "agente publico",
+            "denuncia guarda",
+            "guarda municipal",
+            "guarda civil",
+            "terceirizado",
+            "assedio",
+            "corrupcao",
+            "improbidade",
+            "nepotismo",
+            "denuncia sobre"
+          ]
+        },
+        {
+          "id": "SER.CON",
+          "nome": "Concursos e processos seletivos",
+          "regras": [
+            "concurso",
+            "processo seletivo",
+            "selecao",
+            "estagio",
+            "contratacao",
+            "candidato",
+            "candidado"
+          ]
+        },
+        {
+          "id": "SER.RH",
+          "nome": "Carreira, pagamento e previdência do servidor",
+          "regras": [
+            "servidor",
+            "servidores",
+            "remuneracao",
+            "insalubridade",
+            "quinquenio",
+            "licenca premio",
+            "pericia",
+            "previden",
+            "aposentadoria",
+            "aposentado",
+            "pensao",
+            "ferias",
+            "ponto eletronico",
+            "ppp",
+            "profissiografico",
+            "progressao",
+            "folha pagamento",
+            "contracheque",
+            "plano carreira",
+            "readaptacao",
+            "gestao pessoas",
+            "abono permanencia",
+            "prova vida",
+            "proventos",
+            "recursos humanos",
+            "admissional",
+            "licenca premio"
+          ]
+        },
+        {
+          "id": "SER.ATE",
+          "nome": "Canais de atendimento e sistemas",
+          "regras": [
+            "156",
+            "bh resolve",
+            "bh digital",
+            "atendimento cidadao",
+            "portal",
+            "sistemas ti",
+            "informatica",
+            "site",
+            "internet",
+            "wi fi",
+            "hotspot",
+            "telefon",
+            "senha",
+            "login",
+            "protocolo",
+            "agendamento eletronico",
+            "normas procedimentos",
+            "suporte"
+          ]
+        },
+        {
+          "id": "SER.LAI",
+          "nome": "Acesso à informação, ouvidoria e dados pessoais",
+          "regras": [
+            "acesso informacao",
+            "lai",
+            "ouvidoria",
+            "ouvidor",
+            "transparencia",
+            "metodologia",
+            "controladoria",
+            "auditoria",
+            "correicao",
+            "dados pessoais",
+            "lgpd"
+          ]
+        },
+        {
+          "id": "SER.GES",
+          "nome": "Gestão administrativa",
+          "regras": [
+            "gestao administrativa",
+            "gestao",
+            "administracao",
+            "contrato",
+            "contratos",
+            "licitacao",
+            "fornecedor",
+            "convenio",
+            "indenizacao",
+            "procuradoria",
+            "juridico",
+            "legislacao",
+            "projeto lei",
+            "camara",
+            "secretaria",
+            "subsecretaria",
+            "superintendencia"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CUL",
+      "nome": "Cultura, esporte, lazer e turismo",
+      "subtemas": [
+        {
+          "id": "CUL.EVE",
+          "nome": "Carnaval e eventos",
+          "regras": [
+            "carnaval",
+            "bloco",
+            "blocos",
+            "festival",
+            "fiq",
+            "virada cultural",
+            "reveillon",
+            "evento",
+            "eventos",
+            "show",
+            "arena"
+          ]
+        },
+        {
+          "id": "CUL.CUL",
+          "nome": "Cultura, esporte e turismo",
+          "regras": [
+            "cultura",
+            "cultural",
+            "culturais",
+            "biblioteca",
+            "bibliotecas",
+            "museu",
+            "museus",
+            "teatro",
+            "patrimonio",
+            "esporte",
+            "esportiva",
+            "esportivas",
+            "lazer",
+            "turismo",
+            "belotur",
+            "mais feliz",
+            "piscina",
+            "ginasio",
+            "centro esportivo",
+            "sepultamento"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CON",
+      "nome": "Consumidor (PROCON)",
+      "subtemas": [
+        {
+          "id": "CON.PRO",
+          "nome": "Defesa do consumidor",
+          "regras": [
+            "procon",
+            "consumidor"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DES",
+      "nome": "Desenvolvimento econômico e trabalho",
+      "subtemas": [
+        {
+          "id": "DES.TRA",
+          "nome": "Emprego, empreendedorismo e economia",
+          "regras": [
+            "emprego",
+            "sine",
+            "trabalho",
+            "empreended",
+            "mei",
+            "microempre",
+            "economia",
+            "desenvolvimento economico",
+            "feira livre",
+            "feira",
+            "feiras",
+            "mercado",
+            "shopping popular",
+            "credito popular"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OUT",
+      "nome": "Outros assuntos",
+      "subtemas": [
+        {
+          "id": "OUT.NAO",
+          "nome": "Não é competência da PBH",
+          "regras": [
+            "nao competencia",
+            "competencia pbh",
+            "orgao externo",
+            "governo estado",
+            "governo federal",
+            "cemig",
+            "correios",
+            "copasa"
+          ]
+        },
+        {
+          "id": "OUT.GER",
+          "nome": "Outros e não classificados",
+          "regras": []
+        }
+      ]
+    }
+  ],
+  "motivos": {
+    "descricao": "Lista de 'assuntos' atribuída pela própria Ouvidoria a cada manifestação (vocabulário controlado da PBH). Uma manifestação pode ter mais de um motivo; alguns valores identificam grupos prioritários e não motivos.",
+    "grupos_prioritarios": [
+      "Pessoa Idosa",
+      "Criança e Adolescente",
+      "Pessoa com Deficiência",
+      "Mulher",
+      "População em Situação de Rua",
+      "LGBTQIA+",
+      "Pessoa Negra",
+      "Imigrante"
+    ]
+  }
+}

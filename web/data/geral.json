@@ -1,0 +1,373 @@
+{
+  "gerado_em": "2026-11-04T15:21:33-03:00",
+  "anos": [
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+  ],
+  "periodo": {
+    "inicio": "2022-01",
+    "fim": "2025-06"
+  },
+  "total": {
+    "n": 138323,
+    "encerradas": 119591,
+    "em_andamento": 18732,
+    "suficiente": true,
+    "pct_atendida": 37.4,
+    "pct_orientacao": 35.5,
+    "pct_arquivada": 23.1,
+    "pct_outra": 4.0,
+    "pct_no_prazo": 82.4,
+    "pct_critico": 7.2,
+    "mediana_dias": 11,
+    "p90_dias": 47
+  },
+  "por_ano": {
+    "2022": {
+      "n": 36070,
+      "encerradas": 32612,
+      "em_andamento": 3458,
+      "suficiente": true,
+      "pct_atendida": 36.4,
+      "pct_orientacao": 35.5,
+      "pct_arquivada": 24.7,
+      "pct_outra": 3.5,
+      "pct_no_prazo": 78.4,
+      "pct_critico": 9.4,
+      "mediana_dias": 15.0,
+      "p90_dias": 58
+    },
+    "2023": {
+      "n": 35455,
+      "encerradas": 30770,
+      "em_andamento": 4685,
+      "suficiente": true,
+      "pct_atendida": 26.5,
+      "pct_orientacao": 46.7,
+      "pct_arquivada": 21.9,
+      "pct_outra": 4.9,
+      "pct_no_prazo": 79.9,
+      "pct_critico": 8.3,
+      "mediana_dias": 11.0,
+      "p90_dias": 52
+    },
+    "2024": {
+      "n": 44791,
+      "encerradas": 38450,
+      "em_andamento": 6341,
+      "suficiente": true,
+      "pct_atendida": 42.1,
+      "pct_orientacao": 30.9,
+      "pct_arquivada": 22.8,
+      "pct_outra": 4.3,
+      "pct_no_prazo": 83.8,
+      "pct_critico": 6.6,
+      "mediana_dias": 9.0,
+      "p90_dias": 43
+    },
+    "2025": {
+      "n": 22007,
+      "encerradas": 17759,
+      "em_andamento": 4248,
+      "suficiente": true,
+      "pct_atendida": 48.2,
+      "pct_orientacao": 26.0,
+      "pct_arquivada": 23.3,
+      "pct_outra": 2.6,
+      "pct_no_prazo": 91.0,
+      "pct_critico": 2.9,
+      "mediana_dias": 8,
+      "p90_dias": 28
+    }
+  },
+  "mensal": {
+    "2022-01": 3982,
+    "2022-02": 3278,
+    "2022-03": 3458,
+    "2022-04": 2969,
+    "2022-05": 3268,
+    "2022-06": 3017,
+    "2022-07": 2799,
+    "2022-08": 2803,
+    "2022-09": 2577,
+    "2022-10": 2577,
+    "2022-11": 2881,
+    "2022-12": 2461,
+    "2023-01": 2924,
+    "2023-02": 2960,
+    "2023-03": 3718,
+    "2023-04": 3015,
+    "2023-05": 3410,
+    "2023-06": 2916,
+    "2023-07": 2887,
+    "2023-08": 3104,
+    "2023-09": 2710,
+    "2023-10": 2994,
+    "2023-11": 2521,
+    "2023-12": 2296,
+    "2024-01": 3469,
+    "2024-02": 3375,
+    "2024-03": 3637,
+    "2024-04": 3876,
+    "2024-05": 4091,
+    "2024-06": 4138,
+    "2024-07": 4427,
+    "2024-08": 3793,
+    "2024-09": 3671,
+    "2024-10": 3941,
+    "2024-11": 3212,
+    "2024-12": 3161,
+    "2025-01": 3564,
+    "2025-02": 3652,
+    "2025-03": 3346,
+    "2025-04": 3949,
+    "2025-05": 3892,
+    "2025-06": 3604
+  },
+  "canal": {
+    "Portal": {
+      "n": 36362,
+      "encerradas": 32609,
+      "em_andamento": 3753,
+      "suficiente": true,
+      "pct_atendida": 33.1,
+      "pct_orientacao": 35.6,
+      "pct_arquivada": 27.5,
+      "pct_outra": 3.7,
+      "pct_no_prazo": 83.5,
+      "pct_critico": 6.3,
+      "mediana_dias": 10,
+      "p90_dias": 44
+    },
+    "Portal Mobile": {
+      "n": 25729,
+      "encerradas": 23516,
+      "em_andamento": 2213,
+      "suficiente": true,
+      "pct_atendida": 27.3,
+      "pct_orientacao": 32.3,
+      "pct_arquivada": 36.1,
+      "pct_outra": 4.3,
+      "pct_no_prazo": 85.3,
+      "pct_critico": 5.5,
+      "mediana_dias": 7.0,
+      "p90_dias": 40
+    },
+    "Telefônico": {
+      "n": 49356,
+      "encerradas": 44066,
+      "em_andamento": 5290,
+      "suficiente": true,
+      "pct_atendida": 43.3,
+      "pct_orientacao": 37.8,
+      "pct_arquivada": 16.3,
+      "pct_outra": 2.6,
+      "pct_no_prazo": 82.0,
+      "pct_critico": 7.0,
+      "mediana_dias": 12.0,
+      "p90_dias": 47
+    },
+    "Origem Interna": {
+      "n": 22769,
+      "encerradas": 15678,
+      "em_andamento": 7091,
+      "suficiente": true,
+      "pct_atendida": 43.1,
+      "pct_orientacao": 34.1,
+      "pct_arquivada": 15.2,
+      "pct_outra": 7.6,
+      "pct_no_prazo": 77.2,
+      "pct_critico": 12.5,
+      "mediana_dias": 12.0,
+      "p90_dias": 79
+    },
+    "Presencial": {
+      "n": 4107,
+      "encerradas": 3722,
+      "em_andamento": 385,
+      "suficiente": true,
+      "pct_atendida": 46.2,
+      "pct_orientacao": 32.2,
+      "pct_arquivada": 17.0,
+      "pct_outra": 4.6,
+      "pct_no_prazo": 81.3,
+      "pct_critico": 6.7,
+      "mediana_dias": 13.0,
+      "p90_dias": 49
+    }
+  },
+  "tipologia": {
+    "Reclamação": {
+      "n": 104528,
+      "encerradas": 93867,
+      "em_andamento": 10661,
+      "suficiente": true,
+      "pct_atendida": 39.5,
+      "pct_orientacao": 37.1,
+      "pct_arquivada": 22.2,
+      "pct_outra": 1.2,
+      "pct_no_prazo": 83.1,
+      "pct_critico": 6.4,
+      "mediana_dias": 11,
+      "p90_dias": 44
+    },
+    "Denúncia": {
+      "n": 17470,
+      "encerradas": 10757,
+      "em_andamento": 6713,
+      "suficiente": true,
+      "pct_atendida": 16.5,
+      "pct_orientacao": 24.7,
+      "pct_arquivada": 32.4,
+      "pct_outra": 26.5,
+      "pct_no_prazo": 68.2,
+      "pct_critico": 18.5,
+      "mediana_dias": 16,
+      "p90_dias": 105
+    },
+    "Orientação": {
+      "n": 8924,
+      "encerradas": 8406,
+      "em_andamento": 518,
+      "suficiente": true,
+      "pct_atendida": 31.4,
+      "pct_orientacao": 39.5,
+      "pct_arquivada": 28.6,
+      "pct_outra": 0.5,
+      "pct_no_prazo": 88.7,
+      "pct_critico": 3.9,
+      "mediana_dias": 7.0,
+      "p90_dias": 33
+    },
+    "Sugestão": {
+      "n": 3375,
+      "encerradas": 2760,
+      "em_andamento": 615,
+      "suficiente": true,
+      "pct_atendida": 32.6,
+      "pct_orientacao": 39.8,
+      "pct_arquivada": 25.5,
+      "pct_outra": 2.1,
+      "pct_no_prazo": 80.3,
+      "pct_critico": 7.8,
+      "mediana_dias": 10.0,
+      "p90_dias": 50
+    },
+    "Elogio": {
+      "n": 4026,
+      "encerradas": 3801,
+      "em_andamento": 225,
+      "suficiente": true,
+      "pct_atendida": 61.7,
+      "pct_orientacao": 13.4,
+      "pct_arquivada": 6.7,
+      "pct_outra": 18.3,
+      "pct_no_prazo": 93.3,
+      "pct_critico": 2.3,
+      "mediana_dias": 5,
+      "p90_dias": 23
+    }
+  },
+  "manifestante": {
+    "Nominal": 110477,
+    "Anônimo": 27846
+  },
+  "genero": {
+    "Feminino": 67080,
+    "Masculino": 43003,
+    "Não Desejo Informar": 28227,
+    "": 13
+  },
+  "motivos": [
+    [
+      "Discordância",
+      31962
+    ],
+    [
+      "Dificuldade de Acesso",
+      31887
+    ],
+    [
+      "Irregularidade",
+      29300
+    ],
+    [
+      "Descumprimento de Prazo",
+      15465
+    ],
+    [
+      "Inadequação",
+      11380
+    ],
+    [
+      "Má Qualidade do Atendimento",
+      11135
+    ],
+    [
+      "Ineficiência",
+      8150
+    ],
+    [
+      "Descumprimento de Procedimento",
+      5210
+    ],
+    [
+      "Insuficiência",
+      4388
+    ],
+    [
+      "Ato de Improbidade",
+      1882
+    ],
+    [
+      "Não se aplica",
+      1143
+    ],
+    [
+      "Abuso de Poder",
+      793
+    ],
+    [
+      "Assédio Moral",
+      739
+    ],
+    [
+      "Negligência",
+      566
+    ],
+    [
+      "Descumprimento das Obrigações",
+      473
+    ]
+  ],
+  "prioritarios": [
+    [
+      "Criança e Adolescente",
+      746
+    ],
+    [
+      "Pessoa Idosa",
+      516
+    ],
+    [
+      "Pessoa com Deficiência",
+      114
+    ],
+    [
+      "População em Situação de Rua",
+      13
+    ]
+  ],
+  "limpeza": {
+    "linhas_lidas": 259033,
+    "linhas_repetidas": 120710,
+    "manifestacoes": 138323,
+    "servicos_distintos_originais": 1744,
+    "servicos_apos_autoridade": 1670,
+    "sem_regional": 71024,
+    "sem_orgao": 48410,
+    "nao_classificados": 2136
+  }
+}

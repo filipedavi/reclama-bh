@@ -1,0 +1,16 @@
+{
+  "ouvidoria": {
+    "descricao": "Dados gerais das manifestações processadas pela Ouvidoria de Belo Horizonte no sistema BH Digital. Um CSV acumulado por ano, publicado mensalmente.",
+    "pagina": "https://dados.pbh.gov.br/dataset/dados-gerais-das-manifestacoes-processadas-pela-ouvidoria-de-belo-horizonte-no-sistema-bh-digital",
+    "api": "https://ckan.pbh.gov.br/api/3/action/package_show?id=dados-gerais-das-manifestacoes-processadas-pela-ouvidoria-de-belo-horizonte-no-sistema-bh-digital",
+    "padrao": "CSV separado por ponto e vírgula, codificação ISO-8859-1, datas dd/mm/aaaa, campos multivalorados separados por quebra de linha",
+    "licenca": "Creative Commons Attribution"
+  },
+  "regionais": {
+    "descricao": "Região Administrativa (Regional) - PBH/BHGeo; polígonos simplificados reaproveitados do projeto Linha do Tempo BH",
+    "pagina": "https://dados.pbh.gov.br/dataset/regiao-administrativa"
+  },
+  "base_legal": {
+    "prazo_resposta": "Lei federal nº 13.460/2017, art. 16, § 1º: a ouvidoria responde em até 30 dias, prorrogáveis uma vez por igual período"
+  }
+}
