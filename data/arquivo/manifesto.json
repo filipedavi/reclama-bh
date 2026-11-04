@@ -60,6 +60,20 @@
           "agente": "pipeline/coletar.py (Reclama BH)",
           "resultado": "sucesso",
           "detalhe": "SHA-256 confere"
+        },
+        {
+          "tipo": "verificacao_fonte",
+          "data": "2026-11-04T18:43:37+00:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sem_alteracao",
+          "detalhe": "portal ainda publica 2022.jan-dez.dados.abertos.csv"
+        },
+        {
+          "tipo": "restauracao",
+          "data": "2026-11-04T18:43:45+00:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sucesso",
+          "detalhe": "baixado da fonte; SHA-256 confere"
         }
       ]
     },
@@ -113,6 +127,20 @@
           "agente": "pipeline/coletar.py (Reclama BH)",
           "resultado": "sucesso",
           "detalhe": "SHA-256 confere"
+        },
+        {
+          "tipo": "verificacao_fonte",
+          "data": "2026-11-04T18:43:37+00:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sem_alteracao",
+          "detalhe": "portal ainda publica 2023.jan-dez. dados.abertos.csv"
+        },
+        {
+          "tipo": "restauracao",
+          "data": "2026-11-04T18:43:49+00:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sucesso",
+          "detalhe": "baixado da fonte; SHA-256 confere"
         }
       ]
     },
@@ -166,6 +194,20 @@
           "agente": "pipeline/coletar.py (Reclama BH)",
           "resultado": "sucesso",
           "detalhe": "SHA-256 confere"
+        },
+        {
+          "tipo": "verificacao_fonte",
+          "data": "2026-11-04T18:43:37+00:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sem_alteracao",
+          "detalhe": "portal ainda publica 2024.jan-dez.dados.abertos.csv"
+        },
+        {
+          "tipo": "restauracao",
+          "data": "2026-11-04T18:43:56+00:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sucesso",
+          "detalhe": "baixado da fonte; SHA-256 confere"
         }
       ]
     },
@@ -219,6 +261,20 @@
           "agente": "pipeline/coletar.py (Reclama BH)",
           "resultado": "sucesso",
           "detalhe": "SHA-256 confere"
+        },
+        {
+          "tipo": "verificacao_fonte",
+          "data": "2026-11-04T18:43:37+00:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sem_alteracao",
+          "detalhe": "portal ainda publica 2025.jan-jun.dados.abertos.csv"
+        },
+        {
+          "tipo": "restauracao",
+          "data": "2026-11-04T18:44:11+00:00",
+          "agente": "pipeline/coletar.py (Reclama BH)",
+          "resultado": "sucesso",
+          "detalhe": "baixado da fonte; SHA-256 confere"
         }
       ]
     }
