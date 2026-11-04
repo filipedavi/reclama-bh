@@ -132,6 +132,8 @@ def coletar(manifesto):
             atual["eventos"].append(evento("substituicao", "sucesso", f"substituída por {ident}"))
         manifesto["versoes"].append(novo)
         print(f"  {ano}: arquivada versão até mês {rec['mes']:02d} ({ident})")
+    # num clone novo o manifesto já existe, mas data/raw não é versionado: baixa de novo o que faltar
+    return restaurar(manifesto)
 
 
 def verificar(manifesto):
@@ -182,7 +184,7 @@ def main():
         print("Restauração dos originais ausentes:")
         falhas = restaurar(manifesto)
     else:
-        coletar(manifesto)
+        falhas = coletar(manifesto)
     manifesto["versoes"].sort(key=lambda v: v["identificador"])
     salvar_json(MANIFESTO, manifesto)
     sys.exit(1 if falhas else 0)
