@@ -41,6 +41,20 @@ Digite cada frase na caixa da página inicial e confira o que o site diz em "Ent
 
 - [ ] Em cada busca aparece a linha "Busca equivalente: …" com a consulta booleana (ex.: `subtema:ARV.POD`). Clicar nela repete a busca em modo avançado.
 
+### 2.1 Busca por significado (modelo de linguagem no navegador)
+
+Abaixo dos resultados de qualquer busca em linguagem natural aparece "Não era isso? Buscar por significado" (ou "Nada encontrado pelo vocabulário…" quando a lista está vazia). Precisa de internet na primeira vez: baixa 118 MB do modelo e mostra a porcentagem; depois fica guardado no navegador.
+
+| Digitar e clicar em "Buscar por significado" | "Parece ser sobre" deve incluir | Entre os primeiros serviços |
+|---|---|---|
+| `nao consigo marcar consulta no posto` | Atendimento nos centros de saúde | "Consulta Médica de Saúde da Família e Comunidade" |
+| `mato alto no terreno do lado` | Praças, parques e áreas verdes | "Capina e Roçada - Ocorrência/Reclamação" |
+| `o onibus nunca passa no horario` | Ônibus e transporte coletivo | "Ônibus - Solicitação de Alteração de Quadro de Horário" |
+
+- [ ] A seção "Por significado" diz que é sugestão por similaridade e que a lista por vocabulário é a oficial.
+- [ ] Os chips de "Parece ser sobre" levam à busca filtrada pelo subtema.
+- [ ] Numa busca com zero resultados, depois do primeiro download, a camada roda sozinha.
+
 ## 3. Busca avançada (booleana)
 
 Abra "Busca avançada: operadores e campos" na página de busca e teste:

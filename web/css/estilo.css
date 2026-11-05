@@ -320,3 +320,9 @@ table.dados th.ord:hover { color: var(--link); }
 
 .rotulo-mapa { text-align: center; font-size: .72rem; line-height: 1.15; color: #0b0b0b; text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff; }
 .rotulo-mapa b { font-size: .85rem; }
+
+/* busca por significado (camada opcional, modelo de linguagem no aparelho) */
+.semantica { margin-top: 20px; padding-top: 14px; border-top: 1px dashed var(--borda); }
+.semantica h2 { font-size: 1.05rem; margin: 0 0 8px; }
+.semantica > p { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 0; }
+.semantica .chip { text-decoration: none; }
