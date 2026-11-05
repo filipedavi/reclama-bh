@@ -242,7 +242,7 @@
   <tr><td>RF03</td><td>Reunir as linhas do arquivo em uma por manifestação e normalizar cabeçalhos, datas, prazos, situações e campos multivalorados entre os anos.</td></tr>
   <tr><td>RF04</td><td>Aplicar controle de autoridade aos nomes de serviço e de órgão e classificar cada serviço em tema e subtema.</td></tr>
   <tr><td>RF05</td><td>Calcular os indicadores por serviço, tema, subtema, órgão, regional, canal, tipologia e ano.</td></tr>
-  <tr><td>RF06</td><td>Oferecer busca em linguagem natural, interpretada pelo tesauro, que mostre como a pergunta foi entendida.</td></tr>
+  <tr><td>RF06</td><td>Oferecer busca em linguagem natural, interpretada pelo tesauro, que mostre como a pergunta foi entendida; como complemento, sugestões por similaridade semântica com modelo de linguagem executado no aparelho do usuário.</td></tr>
   <tr><td>RF07</td><td>Oferecer busca booleana com operadores, parênteses, frase exata, truncamento e campos, com facetas e ordenação.</td></tr>
   <tr><td>RF08</td><td>Apresentar, para cada serviço, a página “O que esperar”, com indicadores, comparação com a média, canal, regional, órgão, motivo e séries por ano e mês.</td></tr>
   <tr><td>RF09</td><td>Permitir navegação por tema, órgão (tabela ordenável) e regional (mapa).</td></tr>
@@ -431,6 +431,8 @@
 </div>
 
 <p>A tabela documenta também como o tesauro evoluiu. Na primeira medição, “barulho de bar” reconhecia o subtema certo, mas a palavra livre “bar” não ocorria em nenhum serviço e o E estrito devolvia zero: é a conhecida falta de degradação suave do modelo booleano (BAEZA-YATES; RIBEIRO-NETO, 2013). A correção foi ampliar o tesauro e relaxar as palavras livres quando há termo controlado, e não trocar de modelo, para preservar a transparência. Os resultados podem ser refinados por facetas com contagem (tema, subtema, órgão, tipologia) e ordenados por seis critérios; serviços com menos de vinte manifestações encerradas não participam das ordenações por taxa. Além da busca, o sistema oferece navegação pela taxonomia, pelos órgãos (tabela ordenável), pelas regionais (mapa) e por ligações cruzadas dentro de cada página de serviço.</p>
+
+<p>O limite do tesauro é a paráfrase que ele não prevê (“mato alto no terreno do lado”, “não consigo marcar consulta no posto”). Para esses casos o sistema tem uma segunda camada, por significado, acionada pelo usuário com um botão abaixo dos resultados. Um modelo de linguagem pequeno para representação vetorial de textos, o multilingual-e5-small (WANG <i>et al.</i>, 2024), transforma a pergunta num vetor de 384 dimensões; os vetores dos 1.670 serviços e dos 69 subtemas são calculados no pipeline com o mesmo modelo, a partir do nome do serviço e dos sinônimos do tesauro. A nota de cada serviço combina a similaridade de cosseno com o próprio serviço, a similaridade com o seu subtema e um peso leve de frequência, e os oito mais próximos são apresentados como sugestão, junto com os subtemas prováveis, que funcionam como atalho para a taxonomia. O modelo (118 MB, quantizado) é executado no navegador do cidadão, via WebAssembly, e nenhum texto sai do aparelho; o site continua estático e sem servidor. A camada é declaradamente menos precisa que a busca por vocabulário, que permanece a oficial e explicável, e por isso é apresentada como complemento e não como substituta.</p>
 </section>
 
 <section class="quebra">
@@ -438,7 +440,7 @@
 
 <h2 id="s5-1">5.1 Pipeline dos dados e modelo entidade-relacionamento</h2>
 
-<p>O pipeline (Figura 2) tem três programas em Python, executados em sequência pelo GitHub Actions no dia 5 de cada mês. O <code>coletar.py</code> consulta a API CKAN, identifica para cada ano o recurso que cobre mais meses, baixa o que for novo, calcula o SHA-256 e registra a versão no manifesto; os originais novos são publicados como <i>releases</i>. O <code>processar.py</code> aplica as regras do Quadro 5 e gera a base limpa, uma linha por manifestação. O <code>indicadores.py</code> calcula os indicadores por dimensão, monta o tesauro completo e o catálogo DCAT e grava os JSON lidos pelo site. Os vocabulários (taxonomia, tesauro, órgãos, sinônimos, conceitos, plano de classificação) são arquivos JSON editáveis, separados do código.</p>
+<p>O pipeline (Figura 2) tem três programas em Python, executados em sequência pelo GitHub Actions no dia 5 de cada mês, e um quarto, opcional, que gera os vetores da busca por significado. O <code>coletar.py</code> consulta a API CKAN, identifica para cada ano o recurso que cobre mais meses, baixa o que for novo, calcula o SHA-256 e registra a versão no manifesto; os originais novos são publicados como <i>releases</i>. O <code>processar.py</code> aplica as regras do Quadro 5 e gera a base limpa, uma linha por manifestação. O <code>indicadores.py</code> calcula os indicadores por dimensão, monta o tesauro completo e o catálogo DCAT e grava os JSON lidos pelo site. Os vocabulários (taxonomia, tesauro, órgãos, sinônimos, conceitos, plano de classificação) são arquivos JSON editáveis, separados do código.</p>
 
 <p>O modelo entidade-relacionamento (Figura 3) descreve a estrutura lógica da informação. A entidade central é Manifestação, identificada pelo protocolo, que pertence a uma Versão do conjunto de dados e se relaciona com um Serviço, um Órgão, uma Regional, um Canal e uma Tipologia; com Motivo a relação é de muitos para muitos. Serviço é o registro de autoridade: pertence a um Subtema, que pertence a um Tema, e tem Grafias variantes como entidade fraca. Versão tem Eventos de preservação e uma Classe do plano. O Termo do tesauro tem formas não preferidas (UP) e relações TG, TE e TR. Os Indicadores agregados são uma visão materializada calculada por dimensão. A implementação não usa banco relacional: cada entidade está num arquivo CSV ou JSON, com as chaves estrangeiras como campos.</p>
 
@@ -651,6 +653,7 @@
 <p>PREMIS EDITORIAL COMMITTEE. <b>PREMIS data dictionary for preservation metadata</b>. Version 3.0. [S. l.], 2015.</p>
 <p>RANGANATHAN, S. R. <b>Prolegomena to library classification</b>. 3. ed. Bombay: Asia Publishing House, 1967.</p>
 <p>W3C. <b>Data Catalog Vocabulary (DCAT)</b>: version 3. [S. l.]: W3C, 2024. Disponível em: https://www.w3.org/TR/vocab-dcat-3/. Acesso em: 21 out. 2026.</p>
+<p>WANG, Liang <i>et al.</i> <b>Multilingual E5 text embeddings</b>: a technical report. [S. l.]: arXiv, 2024. arXiv:2402.05672. Disponível em: https://arxiv.org/abs/2402.05672. Acesso em: 5 nov. 2026.</p>
 </section>
 
 </body>

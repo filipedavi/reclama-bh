@@ -54,6 +54,11 @@ jobs:
         run: |
           python pipeline/processar.py
           python pipeline/indicadores.py
+      - name: Vetores semânticos (busca por significado)
+        if: steps.coleta.outputs.novas != ''
+        run: |
+          pip install -q -r pipeline/requisitos-vetores.txt
+          python pipeline/vetores.py
       - name: Registrar no repositório
         run: |
           git config user.name "github-actions[bot]"

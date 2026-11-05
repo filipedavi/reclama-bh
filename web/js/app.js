@@ -1,4 +1,5 @@
 import { MotorBusca, CAMPOS } from './busca.js';
+import { BuscaSemantica, TAMANHO_MODELO_MB } from './semantica.js';
 import { colunas, colunasAgrupadas, corCSS } from './graficos.js';
 
 const NOMES_REG = { BA: 'Barreiro', CS: 'Centro-Sul', LE: 'Leste', NE: 'Nordeste', NO: 'Noroeste', NT: 'Norte', OE: 'Oeste', PA: 'Pampulha', VN: 'Venda Nova', NI: 'Não informada' };
@@ -183,6 +184,37 @@ function viewInicio() {
   graficoAnos(app.querySelector('#g-anos'), g.por_ano, 'Atendidas e arquivadas por ano');
 }
 
+// ------------------------------------------------------------------ busca por significado
+// Segunda camada, sob demanda: só quando o usuário pede (ou já baixou o modelo e a busca por
+// vocabulário não encontrou nada). Ver web/js/semantica.js.
+function buscaPorSignificado(q, nResultados, caixa) {
+  if (!D.semantica) D.semantica = new BuscaSemantica({ servicos: D.servicos });
+  const sem = D.semantica;
+  const disponivel = sem.pronta || BuscaSemantica.jaBaixada();
+  const executar = async () => {
+    caixa.innerHTML = '<p class="mini" id="sem-progresso">Carregando o modelo…</p>';
+    try {
+      if (!sem.pronta) await sem.carregar(({ etapa, fracao }) => {
+        const p = caixa.querySelector('#sem-progresso');
+        if (p) p.textContent = etapa === 'pronto' ? 'Modelo pronto. Comparando…' : `Baixando o modelo de linguagem: ${Math.round(fracao * 100)}%`;
+      });
+      const r = await sem.buscar(q);
+      if (!caixa.isConnected) return;
+      caixa.innerHTML = `<h2>Por significado</h2>
+        <div class="entendi"><span>Parece ser sobre:</span>${r.subtemas.map((s) => `<a class="chip" href="#/buscar?f=subtema:${esc(s.id)}">${esc(nomeSub(s.id))}</a>`).join('')}</div>
+        <div id="sem-lista"></div>
+        <p class="mini">Sugestão por similaridade semântica: a pergunta e os serviços viram vetores no modelo ${esc(r.modelo.split('/')[1])}, que roda no seu aparelho, e os mais próximos aparecem aqui, sem garantia de acerto. A lista acima, por vocabulário controlado, é a busca oficial. <a href="#/sobre/projeto">Como funciona</a>.</p>`;
+      caixa.querySelector('#sem-lista').appendChild(listaServicos(r.servicos.map((x) => x.doc), { limite: 8 }));
+    } catch (erro) {
+      caixa.innerHTML = `<p class="aviso">Não foi possível carregar o modelo (${esc(erro.message)}). Precisa de internet na primeira vez.</p>`;
+    }
+  };
+  if (nResultados === 0 && disponivel) { executar(); return; }
+  caixa.innerHTML = `<p>${nResultados ? 'Não era isso?' : 'Nada encontrado pelo vocabulário.'} <button type="button" class="botao secundario" id="btn-semantica">Buscar por significado</button>
+    <span class="mini">Usa um modelo de linguagem que roda no seu aparelho${disponivel ? '' : ` (baixa ${TAMANHO_MODELO_MB} MB uma vez)`}; nada é enviado para fora.</span></p>`;
+  caixa.querySelector('#btn-semantica').addEventListener('click', executar);
+}
+
 // ------------------------------------------------------------------ busca
 function viewBuscar(params) {
   marcarMenu('buscar');
@@ -243,8 +275,10 @@ function viewBuscar(params) {
           <select id="ordem">${[['n', 'Mais reclamados'], ['atendidos', 'Mais atendidos'], ['menos', 'Menos atendidos'], ['arquivados', 'Mais arquivados'], ['demorados', 'Mais demorados'], ['rapidos', 'Mais rápidos']]
     .map(([v, t]) => `<option value="${v}"${v === ordem ? ' selected' : ''}>${t}</option>`).join('')}</select></span></div>
         <div id="resultados"></div>
+        <section class="semantica" id="semantica" aria-live="polite"></section>
       </div></div>`;
   app.querySelector('#resultados').appendChild(listaServicos(docs));
+  if (r.modo === 'natural') buscaPorSignificado(q, docs.length, app.querySelector('#semantica'));
   app.querySelector('#form-busca').addEventListener('submit', (ev) => { ev.preventDefault(); location.hash = url({ q: app.querySelector('#q').value, f: '', ordem: '' }); });
   app.querySelector('#ordem').addEventListener('change', (ev) => { location.hash = url({ ordem: ev.target.value }); });
   app.querySelectorAll('[data-ir]').forEach((b) => b.addEventListener('click', () => { location.hash = b.dataset.ir; }));
@@ -430,11 +464,15 @@ function viewSobre(secao = 'projeto') {
     corpo = `<div class="cartao">
       <p>A Ouvidoria da Prefeitura de Belo Horizonte publica, no Portal de Dados Abertos, a lista de todas as manifestações que recebe: reclamações, denúncias, sugestões, elogios e pedidos de orientação, com o serviço, o órgão responsável, o tempo de tramitação e o desfecho. São arquivos grandes, com nomes de serviço inconsistentes, uma linha por encaminhamento e sem nenhum agrupamento por assunto. Na prática, ninguém consegue responder a uma pergunta simples: <b>se eu reclamar disso, o que acontece?</b></p>
       <p>O <b>Reclama BH</b> organiza esses dados para responder a essa pergunta. Cada serviço recebe uma página com a taxa de atendimento, a taxa de arquivamento, o tempo mediano de resposta, o canal que funciona melhor e a evolução ano a ano. Os serviços são agrupados numa taxonomia de temas e podem ser encontrados pela linguagem do cidadão, graças a um tesauro.</p>
+      <h3>Como a busca funciona</h3>
+      <p class="sutil">A busca principal é por <b>vocabulário controlado</b>: a pergunta é normalizada, reduzida ao singular e comparada com o tesauro, que traduz a linguagem do cidadão ("buraco na rua") para os termos do sistema (<code>subtema:VIA.BUR</code>). O resultado é uma consulta booleana sobre um índice invertido, mostrada ao usuário como "Entendi assim" e "Busca equivalente". É explicável e roda sem internet.</p>
+      <p class="sutil">Quando o tesauro não reconhece a pergunta, há uma segunda camada, <b>por significado</b>, que o usuário aciona com um botão: um modelo de linguagem pequeno (multilingual-e5-small, 118 MB, baixado uma vez e guardado no navegador) transforma a pergunta num vetor e a compara com os vetores dos ${num(D.docs.length)} serviços e dos subtemas, calculados no pipeline com o mesmo modelo. Tudo roda no aparelho do usuário; nenhum texto é enviado a servidor. Os resultados são sugestões por similaridade, sem a garantia de precisão da busca por vocabulário, e os subtemas apontados servem de atalho para a taxonomia.</p>
       <h3>Pipeline</h3>
       <ol class="sutil">
         <li><b>Coleta</b> (<code>coletar.py</code>): descobre no portal da PBH o arquivo mais completo de cada ano, baixa, calcula SHA-256 e registra no manifesto com metadados de descrição e preservação. Versões substituídas continuam guardadas.</li>
         <li><b>Tratamento</b> (<code>processar.py</code>): reúne as ${num(L_.linhas_lidas)} linhas em ${num(L_.manifestacoes)} manifestações (uma por protocolo), normaliza datas, prazos e situações, aplica o controle de autoridade aos nomes de serviço (${num(L_.servicos_distintos_originais)} grafias viram ${num(L_.servicos_apos_autoridade)} serviços) e classifica cada serviço na taxonomia (${pct(100 * L_.nao_classificados / L_.manifestacoes)} ficam sem classe).</li>
         <li><b>Indicadores</b> (<code>indicadores.py</code>): calcula os indicadores por serviço, tema, órgão, regional, canal e ano, e gera este site, o tesauro completo e o catálogo DCAT.</li>
+        <li><b>Vetores</b> (<code>vetores.py</code>, opcional): calcula com o modelo multilingual-e5-small o vetor semântico de cada serviço e subtema, usado pela busca por significado.</li>
       </ol>
       <p class="mini">Indicadores gerados em ${dataBR(D.geral.gerado_em)}. Dados de ${periodoTxt()}.</p></div>`;
   } else if (secao === 'conceitos') {

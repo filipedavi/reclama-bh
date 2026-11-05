@@ -24,7 +24,8 @@ pipeline/                 Python, só biblioteca padrão
   coletar.py              descobre no portal CKAN o arquivo mais completo de cada ano; arquiva com SHA-256 e manifesto
   processar.py            limpeza, controle de autoridade dos serviços, classificação na taxonomia
   indicadores.py          indicadores por serviço, tema, órgão, regional, canal, ano; gera o site e o catálogo DCAT
-  executar.py             roda tudo
+  vetores.py              (opcional) vetores semânticos dos serviços para a busca por significado; precisa de requisitos-vetores.txt
+  executar.py             roda coletar, processar e indicadores
   fontes.json             de onde vem cada dado
   vocabulario/            taxonomia, tesauro, lista de órgãos, sinônimos de serviços, conceitos, plano de classificação
 data/arquivo/manifesto.json   metadados de cada versão arquivada (Dublin Core + PREMIS + classificação)
@@ -45,6 +46,20 @@ python -m http.server 8000 --directory web
 ```
 
 Abra http://localhost:8000. O site precisa de um servidor local: abrir o `index.html` direto do disco não carrega os dados.
+
+### Busca por significado (opcional)
+
+Além da busca por vocabulário controlado (tesauro), o site tem uma segunda camada que usa um modelo de linguagem
+pequeno (multilingual-e5-small, 118 MB) rodando no navegador do usuário, sem servidor. Os vetores dos serviços
+já estão no repositório (`web/data/vetores.bin`); só precisam ser recalculados quando a lista de serviços muda:
+
+```bash
+pip install -r pipeline/requisitos-vetores.txt   # onnxruntime, tokenizers, numpy
+python pipeline/vetores.py                       # baixa o modelo (118 MB, fica em data/modelo) e grava os vetores
+python pipeline/vetores.py --testar "mato alto no terreno do lado"   # mostra os serviços mais próximos
+```
+
+O workflow do GitHub faz isso sozinho quando há dados novos.
 
 ## Publicar no GitHub
 
@@ -78,6 +93,14 @@ Abra http://localhost:8000. O site precisa de um servidor local: abrir o `index.
 - **Tema/subtema**: atribuídos por regras sobre o nome do serviço (`vocabulario/taxonomia.json`); 1,5% ficam sem classe.
 
 Detalhes e limitações na página *Sobre* do site.
+
+## Busca
+
+Dois níveis. O primeiro é por vocabulário controlado: a pergunta é normalizada, reduzida ao singular e traduzida
+pelo tesauro numa consulta booleana sobre um índice invertido; o site mostra como entendeu ("Entendi assim") e a
+consulta equivalente. O segundo, por significado, é acionado por um botão e compara o vetor da pergunta com os
+vetores dos serviços e subtemas (similaridade de cosseno), gerados por `pipeline/vetores.py` com o mesmo modelo
+que o navegador carrega. Nada é enviado a servidor: o modelo roda no aparelho.
 
 ## Fonte
 
