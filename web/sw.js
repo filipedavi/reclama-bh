@@ -1,7 +1,7 @@
 // Service worker: o app abre sem internet com os últimos dados vistos.
 // Estratégia: rede primeiro para os dados (sempre tenta a versão mais nova), cache como reserva.
-const CACHE = 'reclamabh-v1';
-const BASE = ['./', 'index.html', 'css/estilo.css', 'js/app.js', 'js/busca.js', 'js/graficos.js', 'img/icone.svg', 'manifest.webmanifest'];
+const CACHE = 'reclamabh-v2';
+const BASE = ['./', 'index.html', 'css/estilo.css', 'js/app.js', 'js/busca.js', 'js/graficos.js', 'js/semantica.js', 'img/icone.svg', 'manifest.webmanifest'];
 
 self.addEventListener('install', (ev) => {
   ev.waitUntil(caches.open(CACHE).then((c) => c.addAll(BASE)).then(() => self.skipWaiting()));
