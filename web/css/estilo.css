@@ -404,3 +404,19 @@ h2 { font-weight: 600; }
 .rodape { border-top: 4px solid var(--marca); margin-top: 20px; }
 .rodape .feito { color: var(--tinta-2); display: flex; align-items: center; gap: 8px; }
 .rodape .feito svg { width: 22px; height: 22px; flex: none; }
+
+/* página inicial em frases: respostas prontas e resumo em prosa */
+.respostas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 860px) { .respostas { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .respostas { grid-template-columns: minmax(0, 1fr); } }
+.resposta { display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: var(--tinta); background: var(--superficie); border: 1px solid var(--borda); border-top: 3px solid var(--marca-2); border-radius: var(--raio); padding: 14px 16px; }
+.resposta:hover { border-top-color: var(--marca); }
+.resposta h3 { margin: 0; font-size: 1rem; }
+.resposta p { margin: 2px 0 4px; font-family: var(--fonte-titulo); font-size: 1.15rem; line-height: 1.35; }
+.veredito { align-self: flex-start; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--tinta-3); }
+.veredito.bom { color: var(--melhora); }
+.veredito.ruim { color: var(--piora); }
+.resumo { font-family: var(--fonte-titulo); font-size: 1.3rem; line-height: 1.4; max-width: 760px; margin: 0 0 14px; }
+.lista-temas { padding-left: 1.5em; margin: 0 0 10px; }
+.lista-temas li { margin-bottom: 8px; }
+.lista-temas li::marker { color: var(--marca-2); font-family: var(--fonte-titulo); font-weight: 700; }
