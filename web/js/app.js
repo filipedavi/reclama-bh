@@ -125,19 +125,48 @@ function graficoAnos(alvo, porAno, titulo) {
 const elegiveis = () => D.docs.filter((s) => s.suficiente && s.n >= MIN_RANKING && s.tema !== 'OUT' && s.id !== 'sem-servico');
 
 // ------------------------------------------------------------------ início
+// Frases em português a partir dos indicadores: a página inicial e a de serviço falam antes de mostrar números.
+function dezEmDez(r) {
+  return { a: Math.round((r.pct_atendida || 0) / 10), o: Math.round((r.pct_orientacao || 0) / 10), q: Math.round((r.pct_arquivada || 0) / 10) };
+}
+function fraseResumo(r, { sujeito = 'manifestações' } = {}) {
+  if (!r || !r.encerradas) return '';
+  const { a, o, q } = dezEmDez(r);
+  const partes = [];
+  partes.push(a ? `${a} ${a === 1 ? 'é atendida' : 'são atendidas'}` : 'quase nenhuma é atendida');
+  if (o) partes.push(`${o} ${o === 1 ? 'recebe' : 'recebem'} só uma orientação`);
+  if (q) partes.push(`${q} ${q === 1 ? 'é arquivada' : 'são arquivadas'}`);
+  const desfecho = `De cada 10 ${sujeito} encerradas, ${partes.length > 1 ? `${partes.slice(0, -1).join(', ')} e ${partes.at(-1)}` : partes[0]}.`;
+  const tempo = r.mediana_dias === undefined || r.mediana_dias === null ? ''
+    : ` Metade das respostas sai em até ${diasTxt(r.mediana_dias)}${r.pct_no_prazo !== undefined ? `, e ${pct(r.pct_no_prazo)} chegam dentro dos 30 dias que a lei dá` : ''}.`;
+  return desfecho + tempo;
+}
+function veredito(s) {
+  if (!s.suficiente) return { cls: '', txt: 'poucos registros' };
+  if (s.pct_arquivada >= 50) return { cls: 'ruim', txt: 'costuma ser arquivada' };
+  if (s.mediana_dias > 30) return { cls: 'ruim', txt: 'demora mais que a lei permite' };
+  if (s.pct_atendida >= 50) return { cls: 'bom', txt: 'costuma ser atendida' };
+  if (s.pct_atendida >= 35) return { cls: 'bom', txt: 'mais atendida que arquivada' };
+  return { cls: '', txt: 'na maioria, só orientação' };
+}
+
 function viewInicio() {
   definirTitulo(''); marcarMenu('inicio');
   const g = D.geral;
-  const anos = g.anos;
-  const el = elegiveis();
-  const rank = (chave, inverte, cls, fmt) => `<div class="ranking">${[...el].sort((a, b) => (inverte ? a[chave] - b[chave] : b[chave] - a[chave])).slice(0, 6)
-    .map((s) => `<a href="#/servico/${esc(s.id)}"><span class="nome">${esc(s.nome)}<small>${num(s.n)} manifestações</small></span><span class="val ${cls}">${fmt(s[chave])}</span></a>`).join('')}</div>`;
+  // exemplos: o serviço mais reclamado de cada tema, entre os com amostra suficiente
+  const exemplos = [];
+  const temasVistos = new Set();
+  for (const s of elegiveis()) {
+    if (temasVistos.has(s.tema)) continue;
+    temasVistos.add(s.tema); exemplos.push(s);
+    if (exemplos.length === 6) break;
+  }
+  const temasTop = [...D.temas].filter((t) => t.id !== 'OUT').sort((a, b) => b.n - a.n).slice(0, 5);
   app.innerHTML = `
     <section class="hero">
       <p class="olho">Ouvidoria de Belo Horizonte · ${periodoTxt()}</p>
       <h1>Antes de reclamar, veja o que esperar da Prefeitura.</h1>
-      <p class="lead">Reunimos ${num(g.total.n)} manifestações registradas na Ouvidoria de Belo Horizonte (${periodoTxt()}) e calculamos, para cada serviço,
-        quantas foram atendidas, quantas foram arquivadas e quanto tempo a resposta levou.</p>
+      <p class="lead">${fraseResumo(g.total)} É o retrato geral de ${num(g.total.n)} manifestações; cada serviço tem a própria história.</p>
       <form class="busca-principal" role="search" id="form-busca">
         <label class="pular" for="q">Sobre o que você quer reclamar?</label>
         <input id="q" type="search" placeholder="Ex.: buraco na rua, poda de árvore, ônibus lotado, vaga na creche" autocomplete="off">
@@ -147,8 +176,46 @@ function viewInicio() {
         ${['poda de árvore', 'ônibus', 'poste apagado', 'barulho de bar', 'IPTU', 'vaga na creche', 'remédio no posto', 'o que mais demora', 'o que mais é arquivado']
     .map((s) => `<button type="button" data-q="${esc(s)}">${esc(s)}</button>`).join('')}
       </div>
-      ${tiles(g.total)}
     </section>
+    <section class="secao">
+      <h2>Para começar <small>o serviço mais reclamado de cada assunto</small></h2>
+      <div class="respostas">
+        ${exemplos.map((s) => { const v = veredito(s); const { a, q } = dezEmDez(s); return `<a class="resposta" href="#/servico/${esc(s.id)}">
+          <span class="veredito ${v.cls}">${v.txt}</span>
+          <h3>${esc(s.nome)}</h3>
+          <p>${a} em cada 10 ${a === 1 ? 'é atendida' : 'são atendidas'}, ${q} ${q === 1 ? 'arquivada' : 'arquivadas'}. Resposta em ${diasTxt(s.mediana_dias)}, na metade dos casos.</p>
+          <span class="mini">${esc(nomeTema(s.tema))} · ${num(s.n)} manifestações · responde ${esc(s.orgao || 'não informado')}</span></a>`; }).join('')}
+      </div>
+    </section>
+    <section class="secao grade-2">
+      <div><h2>O que BH mais reclama</h2>
+        <ol class="lista-temas">${temasTop.map((t) => `<li><a href="#/tema/${t.id}">${esc(t.nome)}</a><br><span class="mini">${num(t.n)} manifestações · ${pct(t.pct_atendida)} atendidas · resposta em ${diasTxt(t.mediana_dias)}</span></li>`).join('')}</ol>
+        <p><a href="#/temas">Todos os temas</a> · <a href="#/mapa">Por regional</a> · <a href="#/orgaos">Por órgão</a></p></div>
+      <div><h2>Como ler</h2>
+        <ul class="sutil">
+          <li><b>Atendida</b> é o que a Prefeitura registrou ao encerrar; não sabemos se o cidadão concordou.</li>
+          <li><b>Arquivada</b> é encerrada sem atendimento (faltou dado, ou não era competência do órgão).</li>
+          <li><b>Orientação</b> é uma explicação, sem ação sobre o problema.</li>
+          <li>Os dados vão até <b>${mesAno(g.periodo.fim)}</b>, a última publicação da PBH.</li>
+        </ul>
+        <p><a href="#/panorama">Panorama da cidade</a>: taxas, tempos, canais e rankings. · <a href="#/sobre">Como foi feito</a></p></div>
+    </section>`;
+  app.querySelector('#form-busca').addEventListener('submit', (ev) => { ev.preventDefault(); location.hash = `#/buscar?q=${encodeURIComponent(app.querySelector('#q').value)}`; });
+  app.querySelectorAll('.sugestoes button').forEach((b) => b.addEventListener('click', () => { location.hash = `#/buscar?q=${encodeURIComponent(b.dataset.q)}`; }));
+}
+
+// Panorama: os números da cidade inteira (antes ficavam na página inicial).
+function viewPanorama() {
+  definirTitulo('Panorama'); marcarMenu('panorama');
+  const g = D.geral;
+  const el = elegiveis();
+  const rank = (chave, inverte, cls, fmt) => `<div class="ranking">${[...el].sort((a, b) => (inverte ? a[chave] - b[chave] : b[chave] - a[chave])).slice(0, 6)
+    .map((s) => `<a href="#/servico/${esc(s.id)}"><span class="nome">${esc(s.nome)}<small>${num(s.n)} manifestações</small></span><span class="val ${cls}">${fmt(s[chave])}</span></a>`).join('')}</div>`;
+  app.innerHTML = `
+    <h1>Panorama da cidade</h1>
+    <p class="resumo">${fraseResumo(g.total)}</p>
+    <p class="lead sutil">${num(g.total.n)} manifestações registradas na Ouvidoria de Belo Horizonte, ${periodoTxt()}.</p>
+      ${tiles(g.total)}
     <section class="secao grade-2">
       <div class="cartao"><h2>Como a Prefeitura responde</h2>
         <p class="mini">Desfecho das ${num(g.total.encerradas)} manifestações encerradas. "Gerou orientação" significa que o cidadão recebeu uma explicação, sem ação sobre o problema.</p>
@@ -180,8 +247,6 @@ function viewInicio() {
         </ul>
         <p><a href="#/sobre">Metodologia e vocabulário</a> · <a href="#/sobre/limitacoes">Limitações</a></p></div>
     </section>`;
-  app.querySelector('#form-busca').addEventListener('submit', (ev) => { ev.preventDefault(); location.hash = `#/buscar?q=${encodeURIComponent(app.querySelector('#q').value)}`; });
-  app.querySelectorAll('.sugestoes button').forEach((b) => b.addEventListener('click', () => { location.hash = `#/buscar?q=${encodeURIComponent(b.dataset.q)}`; }));
   graficoAnos(app.querySelector('#g-anos'), g.por_ano, 'Atendidas e arquivadas por ano');
 }
 
@@ -304,6 +369,7 @@ async function viewServico(id) {
       <div class="acoes"><button class="botao" type="button" id="marcar" aria-pressed="${marcados.includes(id)}">${marcados.includes(id) ? '★ Marcado' : '☆ Marcar'}</button>
         <a class="botao secundario" href="https://prefeitura.pbh.gov.br/ouvidoria" rel="noopener">Registrar manifestação na PBH</a></div></div>
     <h2>O que esperar <small>${periodoTxt()}</small></h2>
+    ${s.suficiente ? `<p class="resumo">${fraseResumo(s, { sujeito: 'reclamações sobre este serviço' })}</p>` : ''}
     ${s.suficiente ? tiles(s, { comparar: D.geral.total }) : `<p class="aviso">Só ${num(s.n)} manifestações (${num(s.encerradas)} encerradas): poucas para taxas confiáveis. Os números abaixo são apenas descritivos.</p>${tiles(s)}`}
     <section class="secao grade-2">
       <div class="cartao"><h2>Desfecho das manifestações</h2>${barra100(s)}
@@ -540,6 +606,7 @@ async function rotear() {
   try {
     switch (partes[0]) {
       case undefined: viewInicio(); break;
+      case 'panorama': viewPanorama(); break;
       case 'buscar': viewBuscar(params); break;
       case 'servico': await viewServico(partes[1]); break;
       case 'temas': viewTemas(); break;
