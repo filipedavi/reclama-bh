@@ -12,10 +12,10 @@ Para conferir, em uns 20 minutos, se tudo funciona e se os números batem com os
 
 Se der erro de dados, é porque o `index.html` foi aberto direto do disco em vez de pelo servidor.
 
-## 1. Página inicial
+## 1. Página inicial e Panorama
 
-- [ ] O título diz "Antes de reclamar, veja o que esperar da Prefeitura".
-- [ ] Os quatro números do topo são: **138.323** manifestações, **37%** atendidas, **23%** arquivadas, **11 dias** de mediana (82% dentro de 30 dias).
+- [ ] A página inicial abre com "Sobre o que você quer reclamar?", a caixa de busca e as sugestões; abaixo, "Serviços mais reclamados" (10 itens, o primeiro é "Consulta Médica de Saúde da Família e Comunidade") e "Por assunto" (Saúde primeiro, 37.620).
+- [ ] Clicar em "Panorama" no menu. Os quatro números do topo são: **138.323** manifestações, **37%** atendidas, **23%** arquivadas, **11 dias** de mediana (82% dentro de 30 dias).
 - [ ] A barra "Como a Prefeitura responde" mostra 37 / 36 / 23 / 4.
 - [ ] O gráfico "Ano a ano" tem 2022 a 2025 e a tabela abaixo dele abre em "Ver tabela".
 - [ ] Em "O que mais se reclama", Saúde é o primeiro (37.620) e abre a página do tema ao clicar.
@@ -112,7 +112,7 @@ Abra também "Árvore – Poda de Árvore em Passeios, Praças, Etc": 2.426, 53%
 
 - [ ] Abrir o mesmo endereço no celular (na mesma rede Wi-Fi, usando o IP do computador em vez de `localhost`, ex.: `http://192.168.0.10:8000`), ou estreitar a janela do navegador.
 - [ ] O menu vira uma linha rolável, os cartões empilham, nada fica cortado na horizontal.
-- [ ] No Chrome do celular, "Adicionar à tela inicial" instala como aplicativo (ícone azul com balão).
+- [ ] No Chrome do celular, "Adicionar à tela inicial" instala como aplicativo (ícone vermelho-terra com balão).
 
 ## 8. Pipeline (opcional, precisa de internet; ~5 min)
 

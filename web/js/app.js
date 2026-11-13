@@ -153,53 +153,33 @@ function veredito(s) {
 function viewInicio() {
   definirTitulo(''); marcarMenu('inicio');
   const g = D.geral;
-  // exemplos: o serviço mais reclamado de cada tema, entre os com amostra suficiente
-  const exemplos = [];
-  const temasVistos = new Set();
-  for (const s of elegiveis()) {
-    if (temasVistos.has(s.tema)) continue;
-    temasVistos.add(s.tema); exemplos.push(s);
-    if (exemplos.length === 6) break;
-  }
-  const temasTop = [...D.temas].filter((t) => t.id !== 'OUT').sort((a, b) => b.n - a.n).slice(0, 5);
+  const top = elegiveis().slice(0, 10);
+  const temas = [...D.temas].filter((t) => t.id !== 'OUT').sort((a, b) => b.n - a.n);
   app.innerHTML = `
-    <section class="hero">
-      <p class="olho">Ouvidoria de Belo Horizonte · ${periodoTxt()}</p>
-      <h1>Antes de reclamar, veja o que esperar da Prefeitura.</h1>
-      <p class="lead">${fraseResumo(g.total)} É o retrato geral de ${num(g.total.n)} manifestações; cada serviço tem a própria história.</p>
+    <section class="capa-simples">
+      <h1>Sobre o que você quer reclamar?</h1>
+      <p class="lead">Veja quantas manifestações daquele serviço a Prefeitura atendeu, quantas arquivou e em quanto tempo respondeu, segundo os dados da Ouvidoria de Belo Horizonte (${periodoTxt()}).</p>
       <form class="busca-principal" role="search" id="form-busca">
         <label class="pular" for="q">Sobre o que você quer reclamar?</label>
         <input id="q" type="search" placeholder="Ex.: buraco na rua, poda de árvore, ônibus lotado, vaga na creche" autocomplete="off">
-        <button class="botao" type="submit">Ver o que esperar</button>
+        <button class="botao" type="submit">Buscar</button>
       </form>
       <div class="sugestoes" aria-label="Sugestões">
         ${['poda de árvore', 'ônibus', 'poste apagado', 'barulho de bar', 'IPTU', 'vaga na creche', 'remédio no posto', 'o que mais demora', 'o que mais é arquivado']
     .map((s) => `<button type="button" data-q="${esc(s)}">${esc(s)}</button>`).join('')}
       </div>
     </section>
-    <section class="secao">
-      <h2>Para começar <small>o serviço mais reclamado de cada assunto</small></h2>
-      <div class="respostas">
-        ${exemplos.map((s) => { const v = veredito(s); const { a, q } = dezEmDez(s); return `<a class="resposta" href="#/servico/${esc(s.id)}">
-          <span class="veredito ${v.cls}">${v.txt}</span>
-          <h3>${esc(s.nome)}</h3>
-          <p>${a} em cada 10 ${a === 1 ? 'é atendida' : 'são atendidas'}, ${q} ${q === 1 ? 'arquivada' : 'arquivadas'}. Resposta em ${diasTxt(s.mediana_dias)}, na metade dos casos.</p>
-          <span class="mini">${esc(nomeTema(s.tema))} · ${num(s.n)} manifestações · responde ${esc(s.orgao || 'não informado')}</span></a>`; }).join('')}
-      </div>
-    </section>
-    <section class="secao grade-2">
-      <div><h2>O que BH mais reclama</h2>
-        <ol class="lista-temas">${temasTop.map((t) => `<li><a href="#/tema/${t.id}">${esc(t.nome)}</a><br><span class="mini">${num(t.n)} manifestações · ${pct(t.pct_atendida)} atendidas · resposta em ${diasTxt(t.mediana_dias)}</span></li>`).join('')}</ol>
-        <p><a href="#/temas">Todos os temas</a> · <a href="#/mapa">Por regional</a> · <a href="#/orgaos">Por órgão</a></p></div>
-      <div><h2>Como ler</h2>
-        <ul class="sutil">
-          <li><b>Atendida</b> é o que a Prefeitura registrou ao encerrar; não sabemos se o cidadão concordou.</li>
-          <li><b>Arquivada</b> é encerrada sem atendimento (faltou dado, ou não era competência do órgão).</li>
-          <li><b>Orientação</b> é uma explicação, sem ação sobre o problema.</li>
-          <li>Os dados vão até <b>${mesAno(g.periodo.fim)}</b>, a última publicação da PBH.</li>
-        </ul>
-        <p><a href="#/panorama">Panorama da cidade</a>: taxas, tempos, canais e rankings. · <a href="#/sobre">Como foi feito</a></p></div>
-    </section>`;
+    <div class="grade-2">
+      <section class="bloco"><h2>Serviços mais reclamados</h2>
+        <ol class="lista-simples">${top.map((s) => `<li><a href="#/servico/${esc(s.id)}">${esc(s.nome)}</a><span class="mini">${num(s.n)} manifestações · ${pct(s.pct_atendida)} atendidas · resposta em ${diasTxt(s.mediana_dias)}</span></li>`).join('')}</ol>
+        <p><a href="#/panorama">Panorama da cidade: taxas, rankings e canais</a></p></section>
+      <section class="bloco"><h2>Por assunto</h2>
+        <ul class="lista-simples">${temas.map((t) => `<li><a href="#/tema/${t.id}">${esc(t.nome)}</a><span class="mini">${num(t.n)} manifestações · ${pct(t.pct_atendida)} atendidas</span></li>`).join('')}</ul>
+        <p><a href="#/orgaos">Por órgão</a> · <a href="#/mapa">Por regional</a></p></section>
+    </div>
+    <section class="bloco"><h2>Sobre os dados</h2>
+      <p>${num(g.total.n)} manifestações registradas na Ouvidoria entre ${periodoTxt()}, publicadas pela Prefeitura no Portal de Dados Abertos. O desfecho de cada manifestação é o que a Prefeitura registrou ao encerrar, não a avaliação do cidadão. Manifestações ainda em andamento não entram nas taxas.</p>
+      <p><a href="#/sobre">Como os dados foram tratados</a> · <a href="#/sobre/limitacoes">Limitações</a> · <a href="#/sobre/dados">Dados abertos do site</a></p></section>`;
   app.querySelector('#form-busca').addEventListener('submit', (ev) => { ev.preventDefault(); location.hash = `#/buscar?q=${encodeURIComponent(app.querySelector('#q').value)}`; });
   app.querySelectorAll('.sugestoes button').forEach((b) => b.addEventListener('click', () => { location.hash = `#/buscar?q=${encodeURIComponent(b.dataset.q)}`; }));
 }
@@ -369,7 +349,6 @@ async function viewServico(id) {
       <div class="acoes"><button class="botao" type="button" id="marcar" aria-pressed="${marcados.includes(id)}">${marcados.includes(id) ? '★ Marcado' : '☆ Marcar'}</button>
         <a class="botao secundario" href="https://prefeitura.pbh.gov.br/ouvidoria" rel="noopener">Registrar manifestação na PBH</a></div></div>
     <h2>O que esperar <small>${periodoTxt()}</small></h2>
-    ${s.suficiente ? `<p class="resumo">${fraseResumo(s, { sujeito: 'reclamações sobre este serviço' })}</p>` : ''}
     ${s.suficiente ? tiles(s, { comparar: D.geral.total }) : `<p class="aviso">Só ${num(s.n)} manifestações (${num(s.encerradas)} encerradas): poucas para taxas confiáveis. Os números abaixo são apenas descritivos.</p>${tiles(s)}`}
     <section class="secao grade-2">
       <div class="cartao"><h2>Desfecho das manifestações</h2>${barra100(s)}
