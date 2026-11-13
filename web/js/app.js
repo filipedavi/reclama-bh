@@ -134,6 +134,7 @@ function viewInicio() {
     .map((s) => `<a href="#/servico/${esc(s.id)}"><span class="nome">${esc(s.nome)}<small>${num(s.n)} manifestações</small></span><span class="val ${cls}">${fmt(s[chave])}</span></a>`).join('')}</div>`;
   app.innerHTML = `
     <section class="hero">
+      <p class="olho">Ouvidoria de Belo Horizonte · ${periodoTxt()}</p>
       <h1>Antes de reclamar, veja o que esperar da Prefeitura.</h1>
       <p class="lead">Reunimos ${num(g.total.n)} manifestações registradas na Ouvidoria de Belo Horizonte (${periodoTxt()}) e calculamos, para cada serviço,
         quantas foram atendidas, quantas foram arquivadas e quanto tempo a resposta levou.</p>

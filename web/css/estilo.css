@@ -1,95 +1,106 @@
-/* Linha do Tempo BH: tokens de cor por papel, tema claro e escuro. */
+/* Reclama BH: tokens de cor por papel, tema claro e escuro.
+   Paleta de Belo Horizonte: terra da Serra do Curral (marca), ocre (destaque), azul da Pampulha (ligações e séries), papel quente. */
 :root {
   color-scheme: light;
-  --marca: #0B3D5C;
-  --marca-2: #F2A900;
-  --plano: #f6f6f3;
-  --superficie: #fcfcfb;
-  --superficie-2: #f0efec;
-  --tinta: #0b0b0b;
-  --tinta-2: #52514e;
-  --tinta-3: #6f6d68;
-  --grade: #e1e0d9;
-  --eixo: #c3c2b7;
-  --borda: rgba(11, 11, 11, 0.10);
-  --link: #1c5cab;
-  --serie-1: #2a78d6;
-  --serie-2: #eb6834;
-  --serie-antes: #a9a79f;
-  --piora: #c62f2f;
-  --piora-fundo: #fbe9e8;
-  --melhora: #006300;
-  --melhora-fundo: #e5f3e5;
-  --neutro-fundo: #ecebe7;
-  --div-n2: #c62f2f;
-  --div-n1: #ee9a98;
-  --div-0: #e4e3de;
-  --div-p1: #86b6ef;
-  --div-p2: #1c5cab;
-  --sombra: 0 1px 2px rgba(0, 0, 0, .06), 0 4px 16px rgba(0, 0, 0, .05);
-  --raio: 12px;
+  --marca: #9b3a25;
+  --marca-2: #d79a2b;
+  --plano: #f6f1e7;
+  --superficie: #fffdf9;
+  --superficie-2: #efe8da;
+  --tinta: #1e1a16;
+  --tinta-2: #5a524a;
+  --tinta-3: #7a7168;
+  --grade: #e3dccd;
+  --eixo: #c9bfae;
+  --borda: rgba(60, 40, 20, 0.14);
+  --link: #1c5a86;
+  --serie-1: #1c5a86;
+  --serie-2: #c75a2e;
+  --serie-antes: #b0a797;
+  --piora: #b8392a;
+  --piora-fundo: #f8e4df;
+  --melhora: #2e6b2e;
+  --melhora-fundo: #e3efdd;
+  --neutro-fundo: #efe8da;
+  --div-n2: #b8392a;
+  --div-n1: #e3a39a;
+  --div-0: #e8e1d3;
+  --div-p1: #8db7d6;
+  --div-p2: #1c5a86;
+  --sombra: none;
+  --raio: 6px;
+  --serra: rgba(155, 58, 37, 0.13);
+  --trama: rgba(155, 58, 37, 0.055);
   --fonte: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --fonte-titulo: "Fraunces", Georgia, "Times New Roman", serif;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --marca: #7cc0ea;
-    --plano: #0f1112;
-    --superficie: #1a1a19;
-    --superficie-2: #242422;
-    --tinta: #f0efec;
-    --tinta-2: #c3c2b7;
-    --tinta-3: #a3a198;
-    --grade: #2c2c2a;
-    --eixo: #45453f;
-    --borda: rgba(255, 255, 255, 0.10);
-    --link: #86b6ef;
-    --serie-1: #3987e5;
-    --serie-2: #d95926;
-    --serie-antes: #6b6a64;
-    --piora: #f07b7a;
-    --piora-fundo: #3a1f1f;
-    --melhora: #4cc94c;
-    --melhora-fundo: #1b301b;
-    --neutro-fundo: #2c2c2a;
-    --div-n2: #e66767;
-    --div-n1: #8f3c3c;
-    --div-0: #383835;
-    --div-p1: #2b5a92;
-    --div-p2: #6da7ec;
-    --sombra: 0 1px 2px rgba(0, 0, 0, .4);
+    --marca: #e6a765;
+    --marca-2: #e6a765;
+    --plano: #141210;
+    --superficie: #1d1a16;
+    --superficie-2: #27221d;
+    --tinta: #f3ece0;
+    --tinta-2: #c9bfae;
+    --tinta-3: #a3988a;
+    --grade: #2f2a24;
+    --eixo: #4a4238;
+    --borda: rgba(255, 240, 220, 0.12);
+    --link: #8dbde6;
+    --serie-1: #5c9bd1;
+    --serie-2: #e07a4a;
+    --serie-antes: #6b6459;
+    --piora: #f0847a;
+    --piora-fundo: #3d2321;
+    --melhora: #7fc97f;
+    --melhora-fundo: #1f301f;
+    --neutro-fundo: #2f2a24;
+    --div-n2: #e66b5e;
+    --div-n1: #8f3f38;
+    --div-0: #3a342d;
+    --div-p1: #2f5f8a;
+    --div-p2: #7db4e0;
+    --sombra: none;
+    --serra: rgba(230, 167, 101, 0.18);
+    --trama: rgba(230, 167, 101, 0.07);
   }
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --marca: #7cc0ea;
-  --plano: #0f1112;
-  --superficie: #1a1a19;
-  --superficie-2: #242422;
-  --tinta: #f0efec;
-  --tinta-2: #c3c2b7;
-  --tinta-3: #a3a198;
-  --grade: #2c2c2a;
-  --eixo: #45453f;
-  --borda: rgba(255, 255, 255, 0.10);
-  --link: #86b6ef;
-  --serie-1: #3987e5;
-  --serie-2: #d95926;
-  --serie-antes: #6b6a64;
-  --piora: #f07b7a;
-  --piora-fundo: #3a1f1f;
-  --melhora: #4cc94c;
-  --melhora-fundo: #1b301b;
-  --neutro-fundo: #2c2c2a;
-  --div-n2: #e66767;
-  --div-n1: #8f3c3c;
-  --div-0: #383835;
-  --div-p1: #2b5a92;
-  --div-p2: #6da7ec;
-  --sombra: 0 1px 2px rgba(0, 0, 0, .4);
+  --marca: #e6a765;
+  --marca-2: #e6a765;
+  --plano: #141210;
+  --superficie: #1d1a16;
+  --superficie-2: #27221d;
+  --tinta: #f3ece0;
+  --tinta-2: #c9bfae;
+  --tinta-3: #a3988a;
+  --grade: #2f2a24;
+  --eixo: #4a4238;
+  --borda: rgba(255, 240, 220, 0.12);
+  --link: #8dbde6;
+  --serie-1: #5c9bd1;
+  --serie-2: #e07a4a;
+  --serie-antes: #6b6459;
+  --piora: #f0847a;
+  --piora-fundo: #3d2321;
+  --melhora: #7fc97f;
+  --melhora-fundo: #1f301f;
+  --neutro-fundo: #2f2a24;
+  --div-n2: #e66b5e;
+  --div-n1: #8f3f38;
+  --div-0: #3a342d;
+  --div-p1: #2f5f8a;
+  --div-p2: #7db4e0;
+  --sombra: none;
+  --serra: rgba(230, 167, 101, 0.18);
+  --trama: rgba(230, 167, 101, 0.07);
 }
 
 * { box-sizing: border-box; }
+body { overflow-x: clip; }
 [hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; }
 body {
@@ -326,3 +337,70 @@ table.dados th.ord:hover { color: var(--link); }
 .semantica h2 { font-size: 1.05rem; margin: 0 0 8px; }
 .semantica > p { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 0; }
 .semantica .chip { text-decoration: none; }
+
+
+/* ================================================ identidade BH */
+h1, h2, .marca span, .numero .val, .cab-linha .codigo { font-family: var(--fonte-titulo); font-variation-settings: "opsz" 72; }
+h1 { font-weight: 600; letter-spacing: -.01em; }
+h2 { font-weight: 600; }
+.topo { border-top: 4px solid var(--marca); border-bottom: 1px solid var(--borda); }
+.marca span { font-size: 1.25rem; font-weight: 600; letter-spacing: -.01em; }
+.marca b { color: var(--marca); }
+.marca img { border-radius: 8px; }
+.menu a { border-radius: 4px; }
+.menu a[aria-current="page"] { background: transparent; box-shadow: inset 0 -3px 0 var(--marca); border-radius: 0; }
+.cartao, .numero, .cartao-servico, .tema-card, .mudanca { box-shadow: none; }
+
+/* capa: fundo de papel com a trama diagonal do plano de Aarão Reis e a Serra do Curral ao fundo */
+.hero {
+  position: relative; overflow: hidden; isolation: isolate;
+  margin: -20px calc(50% - 50vw) 8px; padding: 40px calc(50vw - 50%) 84px;
+  background-color: var(--superficie);
+  background-image:
+    repeating-linear-gradient(45deg, var(--trama) 0 1px, transparent 1px 32px),
+    repeating-linear-gradient(-45deg, var(--trama) 0 1px, transparent 1px 32px);
+  border-bottom: 1px solid var(--borda);
+}
+.hero::after {
+  content: ""; position: absolute; inset: auto 0 0 0; height: 78px; z-index: -1; pointer-events: none;
+  background: var(--serra);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 110' preserveAspectRatio='none'%3E%3Cpath d='M0 110V86L40 74 90 80 130 64 170 70 210 52 250 58 290 40 330 46 370 30 400 34 430 20 455 26 480 12 505 18 530 8 560 14 590 24 620 20 650 30 690 26 720 36 760 32 800 44 840 40 880 52 920 48 960 60 1000 56V110Z'/%3E%3C/svg%3E") bottom / 100% 100% no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 110' preserveAspectRatio='none'%3E%3Cpath d='M0 110V86L40 74 90 80 130 64 170 70 210 52 250 58 290 40 330 46 370 30 400 34 430 20 455 26 480 12 505 18 530 8 560 14 590 24 620 20 650 30 690 26 720 36 760 32 800 44 840 40 880 52 920 48 960 60 1000 56V110Z'/%3E%3C/svg%3E") bottom / 100% 100% no-repeat;
+}
+.hero .olho { margin: 0 0 10px; font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--marca); }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.1; max-width: 820px; margin-bottom: .4em; }
+.hero .lead { font-size: 1.1rem; max-width: 720px; }
+.busca-principal input { border-radius: 4px; border: 1.5px solid var(--eixo); }
+.busca-principal input:focus { border-color: var(--marca); outline: none; box-shadow: 0 0 0 3px var(--trama); }
+.botao { border-radius: 4px; }
+.sugestoes button { border-radius: 4px; background: transparent; }
+.sugestoes button:hover { background: var(--superficie-2); }
+
+/* números grandes sem caixas */
+.numeros { gap: 0 24px; margin-top: 26px; }
+.numero { background: none; border: 0; border-left: 3px solid var(--marca-2); border-radius: 0; padding: 2px 0 2px 12px; }
+.numero .val { font-size: 2.3rem; font-weight: 600; line-height: 1.1; }
+.numero .val small { font-family: var(--fonte); display: block; margin-top: 2px; }
+.numero .rot { text-transform: uppercase; letter-spacing: .04em; font-size: .72rem; font-weight: 600; }
+@media (max-width: 720px) { .numeros { gap: 14px 16px; } }
+
+/* rankings como listas numeradas, com fios em vez de caixas */
+.ranking { gap: 0; counter-reset: pos; }
+.ranking a { grid-template-columns: 1.6em minmax(0, 1fr) auto; background: none; border: 0; border-bottom: 1px solid var(--grade); border-radius: 0; padding: 7px 2px; }
+.ranking a::before { counter-increment: pos; content: counter(pos); font-family: var(--fonte-titulo); font-weight: 700; color: var(--marca-2); font-size: 1.05rem; }
+.ranking a:hover { background: var(--superficie-2); }
+.ranking a.pct-fundo { background: linear-gradient(90deg, var(--superficie-2) var(--p), transparent var(--p)); }
+.ranking .nome { white-space: normal; }
+
+.cartao-servico, .tema-card { border-left: 3px solid var(--eixo); }
+.cartao-servico:hover, .tema-card:hover { border-left-color: var(--marca); }
+.cartao-servico h3 { font-family: var(--fonte); }
+.abas { border-radius: 4px; }
+.aviso { border-left-color: var(--marca); border-radius: 4px; }
+.chip { border-radius: 4px; }
+.sumario-sobre a { border-radius: 4px; }
+.sumario-sobre a[aria-current="page"] { background: var(--marca); }
+
+.rodape { border-top: 4px solid var(--marca); margin-top: 20px; }
+.rodape .feito { color: var(--tinta-2); display: flex; align-items: center; gap: 8px; }
+.rodape .feito svg { width: 22px; height: 22px; flex: none; }
