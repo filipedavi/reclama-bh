@@ -464,3 +464,49 @@ ol.lista-simples li::before { counter-increment: n; content: counter(n); positio
 .legenda-mapa { display: flex; align-items: center; gap: 8px; margin-top: 8px; font-size: .85rem; color: var(--tinta-2); flex-wrap: wrap; }
 .legenda-mapa i { display: inline-block; width: 140px; height: 10px; border-radius: 3px; border: 1px solid var(--borda); }
 .rotulo-mapa { color: #0b0b0b; text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 4px #fff; }
+
+/* ================================================ estilo final: gov.uk com as cores de BH */
+:root, :root[data-theme="light"] { --plano: #ffffff; --superficie: #ffffff; --superficie-2: #f3f2f1; --grade: #b1b4b6; --borda: #b1b4b6; --tinta: #0b0c0c; --tinta-2: #505a5f; --tinta-3: #505a5f; --link: #1d70b8; --fonte-titulo: var(--fonte); --raio: 0; --terra: #9b3a25; --terra-escuro: #6f2716; --ocre: #e0a85a; }
+:root[data-theme="dark"] { --fonte-titulo: var(--fonte); --raio: 0; --terra: #9b3a25; --terra-escuro: #6f2716; --ocre: #e0a85a; --link: #8dbde6; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --fonte-titulo: var(--fonte); --raio: 0; --terra: #9b3a25; --terra-escuro: #6f2716; --ocre: #e0a85a; --link: #8dbde6; } }
+h1, h2, h3, .numero .val, .cab-linha .codigo { font-variation-settings: normal; letter-spacing: 0; }
+h1 { font-weight: 700; font-size: clamp(1.9rem, 4vw, 3rem); }
+h2 { font-weight: 700; font-size: 1.5rem; }
+.topo { background: var(--terra); border-top: 0; border-bottom: 0; color: #fff; }
+.marca, .marca span, .menu a, .tema { color: #fff; }
+.marca b { color: var(--ocre); }
+.marca img { display: block; border-radius: 6px; background: #fff; }
+.menu a[aria-current="page"] { box-shadow: inset 0 -4px 0 var(--ocre); }
+.tema { border-color: rgba(255,255,255,.5); }
+/* a Serra do Curral, em ocre, fecha o cabeçalho */
+.filete { display: block; height: 16px; background: var(--ocre); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 110' preserveAspectRatio='none'%3E%3Cpath d='M0 110V86L40 74 90 80 130 64 170 70 210 52 250 58 290 40 330 46 370 30 400 34 430 20 455 26 480 12 505 18 530 8 560 14 590 24 620 20 650 30 690 26 720 36 760 32 800 44 840 40 880 52 920 48 960 60 1000 56V110Z'/%3E%3C/svg%3E") bottom / 100% 100% no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 110' preserveAspectRatio='none'%3E%3Cpath d='M0 110V86L40 74 90 80 130 64 170 70 210 52 250 58 290 40 330 46 370 30 400 34 430 20 455 26 480 12 505 18 530 8 560 14 590 24 620 20 650 30 690 26 720 36 760 32 800 44 840 40 880 52 920 48 960 60 1000 56V110Z'/%3E%3C/svg%3E") bottom / 100% 100% no-repeat; margin-top: -1px; }
+.filete::before { content: none; }
+main { padding-top: 28px; }
+a { text-decoration: underline; text-underline-offset: .1em; }
+.busca-principal input { border: 2px solid var(--tinta); border-radius: 0; }
+.busca-principal input:focus { outline: 3px solid var(--ocre); outline-offset: 0; box-shadow: inset 0 0 0 2px; }
+:focus-visible { outline: 3px solid var(--ocre); }
+.botao, .botao.secundario { border-radius: 0; box-shadow: 0 2px 0 var(--terra-escuro); }
+.botao { background: var(--terra); color: #fff; }
+:root[data-theme="dark"] .botao { color: #fff; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .botao { color: #fff; } }
+.botao.secundario, :root .botao.secundario.secundario { background: var(--superficie-2); box-shadow: 0 2px 0 #929191; }
+.sugestoes { gap: 4px 14px; }
+.sugestoes button { border: 0; padding: 0; background: none; color: var(--link); text-decoration: underline; font-size: .95rem; }
+.bloco, .cartao { border-top: 2px solid var(--tinta); }
+.lista-simples li { border-bottom: 1px solid var(--grade); }
+ol.lista-simples li::before { color: var(--tinta-2); font-family: var(--fonte); }
+.numero { border-left: 4px solid var(--terra); }
+.numero .rot { text-transform: none; letter-spacing: 0; font-size: .95rem; font-weight: 400; color: var(--tinta); }
+.numero .val { font-size: 2.6rem; font-weight: 700; }
+.ranking a::before { color: var(--tinta-2); font-family: var(--fonte); }
+.abas { border-radius: 0; }
+.abas button[aria-pressed="true"] { background: var(--terra); color: #fff; }
+.chip, .aviso, .selo, .menu a, .faceta button, .tema, .mapa, .barra-100, .barra-100 span, .sumario-sobre a { border-radius: 0; }
+.sumario-sobre a[aria-current="page"] { background: var(--terra); color: #fff; }
+.aviso { border-left: 10px solid var(--terra); }
+table.dados th, table.dados td { border-bottom: 1px solid var(--grade); }
+/* rodapé: a serra de novo, em terracota, sobre fundo cinza */
+.rodape { background: var(--superficie-2); border-top: 0; max-width: none; padding: 28px calc(50vw - 50%); position: relative; margin-top: 36px; }
+.rodape::before { content: ""; position: absolute; left: 0; right: 0; top: -14px; height: 14px; background: var(--terra); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 110' preserveAspectRatio='none'%3E%3Cpath d='M0 110V86L40 74 90 80 130 64 170 70 210 52 250 58 290 40 330 46 370 30 400 34 430 20 455 26 480 12 505 18 530 8 560 14 590 24 620 20 650 30 690 26 720 36 760 32 800 44 840 40 880 52 920 48 960 60 1000 56V110Z'/%3E%3C/svg%3E") bottom / 100% 100% no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 110' preserveAspectRatio='none'%3E%3Cpath d='M0 110V86L40 74 90 80 130 64 170 70 210 52 250 58 290 40 330 46 370 30 400 34 430 20 455 26 480 12 505 18 530 8 560 14 590 24 620 20 650 30 690 26 720 36 760 32 800 44 840 40 880 52 920 48 960 60 1000 56V110Z'/%3E%3C/svg%3E") bottom / 100% 100% no-repeat; }
+.rodape .feito img { background: #fff; }
