@@ -28,6 +28,16 @@ function definirTitulo(t) { document.title = t ? `${t} · Reclama BH` : 'Reclama
 function marcarMenu(rota) {
   document.querySelectorAll('.menu a').forEach((a) => { if (a.dataset.rota === rota) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
 }
+// cor de uma variável CSS em #rrggbb, e mistura linear entre duas cores (t de 0 a 1)
+function corHex(v) {
+  const c = corCSS(v); const m = c.match(/\d+/g);
+  if (c.startsWith('#')) return c.length === 4 ? '#' + [...c.slice(1)].map((x) => x + x).join('') : c;
+  return m ? '#' + m.slice(0, 3).map((x) => (+x).toString(16).padStart(2, '0')).join('') : c;
+}
+function misturar(a, b, t) {
+  const [x, y] = [a, b].map((h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16)));
+  return '#' + x.map((v, i) => Math.round(v + (y[i] - v) * t).toString(16).padStart(2, '0')).join('');
+}
 const nomeTema = (id) => D.temas.find((t) => t.id === id)?.nome || id;
 const nomeSub = (id) => D.temas.flatMap((t) => t.subtemas).find((s) => s.id === id)?.nome || id;
 const nomeOrgao = (s) => (D.orgaos[s] ? `${s} · ${D.orgaos[s].nome}` : s);
@@ -450,7 +460,7 @@ async function viewMapa(params) {
   let ind = params.get('ind') || 'pct_atendida';
   app.innerHTML = `<h1>Regionais</h1><p class="sutil">Resultado das manifestações por região administrativa. ${pct(100 * D.geral.limpeza.sem_regional / D.geral.total.n)} das manifestações não informam regional e ficam fora deste recorte.</p>
     <div id="abas"></div>
-    <div class="grade-2"><div class="mapa grande" id="mapa" aria-label="Mapa das regionais"></div><div id="tab"></div></div>`;
+    <div class="grade-2"><div><div class="mapa grande" id="mapa" aria-label="Mapa das regionais"></div><div class="legenda-mapa" id="legenda-mapa"></div></div><div id="tab"></div></div>`;
   if (!D.geo) D.geo = await json('data/geo-regionais.json');
   const m = novoMapa(app.querySelector('#mapa'));
   let camada = null;
@@ -460,20 +470,25 @@ async function viewMapa(params) {
     const vals = Object.entries(D.regionais).filter(([k]) => k !== 'NI').map(([, v]) => v[ind]).filter((v) => v !== undefined);
     const min = Math.min(...vals), max = Math.max(...vals);
     const inverte = ind !== 'pct_atendida' && ind !== 'pct_no_prazo';
+    // escala contínua de uma cor só (azul da Pampulha): quanto mais escuro, melhor o resultado no indicador
+    const [claro, escuro] = [corHex('var(--mapa-claro)'), corHex('var(--mapa-escuro)')];
     for (const g of D.geo) {
       const r = D.regionais[g.sigla];
       const v = r?.[ind];
       let t = max === min ? 0.5 : (v - min) / (max - min);
       if (inverte) t = 1 - t;
-      const cor = t > 0.66 ? 'var(--div-p2)' : t > 0.33 ? 'var(--div-0)' : 'var(--div-n2)';
-      L.polygon(g.poligonos, { color: corCSS('var(--superficie)'), weight: 2, fillColor: corCSS(cor), fillOpacity: 0.85 })
+      L.polygon(g.poligonos, { color: corCSS('var(--superficie)'), weight: 2, fillColor: misturar(claro, escuro, t), fillOpacity: 0.9 })
         .bindTooltip(`<b>${g.nome}</b><br>${num(r?.n)} manifestações<br>${{ pct_atendida: 'atendidas', pct_arquivada: 'arquivadas', mediana_dias: 'mediana', pct_no_prazo: 'no prazo' }[ind]}: ${ind === 'mediana_dias' ? diasTxt(v) : pct(v)}`, { sticky: true })
         .on('click', () => { location.hash = `#/regional/${g.sigla}`; }).addTo(camada);
       const anel = g.poligonos[0][0];
       const centro = [anel.reduce((a, p) => a + p[0], 0) / anel.length, anel.reduce((a, p) => a + p[1], 0) / anel.length];
       L.marker(centro, { icon: L.divIcon({ className: 'rotulo-mapa', html: `${g.nome}<br><b>${ind === 'mediana_dias' ? diasTxt(r?.[ind]) : pct(r?.[ind])}</b>`, iconSize: [90, 30], iconAnchor: [45, 15] }), interactive: false }).addTo(camada);
     }
-    app.querySelector('#tab').innerHTML = `<div class="cartao">${tabelaIndicadores(D.regionais, { rotulo: 'Regional', ordem: ind, link: (k) => `#/regional/${k}` })}<p class="mini">Azul: melhor terço; cinza: terço do meio; vermelho: pior terço, no indicador escolhido.</p></div>`;
+    app.querySelector('#tab').innerHTML = `<div class="cartao">${tabelaIndicadores(D.regionais, { rotulo: 'Regional', ordem: ind, link: (k) => `#/regional/${k}` })}</div>`;
+    const rot = { pct_atendida: 'mais atendidas', pct_arquivada: 'menos arquivadas', mediana_dias: 'resposta mais rápida', pct_no_prazo: 'mais no prazo' }[ind];
+    const [pior, melhor] = inverte ? [max, min] : [min, max];
+    const fmt = (v) => (ind === 'mediana_dias' ? diasTxt(v) : pct(v));
+    app.querySelector('#legenda-mapa').innerHTML = `<span>${fmt(pior)}</span><i style="background:linear-gradient(90deg, ${claro}, ${escuro})"></i><span>${fmt(melhor)}</span><span class="mini">cor mais forte: ${rot}</span>`;
   };
   app.querySelector('#abas').appendChild(abas([['pct_atendida', 'Atendidas'], ['pct_arquivada', 'Arquivadas'], ['mediana_dias', 'Tempo mediano'], ['pct_no_prazo', 'No prazo']], ind, (v) => { ind = v; pintar(); }));
   pintar();

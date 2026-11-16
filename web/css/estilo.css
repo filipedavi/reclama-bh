@@ -33,6 +33,8 @@
   --trama: rgba(155, 58, 37, 0.055);
   --fonte: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --fonte-titulo: "Fraunces", Georgia, "Times New Roman", serif;
+  --mapa-claro: #d9e6f1;
+  --mapa-escuro: #1c5a86;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -65,6 +67,8 @@
     --sombra: none;
     --serra: rgba(230, 167, 101, 0.18);
     --trama: rgba(230, 167, 101, 0.07);
+    --mapa-claro: #2b3a48;
+    --mapa-escuro: #8dbde6;
   }
 }
 :root[data-theme="dark"] {
@@ -97,6 +101,8 @@
   --sombra: none;
   --serra: rgba(230, 167, 101, 0.18);
   --trama: rgba(230, 167, 101, 0.07);
+  --mapa-claro: #2b3a48;
+  --mapa-escuro: #8dbde6;
 }
 
 * { box-sizing: border-box; }
@@ -454,3 +460,7 @@ ol.lista-simples li::before { counter-increment: n; content: counter(n); positio
 .resumo { display: none; }
 .cab-linha { margin-bottom: 18px; }
 .cab-linha .acoes { align-self: center; }
+
+.legenda-mapa { display: flex; align-items: center; gap: 8px; margin-top: 8px; font-size: .85rem; color: var(--tinta-2); flex-wrap: wrap; }
+.legenda-mapa i { display: inline-block; width: 140px; height: 10px; border-radius: 3px; border: 1px solid var(--borda); }
+.rotulo-mapa { color: #0b0b0b; text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 4px #fff; }
