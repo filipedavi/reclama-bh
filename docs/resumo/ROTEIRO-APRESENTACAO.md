@@ -9,7 +9,7 @@ Tempo: 5 minutos. Site aberto em https://filipedavi.github.io/reclama-bh/ antes 
 ## 2. De onde vêm os dados (1 min, mostrar a aba do portal)
 
 - "A fonte é o Portal de Dados Abertos da PBH, o conjunto 'Dados gerais das manifestações processadas pela Ouvidoria no Sistema BH Digital', licença Creative Commons."
-- "A Ouvidoria publica um CSV acumulado por ano: janeiro, janeiro a fevereiro, e assim por diante. Nós pegamos o arquivo mais completo de cada ano, de 2022 até junho de 2025, que é a última publicação. Quatro arquivos, 138.323 manifestações."
+- "A Ouvidoria publica um CSV por ano, que vai acumulando dentro do ano: janeiro, depois janeiro a fevereiro, e assim por diante, e cada publicação substitui a anterior. O arquivo de um ano não contém os outros. Por isso pegamos o mais completo de cada ano: dezembro de 2022, 2023 e 2024, e junho de 2025, que é a última publicação. Quatro arquivos, 138.323 manifestações."
 - "O arquivo bruto tem 259 mil linhas, porque cada encaminhamento interno vira uma linha; 1.744 grafias de nome de serviço; siglas de órgão sem nome por extenso; nenhum agrupamento por assunto; e cada publicação apaga a anterior, não existe histórico. É um caso típico de organização da informação: precisa de controle de vocabulário, classificação, metadados e preservação."
 - "Importante: o portal não publica o texto da manifestação, só campos categóricos. Não há dado pessoal em nada do que usamos."
 
